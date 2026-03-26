@@ -1,0 +1,45 @@
+@use "./_mixins.scss" as *;
+@use "./_var.scss" as *;
+
+.swiper-button-prev {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    left: auto;
+    right: auto;
+    &::after {
+        font-size: 18px;
+    }
+    &:hover {
+        background-color: $primary-light;
+        border-color: $primary-light;
+    }
+}
+
+.swiper-button-next {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    left: auto;
+    right: auto;
+    &::after {
+        font-size: 18px;
+    }
+    &:hover {
+        border-color: $primary-light;
+        background-color: $primary-light;
+    }
+}

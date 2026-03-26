@@ -1,0 +1,16 @@
+@use "./base/_reset.scss";
+@use "./base/_var.scss";
+@use "./base/_colors.scss";
+@use "./base/_mixins.scss";
+@use "./base/_basics.scss";
+@use "./base/_spacers.scss";
+@use "./base/_alignments.scss";
+@use "./base/_typography.scss";
+@use "./base/_positions.scss";
+@use "./base/_container.scss";
+@use "./base/_buttons.scss";
+@use "./base/_swiper.scss";
+@use "./base/_borderradius.scss";
+
+// Component
+@use "./component/_component.scss";

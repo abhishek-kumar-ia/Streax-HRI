@@ -1,0 +1,33 @@
+@use "../base/_var.scss" as *;
+
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $secondary;
+    .header_container {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 2.5rem;
+                li {
+                    a {
+                        color: $white;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .menu_icon {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+    }
+}

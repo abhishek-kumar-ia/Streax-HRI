@@ -1,0 +1,43 @@
+.banner {
+    height: calc(100dvh - 83px);
+    .banner_container {
+        height: 100%;
+    }
+    .banner_utils {
+        bottom: 10%;
+        width: 90%;
+        left: 5%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        align-items: center;
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            height: 20px;
+            align-items: center;
+        }
+        .swiper-pagination {
+            width: fit-content;
+            bottom: auto;
+            right: 0;
+            position: relative;
+            .swiper-pagination-bullet  {
+                height: 1rem;
+                width: 1rem;
+                background-color: #B7B7B7;
+                border-radius: 50%;
+                opacity: 1;
+                margin-right: 5px;
+                margin-left: 5px;
+                transition: 0.3s ease;
+                &.swiper-pagination-bullet-active {
+                    background-color: #ffffff;
+                    width: 4rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

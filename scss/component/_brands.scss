@@ -1,0 +1,13 @@
+@use "../base/_var.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.swiper_brands {
+    .brand_card {
+        background-color: $white;
+        padding: 3rem 2rem;
+        border-radius: 2rem;
+        > h3 {
+            font-size: 2.2rem;
+        }
+    }
+}

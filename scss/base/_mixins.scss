@@ -1,0 +1,46 @@
+$xxl-desktop: 1920px;
+$lg-desktop: 1745px; 
+$md-desktop: 1536px; 
+$sm-desktop: 1281px; 
+$break-desktop: 1024px; // Tab
+$break-mobile-large: 992px;
+$break-mobile-horizontal: 767px;
+$break-mobile: 480px;
+$break-mobile-small: 320px;
+
+@mixin respond-to($media) {
+  @if $media == lg-desktop {
+    @media (max-width: $lg-desktop) { @content; }
+  } @else if $media == md-desktop {
+    @media (max-width: $md-desktop) { @content; }
+  } @else if $media == sm-desktop {
+    @media (max-width: $sm-desktop) { @content; }
+  } @else if $media == xs-desktop {
+    @media (max-width: $xs-desktop) { @content; }
+  } @else if $media == break-desktop {
+    @media (max-width: $break-desktop) { @content; }
+  } @else if $media == mobile-large {
+    @media (max-width: $break-mobile-large) { @content; }
+  } @else if $media == mobile-horizontal {
+    @media (max-width: $break-mobile-horizontal) { @content; }
+  } @else if $media == mobile {
+    @media (max-width: $break-mobile) { @content; }
+  } @else if $media == mobile-small {
+    @media (max-width: $break-mobile-small) { @content; }
+  }
+
+  // ✔ FIXED: media above 1920px
+  @else if $media == xxl-desktop-up {
+    @media (min-width: #{($xxl-desktop + 1)}) { @content; }
+  }
+}
+
+
+
+//   Example Usage
+
+// .container {
+//     @include respond-to(mobile-horizontal) {
+//       background-color: lightblue;
+//     }
+//   }

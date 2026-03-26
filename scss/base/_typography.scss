@@ -1,0 +1,55 @@
+// Font Weights
+.light {
+    font-weight: 300;
+}
+.regular {
+    font-weight: 400;
+}
+.medium {
+    font-weight: 500;
+}
+.semibold {
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+
+// Text Cases
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-lowercase {
+    text-transform: lowercase;
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Common Line Heights
+p {
+    line-height: 1.35;
+    font-size: 1.6rem;
+}
+
+// Headings
+.h1 {
+    font-size: 10rem;
+}
+.h2 {
+    font-size: 5.8rem;
+}
+
+// Paragraphs
+.para-sm {
+    font-size: 1.4rem;
+}
+.para {
+    font-size: 1.6rem;
+}
+.para-md {
+    font-size: 1.8rem;
+}
+.para-lg {
+    font-size: 2rem;
+}
