@@ -1,3 +1,6 @@
+@use "../base/_var.scss" as *;
+@use "../base/_mixins.scss" as *;
+
 .banner {
     height: calc(100dvh - 83px);
     .banner_container {
@@ -15,7 +18,6 @@
         .buttons {
             display: flex;
             gap: 20px;
-            height: 20px;
             align-items: center;
         }
         .swiper-pagination {

@@ -330,6 +330,9 @@ a:focus-visible {
 .g.g2 {
   grid-template-columns: repeat(2, 1fr);
 }
+.g.g3 {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .jc-c {
   justify-content: center;
@@ -396,12 +399,16 @@ p {
   font-size: 1.6rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+}
+
 .h1 {
   font-size: 10rem;
 }
 
 .h2 {
-  font-size: 5.8rem;
+  font-size: 4.4rem;
 }
 
 .para-sm {
@@ -418,6 +425,10 @@ p {
 
 .para-lg {
   font-size: 2rem;
+}
+
+.section_title {
+  margin-bottom: 5rem;
 }
 
 .pos-rel {
@@ -458,8 +469,13 @@ p {
     max-width: 90%;
   }
 }
+.container-w80.container-slider {
+  max-width: 95%;
+  left: 5%;
+  margin-left: 0;
+}
 @media (max-width: 992px) {
-  .container-w80.container-slider {
+  .container-w80.container-slider-mob {
     max-width: 90%;
     left: 5%;
   }
@@ -654,6 +670,14 @@ p {
   transition: 0.3s ease;
   left: auto;
   right: auto;
+  margin-top: 0;
+}
+.swiper-button-prev.green {
+  border-color: #005039;
+  color: #005039;
+}
+.swiper-button-prev.green:hover {
+  color: #FFFFFF;
 }
 .swiper-button-prev::after {
   font-size: 18px;
@@ -676,6 +700,14 @@ p {
   transition: 0.3s ease;
   left: auto;
   right: auto;
+  margin-top: 0;
+}
+.swiper-button-next.green {
+  border-color: #005039;
+  color: #005039;
+}
+.swiper-button-next.green:hover {
+  color: #FFFFFF;
 }
 .swiper-button-next::after {
   font-size: 18px;
@@ -685,8 +717,55 @@ p {
   background-color: #10864F;
 }
 
+.progress-track {
+  width: calc(100% - 120px);
+  height: 2px;
+  background: #bbbbbb;
+  position: relative;
+}
+
+.progress-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #10864F;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  width: fit-content;
+  width: 100%;
+}
+.bottom-bar .btn_block {
+  flex-basis: 15%;
+}
+.bottom-bar .progress-track {
+  flex-basis: 70%;
+}
+.bottom-bar .actions {
+  flex-basis: fit-content;
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
 .br-5 {
   border-radius: 5px;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-20 {
+  border-radius: 20px;
 }
 
 header {
@@ -737,7 +816,6 @@ header .header_container .menu_icon {
 .banner .banner_utils .buttons {
   display: flex;
   gap: 20px;
-  height: 20px;
   align-items: center;
 }
 .banner .banner_utils .swiper-pagination {
@@ -770,5 +848,26 @@ header .header_container .menu_icon {
 .swiper_brands .brand_card > h3 {
   font-size: 2.2rem;
 }
+.swiper_brands .brand_card > p {
+  font-size: 1.4rem;
+}
 
-/*# sourceMappingURL=main.css.map */
+.container_innovation .video_block {
+  aspect-ratio: 189/226;
+}
+.container_innovation .video_block > video {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.block_right {
+  padding-top: 10rem;
+}
+
+.block_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */

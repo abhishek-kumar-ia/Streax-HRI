@@ -3,25 +3,34 @@
 
 // Containers
 .container-w80 {
-    max-width: 80%;
-    margin: 0 auto;
-    @include respond-to(md-desktop) {
-        max-width: 90%;
-      }
-      @include respond-to(mobile-horizontal) {
-        max-width: 90%;
-      }
-      &.container-slider {
-        @include respond-to(mobile-large) {
-          max-width: 90%;
-          left: 5%;
-        }
-      }
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include respond-to(md-desktop) {
+    max-width: 90%;
+  }
+
+  @include respond-to(mobile-horizontal) {
+    max-width: 90%;
+  }
+
+  &.container-slider {
+    max-width: 95%;
+    left: 5%;
+    margin-left: 0;
+  }
+
+  &.container-slider-mob {
+    @include respond-to(mobile-large) {
+      max-width: 90%;
+      left: 5%;
+    }
+  }
 }
 
 
 // Section Paddings
 .section_padding {
-  padding-top: 12rem ;
+  padding-top: 12rem;
   padding-bottom: 12rem;
 }

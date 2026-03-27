@@ -1,0 +1,26 @@
+{
+  "name": "streax-hri",
+  "version": "1.0.0",
+  "description": "<!-- Scss to Css Command -->\r sass scss/main.scss css/main.css",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek-kumar-ia/Streax-HRI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishek-kumar-ia/Streax-HRI/issues"
+  },
+  "homepage": "https://github.com/abhishek-kumar-ia/Streax-HRI#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.98.0"
+  }
+}

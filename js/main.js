@@ -35,3 +35,59 @@ const brandsSwiper = new Swiper('.swiper_brands.swiper', {
         },
     },
 });
+
+const awardsSwiper = new Swiper('.swiper_awards.swiper', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+});
+
+
+$(function () {
+
+    function initSlider(selector, slidesPerView) {
+  
+      const $slider = $(selector);
+      const $section = $slider.closest("section");
+      const $prev = $section.find(".prev");
+      const $next = $section.find(".next");
+      const $indicator = $section.find(".progress-indicator");
+      const $track = $section.find(".progress-track");
+  
+      const swiper = new Swiper(selector, {
+        slidesPerView: slidesPerView,
+        slidesPerGroup: 1,
+        spaceBetween: 24,
+        speed: 500,
+        navigation: {
+          nextEl: $next[0],
+          prevEl: $prev[0]
+        }
+      });
+  
+      function updateProgress() {
+  
+        /* ✅ snapGrid FIX (works for 1.5 view) */
+        const totalSteps = swiper.snapGrid.length;
+        const stepWidth = $track.width() / totalSteps;
+  
+        $indicator.width((swiper.activeIndex + 1) * stepWidth);
+  
+        $prev.prop("disabled", swiper.isBeginning);
+        $next.prop("disabled", swiper.isEnd);
+      }
+  
+      swiper.on("slideChange", updateProgress);
+      $(window).on("resize", updateProgress);
+      updateProgress();
+    }
+  
+    initSlider(".singleSlider", 1);
+    initSlider(".fourcolumslider", 4);
+    initSlider(".stories-swiper", 1.5);
+    initSlider(".threecolumslider", 3);
+    initSlider(".fourtwocolumslider", 3.2);
+    initSlider(".fivecolumnslider", 4.2);
+  
+  
+  });

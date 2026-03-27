@@ -1,0 +1,24 @@
+@use "../base/_var.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.container_innovation {
+    .video_block {
+        aspect-ratio: 189 / 226;
+        > video {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.block_right {
+    padding-top: 10rem;
+}
+
+.block_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
