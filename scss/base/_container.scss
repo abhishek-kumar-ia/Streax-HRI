@@ -13,19 +13,6 @@
   @include respond-to(mobile-horizontal) {
     max-width: 90%;
   }
-
-  &.container-slider {
-    max-width: 95%;
-    left: 5%;
-    margin-left: 0;
-  }
-
-  &.container-slider-mob {
-    @include respond-to(mobile-large) {
-      max-width: 90%;
-      left: 5%;
-    }
-  }
 }
 
 

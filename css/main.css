@@ -145,6 +145,26 @@ a:focus-visible {
   height: 100%;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
 .pt-1 {
   padding-top: 1rem;
 }
@@ -469,17 +489,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 90%;
   }
 }
-.container-w80.container-slider {
-  max-width: 95%;
-  left: 5%;
-  margin-left: 0;
-}
-@media (max-width: 992px) {
-  .container-w80.container-slider-mob {
-    max-width: 90%;
-    left: 5%;
-  }
-}
 
 .section_padding {
   padding-top: 12rem;
@@ -737,16 +746,13 @@ h1, h2, h3, h4, h5, h6 {
 .bottom-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   margin-top: 30px;
   width: fit-content;
   width: 100%;
 }
 .bottom-bar .btn_block {
-  flex-basis: 15%;
-}
-.bottom-bar .progress-track {
-  flex-basis: 70%;
+  flex-basis: 20%;
 }
 .bottom-bar .actions {
   flex-basis: fit-content;
@@ -754,6 +760,53 @@ h1, h2, h3, h4, h5, h6 {
   gap: 20px;
   flex-grow: 1;
   justify-content: flex-end;
+}
+
+button.prev {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #005039;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+button.prev > svg > path {
+  stroke: #6C6C6C;
+}
+button.prev:hover {
+  background-color: #005039;
+}
+button.prev:hover > svg > path {
+  stroke: #FFFFFF;
+}
+
+button.next {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #005039;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: rotate(180deg);
+}
+button.next > svg > path {
+  stroke: #6C6C6C;
+}
+button.next:hover {
+  background-color: #005039;
+}
+button.next:hover > svg > path {
+  stroke: #FFFFFF;
 }
 
 .br-5 {
@@ -861,7 +914,7 @@ header .header_container .menu_icon {
   object-position: center;
 }
 
-.block_right {
+.container_innovation .block_right {
   padding-top: 10rem;
 }
 
@@ -870,4 +923,12 @@ header .header_container .menu_icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.awards_slider {
+  overflow: visible;
+}
+
+.stakeholders_slider {
+  overflow: visible;
 }/*# sourceMappingURL=main.css.map */

@@ -89,21 +89,78 @@
 .bottom-bar {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 30px;
     width: fit-content;
     width: 100%;
     .btn_block {
-        flex-basis: 15%;
+        flex-basis: 20%;
     }
-    .progress-track {
-        flex-basis: 70%;
-    }
+    // .progress-track {
+    //     flex-basis: 70%;
+    // }
     .actions {
         flex-basis: fit-content;
         display: flex;
         gap: 20px;
         flex-grow: 1;
         justify-content: flex-end;
+    }
+}
+
+// Custom Prev Button
+button.prev {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $primary;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    > svg { 
+        > path {
+            stroke: #6C6C6C;
+        }
+    }
+    &:hover {
+        background-color: $primary;
+        > svg {
+            > path {
+                stroke: $white;
+            }
+        }
+    }
+  }
+
+// Custom Next Button
+button.next {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $primary;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: rotate(180deg);
+    > svg { 
+        > path {
+            stroke: #6C6C6C;
+        }
+    }
+    &:hover {
+        background-color: $primary;
+        > svg {
+            > path {
+                stroke: $white;
+            }
+        }
     }
 }

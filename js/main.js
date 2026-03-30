@@ -36,12 +36,9 @@ const brandsSwiper = new Swiper('.swiper_brands.swiper', {
     },
 });
 
-const awardsSwiper = new Swiper('.swiper_awards.swiper', {
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 30,
-});
 
+
+// Create different slider for fourtwocolumslider
 
 $(function () {
 
@@ -82,12 +79,8 @@ $(function () {
       updateProgress();
     }
   
-    initSlider(".singleSlider", 1);
-    initSlider(".fourcolumslider", 4);
-    initSlider(".stories-swiper", 1.5);
-    initSlider(".threecolumslider", 3);
-    initSlider(".fourtwocolumslider", 3.2);
-    initSlider(".fivecolumnslider", 4.2);
-  
+    initSlider(".awards_slider", 4.2);
+    initSlider(".stakeholders_slider", 4.2);
+    initSlider(".linkedin_slider", 2.75);
   
   });
