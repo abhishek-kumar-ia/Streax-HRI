@@ -9,16 +9,15 @@ $(function () {
 
 //   Banner
 const bannerSwiper = new Swiper('.banner_container', {
-    loop: true,
+    // loop: true,
     slidesPerView: 1,
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper_pagination_banner',
         clickable: true,
     },
-
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next-banner',
+        prevEl: '.swiper-button-prev-banner',
     },
     // autoplay: {
     //     delay: 4000,
@@ -55,7 +54,6 @@ const bannerSwiper = new Swiper('.banner_container', {
   const $awardsNext = $awardsSection.find('.awards_slider_next');
 
   const awardsSwiper = new Swiper('.awards_slider.swiper', {
-    loop: true,
     slidesPerView: 4,
     slidesPerGroup: 1,
     spaceBetween: 30,
@@ -177,4 +175,21 @@ stakeholderSwiper.on('breakpoint', updateStakeholderProgress);
 $(window).on('resize', updateStakeholderProgress);
 updateStakeholderProgress();
 // Stakeholder Swiper End
+
+
+// Video Slider Swiper Start
+const videoSliderSwiper = new Swiper('.video_slider.swiper', {
+  // loop: true,
+  slidesPerView: 1,
+  pagination: {
+      el: '.swiper_pagination_videos',
+      clickable: true,
+  },
+  navigation: {
+      nextEl: '.swiper-button-next-videos',
+      prevEl: '.swiper-button-prev-videos',
+  },
+});
+// Video Slider Swiper End
+
 });

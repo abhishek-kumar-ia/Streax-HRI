@@ -47,11 +47,11 @@
 // Custom Prev Button
 button.prev {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    background-color: $primary-light;
     border-radius: 50%;
-    border: 1px solid $primary;
+    border: 1px solid $primary-light;
     transition: 0.3s ease;
     display: inline-flex;
     align-items: center;
@@ -59,30 +59,16 @@ button.prev {
     position: relative;
     > svg { 
         > path {
-            stroke: #6C6C6C;
+            stroke: $white;
         }
     }
-    &:hover {
-        background-color: $primary;
+    &.swiper-button-disabled {
+        border-color: $primary-light;
+        background: transparent;
+        opacity: 1;
         > svg {
             > path {
-                stroke: $white;
-            }
-        }
-    }
-    &.golden {
-        border-color: $secondary;
-        > svg {
-            > path {
-                stroke: $secondary;
-            }
-        }
-        &:hover {
-            background-color: $secondary;
-            > svg {
-                > path {
-                    stroke: $white;
-                }
+                stroke: $primary-light;
             }
         }
     }
@@ -91,11 +77,11 @@ button.prev {
 // Custom Next Button
 button.next {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    background-color: $primary-light;
     border-radius: 50%;
-    border: 1px solid $primary;
+    border: 1px solid $primary-light;
     transition: 0.3s ease;
     display: inline-flex;
     align-items: center;
@@ -104,30 +90,16 @@ button.next {
     transform: rotate(180deg);
     > svg { 
         > path {
-            stroke: #6C6C6C;
+            stroke: $white;
         }
     }
-    &:hover {
-        background-color: $primary;
+    &.swiper-button-disabled {
+        border-color: $primary-light;
+        background: transparent;
+        opacity: 1;
         > svg {
             > path {
-                stroke: $white;
-            }
-        }
-    }
-    &.golden {
-        border-color: $secondary;
-        > svg {
-            > path {
-                stroke: $secondary;
-            }
-        }
-        &:hover {
-            background-color: $secondary;
-            > svg {
-                > path {
-                    stroke: $white;
-                }
+                stroke: $primary-light;
             }
         }
     }
@@ -143,69 +115,51 @@ button.next {
         gap: 20px;
         align-items: center;
         .swiper-button-prev {
-            height: 40px;
-            width: 40px;
-            border: 1px solid #fff;
+            height: 48px;
+            width: 48px;
+            border: 1px solid $primary-light;
             color: #fff;
             border-radius: 50%;
-            background: transparent;
+            background: $primary-light;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s ease;
             left: auto;
             right: auto;
+            top: auto;
             margin-top: 0;
-        
-            &.green {
-                border-color: $primary;
-                color: $primary;
-        
-                &:hover {
-                    color: $white;
-                }
+            &.swiper-button-disabled {
+                border-color: $white;
+                background: transparent;
+                opacity: 1;
             }
-        
             &::after {
                 font-size: 18px;
-            }
-        
-            &:hover {
-                background-color: $primary;
-                border-color: $primary;
             }
         }
         
         .swiper-button-next {
-            height: 40px;
-            width: 40px;
-            border: 1px solid #fff;
-            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+            border: 1px solid $primary-light;
             color: #fff;
-            background: transparent;
+            border-radius: 50%;
+            background: $primary-light;
             font-size: 20px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s ease;
             left: auto;
             right: auto;
+            top: auto;
             margin-top: 0;
-        
-            &.green {
-                border-color: $primary;
-                color: $primary;
-        
-                &:hover {
-                    color: $white;
-                }
-            }
-        
+            &.swiper-button-disabled {
+                border-color: $white;
+                background: transparent;
+                opacity: 1;
+            }            
             &::after {
                 font-size: 18px;
-            }
-        
-            &:hover {
-                border-color: $primary;
-                background-color: $primary;
             }
         }
     }

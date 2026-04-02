@@ -14,8 +14,22 @@ footer {
         gap: 8rem;
         padding-bottom: 8rem;
         border-bottom: 1px solid #616161;
+        flex-wrap: wrap;
+        @include respond-to(mobile-large) {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+        }
         .block_left {
             width: 25%;
+            @include respond-to(mobile-large) {
+                width: 100%;
+            }
+            .logo {
+                img {
+                        width: 160px;
+                        height: auto;
+                }
+            }
             .social-icons {
                 display: flex;
                 gap: 1.6rem;
@@ -24,16 +38,25 @@ footer {
 
         .block_right {
                 width: 50%;
+                @include respond-to(mobile-large) {
+                    width: 100%;
+                }
             .ft_links {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-
+                @include respond-to(mobile-large) {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 6rem;
+                }
                 ul {
                     li {
                         &.title {
                             a {
                                 font-weight: 600;
                                 font-size: 1.8rem;
+                                @include respond-to(mobile-large) {
+                                    font-size: 1.6rem;
+                                }
                             }
                         }
 
@@ -43,6 +66,9 @@ footer {
                             font-size: 1.6rem;
                             line-height: 2;
                             font-weight: 300;
+                            @include respond-to(mobile-large) {
+                                font-size: 1.4rem;
+                            }
                         }
                     }
                 }
@@ -57,6 +83,10 @@ footer {
                         display: flex;
                         gap: 1.4rem;
                         align-items: center;
+                        @include respond-to(mobile-large) {
+                            font-size: 1.4rem;
+                            margin-top: 2rem;
+                        }
                     }
                 }
             }
@@ -67,6 +97,10 @@ footer {
         padding-bottom: 4rem;
         display: flex;
         justify-content: space-between;
+        @include respond-to(mobile-large) {
+            flex-direction: column;
+            gap: 2rem;
+        }
         .block_left {
             ul {
                 display: flex;
@@ -77,6 +111,9 @@ footer {
                         font-size: 1.6rem;
                         color: $gray-light;
                         line-height: 2;
+                        @include respond-to(mobile-large) {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
@@ -87,6 +124,9 @@ footer {
                 font-size: 1.6rem;
                 color: $gray-light;
                 line-height: 2;
+                @include respond-to(mobile-large) {
+                    font-size: 1.4rem;
+                }
             }
         }
     }
