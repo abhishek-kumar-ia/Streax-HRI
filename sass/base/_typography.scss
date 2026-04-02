@@ -26,37 +26,14 @@
     text-transform: capitalize;
 }
 
-// Common Line Heights
-p {
+// Global Line-height
+p , h1 , h2 , h3 , h4 , h5 , h6 {
     line-height: 1.35;
-    font-size: 1.6rem;
-}
-h1 , h2 , h3 , h4 , h5 , h6 {
-    line-height: 1.3;
 }
 
-// Headings
-.h1 {
-    font-size: 10rem;
+p { 
+    font-size: 1.8rem;
 }
 .h2 {
     font-size: 4.4rem;
-}
-
-// Paragraphs
-.para-sm {
-    font-size: 1.4rem;
-}
-.para {
-    font-size: 1.6rem;
-}
-.para-md {
-    font-size: 1.8rem;
-}
-.para-lg {
-    font-size: 2rem;
-}
-
-.section_title {
-    margin-bottom: 5rem;
 }

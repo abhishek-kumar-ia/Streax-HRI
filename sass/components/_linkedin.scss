@@ -1,0 +1,13 @@
+@use '../base/_vars.scss' as *;
+@use '../base/_mixins.scss' as *;
+
+.container_linkedin_posts {
+    display: flex;
+    gap: 8rem;
+    .block_left {
+        width: 30%;
+    }
+    .block_right {
+        width: 70%;
+    }
+}

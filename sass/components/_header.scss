@@ -1,0 +1,107 @@
+@use '../base/_mixins.scss' as *;
+@use '../base/_vars.scss' as *;
+
+header {
+    background-color: $primary;
+    padding: 1rem 0;
+    border-bottom: 2px solid $secondary;
+    position: relative;
+    .container_header {
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+        position: relative;
+        .block_center {
+            flex-grow: 1;
+            .navigation {
+                @include respond-to(mobile-large) {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    gap: 4rem;
+                    li {
+                        a {
+                            color: #fff;
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        .block_right {
+            display: flex;
+            gap: 2rem;
+        }
+        .hamburger_icon {
+            display: none;
+            width: 3rem;
+            height: 2.2rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 3;
+            @include respond-to(mobile-large) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            span {
+                display: block;
+                width: 100%;
+                height: 0.2rem;
+                background-color: #fff;
+                border-radius: 2px;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                transform-origin: center;
+            }
+            &.is_open {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(0.95rem) rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-0.95rem) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    .mobile_menu {
+        display: none;
+        background-color: $primary;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 2;
+        @include respond-to(mobile-large) {
+            padding: 1.6rem 2rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            li {
+                a {
+                    color: #fff;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        &.is_open {
+            display: block;
+        }
+    }
+    @include respond-to(mobile-large) {
+        .container_header {
+            gap: 2rem;
+        }
+        .block_right {
+            margin-left: auto;
+        }
+    }
+}

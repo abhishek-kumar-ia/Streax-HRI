@@ -1,0 +1,20 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.stakeholder_section {
+    overflow-x: hidden;
+    .stakeholder_slider {
+        overflow: visible;
+        .swiper-wrapper {
+            .card {
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 2rem;
+                > img {
+                    max-width: 300px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

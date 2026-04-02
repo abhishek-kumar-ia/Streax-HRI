@@ -1,0 +1,59 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.our_team_container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .right_block {
+        padding-left: 8rem;
+        .team-rows {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .team-col-parent {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .team-card-1 {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 32px;
+                        height: 32px;
+                        background: $secondary;
+                        border-radius: 6px;
+                        position: absolute;
+                        left: -52px;
+                        top: auto;
+                        bottom: 0;
+                    
+                    }
+                }
+                .team-card-3 {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        background: $secondary;
+                        border-radius: 3px;
+                        position: absolute;
+                        top: -36px;
+                        left: 0px;
+                    }
+                    &::after {
+                        content: '';
+                        width: 47px;
+                        height: 47px;
+                        background: $secondary;
+                        border-radius: 10px;
+                        position: absolute;
+                        top: auto;
+                        bottom: -67px;
+                        left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

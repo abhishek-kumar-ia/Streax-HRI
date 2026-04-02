@@ -1,0 +1,33 @@
+@use "./_mixins.scss" as *;
+
+
+// Containers
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  @include respond-to(mobile-large) {
+    max-width: 90%;
+  }
+  &.container_mob_slider {
+    @include respond-to(mobile-large) {
+      max-width: 95%;
+      position: relative;
+      left: 5%;
+    }
+  }
+}
+
+.container-w90 {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+// Section Paddings
+.section_padding {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+.section_title {
+  margin-bottom: 6rem;
+}

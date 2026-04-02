@@ -1,4 +1,4 @@
-@use "./_var.scss" as *;
+@use './_vars.scss' as *;
 
 .text-primary {
     color: $primary;
@@ -6,35 +6,32 @@
 .text-secondary {
     color: $secondary;
 }
-.text-tertiary {
-    color: $tertiary;
-}
-.text-body {
-    color: $body;
-}
-.text-body-dark {
-    color: $body-dark;
-}
-
-.bg-primary {
-    background-color: $primary;
-}
-.bg-secondary {
-    background-color: $secondary;
-}
-.bg-tertiary {
-    background-color: $tertiary;
-}
-
-// Colors
 .text-white {
     color: $white;
 }
 .text-black {
     color: $black;
 }
+.text-gray {
+    color: $gray;
+}
+.text-gray-light {
+    color: $gray-light;
+}
 
 // Background Colors
+.bg-primary {
+    background-color: $primary;
+}
+.bg-secondary {
+    background-color: $secondary;
+}
+.bg-white {
+    background-color: $white;
+}
+.bg-black {
+    background-color: $black;
+}
 
 .bg-section-primary {
     background-color: $bg-section;

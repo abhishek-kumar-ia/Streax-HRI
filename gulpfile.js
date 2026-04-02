@@ -2,8 +2,8 @@ const { src, dest, watch, series } = require("gulp");
 const sassCompiler = require("gulp-sass")(require("sass"));
 
 const paths = {
-  scssEntry: "scss/main.scss",
-  scssAll: "scss/**/*.scss",
+  scssEntry: "sass/main.scss",
+  scssAll: "sass/**/*.scss",
   cssDest: "css"
 };
 

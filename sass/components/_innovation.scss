@@ -1,0 +1,32 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.container_innovation {
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr !important;
+    }
+    .video_block {
+        aspect-ratio: 189 / 226;
+        > video {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.container_innovation {    
+    .block_right {
+        padding-top: 10rem;
+        @include respond-to(mobile-large) {
+            padding-top: 0;
+        }
+    }
+    .block_center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

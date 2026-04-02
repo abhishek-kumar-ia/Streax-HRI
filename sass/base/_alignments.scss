@@ -17,6 +17,9 @@
 // Grid Alignments
 .g {
     display: grid;
+    &.gap80 {
+        gap: 8rem;
+    }
     &.gap {
         gap: 6rem;
     }

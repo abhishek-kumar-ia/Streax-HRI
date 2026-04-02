@@ -1,0 +1,19 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.banner {
+    height: calc(100dvh - 83px);
+    .banner_container {
+        height: 100%;
+        .button_utils {
+            bottom: 10%;
+            width: 90%;
+            left: 10%;
+            justify-content: flex-end;
+            gap: 30px;
+            align-items: center;
+        }
+    }
+}
+
+

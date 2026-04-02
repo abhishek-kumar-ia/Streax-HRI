@@ -1,4 +1,4 @@
-@use "./_var.scss" as *;
+@use "./_vars.scss" as *;
 
 .btn {
   text-decoration: none;
@@ -104,7 +104,7 @@
     font-weight: 600;
     line-height: 2rem;
     user-select: none;
-    color: $primary-light;
+    color: $primary;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -156,14 +156,14 @@
       align-items: center;
       background-color: transparent;
       border-radius: 50%;
-      border: 1px solid $primary-light;
+      border: 1px solid $primary;
     }
 
     .arrow {
       height: 2px;
       width: 15px;
       position: relative;
-      background: $primary-light;
+      background: $primary;
       transform: rotate(315deg);
       border-radius: 10px;
       display: inline-block;
@@ -176,7 +176,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        background: $primary-light;
+        background: $primary;
         height: 1.5px;
         width: 10px;
         border-radius: 10px;

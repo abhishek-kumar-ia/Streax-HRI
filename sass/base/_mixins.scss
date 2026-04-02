@@ -35,12 +35,5 @@ $break-mobile-small: 320px;
   }
 }
 
-
-
-//   Example Usage
-
-// .container {
-//     @include respond-to(mobile-horizontal) {
-//       background-color: lightblue;
-//     }
-//   }
+// For all mobile or queries 
+// mobile query will start from "mobile-large"

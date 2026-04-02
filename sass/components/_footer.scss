@@ -1,0 +1,93 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+footer {
+    background-image: url('../assets/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .block_top {
+        padding-top: 12rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 8rem;
+        padding-bottom: 8rem;
+        border-bottom: 1px solid #616161;
+        .block_left {
+            width: 25%;
+            .social-icons {
+                display: flex;
+                gap: 1.6rem;
+            }
+        }
+
+        .block_right {
+                width: 50%;
+            .ft_links {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                ul {
+                    li {
+                        &.title {
+                            a {
+                                font-weight: 600;
+                                font-size: 1.8rem;
+                            }
+                        }
+
+                        a {
+                            margin-bottom: 3rem;
+                            color: $gray-light;
+                            font-size: 1.6rem;
+                            line-height: 2;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .right_ft_links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .follow_text {
+                        font-weight: 300;
+                        font-size: 1.6rem;
+                        color: $gray-light;
+                        display: flex;
+                        gap: 1.4rem;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .block_bottom {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        .block_left {
+            ul {
+                display: flex;
+                gap: 2rem;
+                li {
+                    a {
+                        font-weight: 300;
+                        font-size: 1.6rem;
+                        color: $gray-light;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+        .block_right {
+            p{
+                font-weight: 300;
+                font-size: 1.6rem;
+                color: $gray-light;
+                line-height: 2;
+            }
+        }
+    }
+}
