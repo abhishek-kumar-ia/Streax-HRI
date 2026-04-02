@@ -319,7 +319,9 @@
       <div class="swiper-slide">
         <div class="video_block">
           <video src="./assets/videos/video_bg.mp4" muted autoplay loop class="img-fluid"></video>
-
+          <button class="play_button" data-src="./assets/videos/video_bg.mp4">
+            <img src="./assets/icons/play.svg" alt="Play Icon" />
+          </button>
         </div>
         <div class="container br-20 video_slider_container">
           <div class="video_slider_content">
@@ -338,7 +340,9 @@
       <div class="swiper-slide">
         <div class="video_block">
           <video src="./assets/videos/video_bg.mp4" muted autoplay loop class="img-fluid"></video>
-
+          <button class="play_button" data-src="sw6s8EV6lWU?si=MlbFWf9GRWMN9aMN">
+            <img src="./assets/icons/play.svg" alt="Play Icon" />
+          </button>
         </div>
         <div class="container br-20 video_slider_container">
           <div class="video_slider_content">
@@ -836,6 +840,19 @@
     </div>
 </footer>
 <!-- Footer Section End -->
+
+<!-- Video Popup Start -->
+<div class="video_popup" aria-hidden="true">
+  <div class="video_popup_backdrop"></div>
+  <div class="video_popup_modal" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="video_popup_close" type="button" aria-label="Close video player">
+      &times;
+    </button>
+    <div class="video_popup_media_wrap">
+      <div class="video_popup_media"></div>
+    </div>
+  </div>
+</div>
 
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

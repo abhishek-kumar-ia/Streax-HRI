@@ -192,4 +192,193 @@ const videoSliderSwiper = new Swiper('.video_slider.swiper', {
 });
 // Video Slider Swiper End
 
+  // Video Popup (opens on .play_button[data-src])
+  const $videoPopup = $(".video_popup");
+  const $videoPopupMedia = $(".video_popup_media");
+  const $videoPopupClose = $(".video_popup_close");
+  const $videoPopupBackdrop = $(".video_popup_backdrop");
+
+  let backgroundVideoState = [];
+
+  function getYouTubeEmbedUrl(src) {
+    if (!src) return null;
+
+    let s = String(src).trim();
+    if (!s) return null;
+
+    // If someone passed the full <iframe ...> markup into data-src,
+    // extract its src attribute first.
+    if (s.toLowerCase().includes("<iframe")) {
+      const srcMatch = s.match(/src\s*=\s*["']([^"']+)["']/i);
+      if (srcMatch && srcMatch[1]) s = srcMatch[1].trim();
+    }
+
+    const isYouTube = /youtube\.com|youtu\.be/i.test(s);
+    if (!isYouTube) return null;
+
+    const ensureAutoplayParams = (embedUrl) => {
+      try {
+        const u = new URL(embedUrl);
+        u.searchParams.set("autoplay", "1");
+        u.searchParams.set("rel", "0");
+        return u.toString();
+      } catch (e) {
+        // If URL() fails, just return original.
+        return embedUrl;
+      }
+    };
+
+    try {
+      // Short links: https://youtu.be/VIDEOID
+      if (/youtu\.be/i.test(s)) {
+        const id = s.split("youtu.be/")[1].split(/[?&#]/)[0];
+        if (id) return ensureAutoplayParams(`https://www.youtube.com/embed/${id}`);
+      }
+
+      const url = new URL(s, window.location.href);
+      const hostname = url.hostname.toLowerCase();
+      if (!hostname.includes("youtube.com")) return null;
+
+      // https://www.youtube.com/watch?v=VIDEOID
+      const v = url.searchParams.get("v");
+      if (v) return ensureAutoplayParams(`https://www.youtube.com/embed/${v}`);
+
+      // https://www.youtube.com/embed/VIDEOID
+      const embedMatch = url.pathname.match(/\/embed\/([^/]+)/i);
+      if (embedMatch && embedMatch[1]) {
+        return ensureAutoplayParams(`https://www.youtube.com/embed/${embedMatch[1]}`);
+      }
+
+      // https://www.youtube.com/shorts/VIDEOID
+      const shortsMatch = url.pathname.match(/\/shorts\/([^/]+)/i);
+      if (shortsMatch && shortsMatch[1]) {
+        return ensureAutoplayParams(`https://www.youtube.com/embed/${shortsMatch[1]}`);
+      }
+    } catch (e) {
+      // If URL() fails, try extracting IDs from raw text.
+      const embedMatch = s.match(/\/embed\/([^/?&#]+)/i);
+      if (embedMatch && embedMatch[1]) {
+        return ensureAutoplayParams(`https://www.youtube.com/embed/${embedMatch[1]}`);
+      }
+      const watchMatch = s.match(/[?&]v=([^/?&#]+)/i);
+      if (watchMatch && watchMatch[1]) {
+        return ensureAutoplayParams(`https://www.youtube.com/embed/${watchMatch[1]}`);
+      }
+      const shortsMatch = s.match(/\/shorts\/([^/?&#]+)/i);
+      if (shortsMatch && shortsMatch[1]) {
+        return ensureAutoplayParams(`https://www.youtube.com/embed/${shortsMatch[1]}`);
+      }
+    }
+
+    return null;
+  }
+
+  function pauseBackgroundVideos() {
+    const $bgVideos = $(".video_slider .video_block video");
+    backgroundVideoState = $bgVideos
+      .toArray()
+      .map((el) => ({
+        el,
+        time: el.currentTime || 0,
+        wasPaused: el.paused,
+      }));
+
+    $bgVideos.each(function () {
+      try {
+        this.pause();
+      } catch (e) {}
+    });
+  }
+
+  function resumeBackgroundVideos() {
+    backgroundVideoState.forEach(({ el, time, wasPaused }) => {
+      try {
+        el.currentTime = time;
+        if (!wasPaused) {
+          const p = el.play();
+          if (p && typeof p.catch === "function") p.catch(() => {});
+        }
+      } catch (e) {}
+    });
+    backgroundVideoState = [];
+  }
+
+  function openVideoPopup(src) {
+    if (!src) return;
+
+    pauseBackgroundVideos();
+
+    const embedUrl = getYouTubeEmbedUrl(src);
+    let mediaHtml = "";
+
+    if (embedUrl) {
+      mediaHtml = `<iframe
+        src="${embedUrl}"
+        title="YouTube video player"
+        frameborder="0"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>`;
+    } else {
+      mediaHtml = `<video src="${src}" controls autoplay playsinline></video>`;
+    }
+
+    $videoPopupMedia.html(mediaHtml);
+    $videoPopup.addClass("is_open").attr("aria-hidden", "false");
+
+    // Move focus to close button for accessibility
+    $videoPopupClose.trigger("focus");
+  }
+
+  function closeVideoPopup() {
+    if (!$videoPopup.hasClass("is_open")) return;
+
+    // Stop playback
+    const $video = $videoPopupMedia.find("video");
+    if ($video.length) {
+      try {
+        $video[0].pause();
+      } catch (e) {}
+      $video.attr("src", "");
+    }
+
+    const $iframe = $videoPopupMedia.find("iframe");
+    if ($iframe.length) {
+      $iframe.attr("src", "");
+    }
+
+    $videoPopupMedia.empty();
+    $videoPopup.removeClass("is_open").attr("aria-hidden", "true");
+
+    resumeBackgroundVideos();
+  }
+
+  $(document).on("click", ".play_button[data-src]", function (e) {
+    e.preventDefault();
+    const src = $(this).data("src");
+
+    // Re-open fresh if already open
+    closeVideoPopup();
+    openVideoPopup(src);
+  });
+
+  $videoPopupClose.on("click", function () {
+    closeVideoPopup();
+  });
+
+  $videoPopupBackdrop.on("click", function () {
+    closeVideoPopup();
+  });
+
+  // Prevent clicks inside modal from closing
+  $videoPopup.on("click", ".video_popup_modal", function (e) {
+    e.stopPropagation();
+  });
+
+  // Escape key to close
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") closeVideoPopup();
+  });
+
 });

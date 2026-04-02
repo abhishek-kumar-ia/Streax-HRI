@@ -1232,6 +1232,21 @@ footer .block_bottom .block_right p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.video_slider .swiper-slide .video_block .play_button {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  background: transparent;
+  height: auto;
+  border: none;
+  cursor: pointer;
+}
+.video_slider .swiper-slide .video_block .play_button img {
+  width: 100%;
+  height: auto;
+}
 .video_slider .swiper-slide .video_block video {
   width: 100%;
   height: 100vh;
@@ -1256,4 +1271,89 @@ footer .block_bottom .block_right p {
 .video_slider_utils .utils {
   align-items: center;
   gap: 2rem;
+}
+
+.video_popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+.video_popup.is_open {
+  display: block;
+}
+
+.video_popup_backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.video_popup_modal {
+  position: relative;
+  width: min(960px, 92vw);
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b0b0f;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  /* allow close button to sit above video content */
+  padding-top: 0;
+}
+
+.video_popup_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(10, 10, 14, 0.65);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.video_popup_media_wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+
+.video_popup_media {
+  width: 100%;
+  height: 100%;
+}
+.video_popup_media iframe,
+.video_popup_media video {
+  width: 100%;
+  height: 100%;
+}
+.video_popup_media iframe {
+  border: 0;
+  display: block;
+}
+.video_popup_media video {
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .video_popup_modal {
+    width: 96vw;
+    border-radius: 12px;
+  }
+  .video_popup_close {
+    top: 8px;
+    right: 8px;
+  }
 }/*# sourceMappingURL=main.css.map */
