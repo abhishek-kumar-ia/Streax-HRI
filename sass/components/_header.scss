@@ -11,6 +11,10 @@ header {
         gap: 6rem;
         align-items: center;
         position: relative;
+        @include respond-to(md-desktop) {
+            gap: 4rem;
+            max-width: 90%;
+        }
         .block_center {
             flex-grow: 1;
             .navigation {
@@ -80,12 +84,16 @@ header {
         top: 100%;
         z-index: 2;
         @include respond-to(mobile-large) {
-            padding: 1.6rem 2rem;
+            padding: 3rem 2rem;
+            height: calc(100dvh - 83px);
+        }
+        nav {
+            height: 100%;
         }
         ul {
             display: flex;
             flex-direction: column;
-            gap: 1.4rem;
+            gap: 2rem;
             li {
                 a {
                     color: #fff;

@@ -9,5 +9,8 @@
         > h3 {
             font-size: 2.2rem;
             font-weight: 600;
+            @include respond-to(md-desktop) {
+                font-size: 2rem;
+            }
         }
     }

@@ -1,0 +1,56 @@
+@use '../base/_mixins.scss' as *;
+@use '../base/_vars.scss' as *;
+
+.features_section {
+    background-image: url('../assets/Hair_cut_bg.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    // @include respond-to(md-desktop) {
+    //     background-position: right bottom;
+    //     background-size: 50%;
+    // }
+    @include respond-to(mobile-large) {
+            background-position: right bottom;    
+            padding-bottom: 200px;
+        }
+    .block_left {
+        width: 60%;
+        @include respond-to(mobile-large) {
+            width: 100%;
+        }
+    }
+}
+.features_block {
+  display: flex;
+  gap: 8rem;
+  margin-top: 8rem;
+  @include respond-to(md-desktop) {
+    gap: 4rem;
+  }
+  @include respond-to(mobile-large) {
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+  .feature_item {
+    display: flex;
+    flex-direction: column;
+
+    > p {
+        font-size: 2.2rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.8rem;
+        }
+    }
+    > h4 {
+        font-size: 6rem;
+        @include respond-to(md-desktop) {
+            font-size: 4.6rem;
+        }
+        @include respond-to(mobile-large) {
+            font-size: 4rem;
+        }
+    }
+  }
+}

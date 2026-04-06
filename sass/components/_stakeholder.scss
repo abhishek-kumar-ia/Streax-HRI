@@ -4,7 +4,8 @@
 .stakeholder_section {
     overflow-x: hidden;
     .stakeholder_slider {
-        overflow: visible;
+        // overflow: visible;
+        box-sizing: content-box;
         .swiper-wrapper {
             .card {
                 background-color: #fff;

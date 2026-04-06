@@ -31,6 +31,9 @@
     width: 100%;
     .btn_block {
         flex-basis: 20%;
+        @include respond-to(md-desktop) {
+            flex-basis: 25%;
+        }
     }
     // .progress-track {
     //     flex-basis: 70%;

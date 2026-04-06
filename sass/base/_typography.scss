@@ -35,12 +35,18 @@ p , h1 , h2 , h3 , h4 , h5 , h6 {
 
 p { 
     font-size: 1.8rem;
+    @include respond-to(md-desktop) {
+        font-size: 1.6rem;
+    }
     @include respond-to(mobile-large) {
         font-size: 1.6rem;
     }
 }
 .h2 {
     font-size: 4.4rem;
+    @include respond-to(md-desktop) {
+        font-size: 3.6rem;
+    }
     @include respond-to(mobile-large) {
         font-size: 3.2rem;
     }

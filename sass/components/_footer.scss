@@ -6,7 +6,11 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    > .container {
+        @include respond-to(md-desktop) {
+            max-width: 90%;
+        }
+    }
     .block_top {
         padding-top: 12rem;
         display: flex;

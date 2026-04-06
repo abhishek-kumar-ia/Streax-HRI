@@ -3,6 +3,9 @@
 
 .banner {
     height: calc(100dvh - 83px);
+    @include respond-to(mobile-large) {
+        height: auto;
+    }
     .banner_container {
         height: 100%;
         .button_utils {
@@ -12,6 +15,10 @@
             justify-content: flex-end;
             gap: 30px;
             align-items: center;
+            @include respond-to(mobile-large) {
+                left: 5%;
+                justify-content: space-between;
+            }
         }
     }
 }

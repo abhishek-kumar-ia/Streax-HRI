@@ -5,6 +5,11 @@ $(function () {
   $hamburger.on("click", function () {
     $(this).toggleClass("is_open");
     $menu.stop(true, true).slideToggle(250).toggleClass("is_open");
+    if ($menu.hasClass("is_open")) {
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    }
   });
 
 //   Banner
@@ -122,17 +127,17 @@ const linkedinPostsSwiper = new Swiper('.linkedin_posts.swiper', {
 
 
 // Stakeholder Swiper Start
-const $stakeholderSlider = $('.stakeholder_slider.swiper');
+const $stakeholderSlider = $('.stakeholder_slider');
 const $stakeholderSection = $stakeholderSlider.closest('section');
 const $stakeholderTrack = $stakeholderSection.find('.progress-track');
 const $stakeholderIndicator = $stakeholderSection.find('.progress-indicator');
 const $stakeholderPrev = $stakeholderSection.find('.stakeholder_slider_prev');
 const $stakeholderNext = $stakeholderSection.find('.stakeholder_slider_next');
 
-const stakeholderSwiper = new Swiper('.stakeholder_slider.swiper', {
+const stakeholderSwiper = new Swiper('.stakeholder_slider', {
   // loop: true,
   slidesPerView: 4.5,
-  slidesPerGroup: 1,
+  // slidesPerGroup: 1,
   spaceBetween: 40,
   navigation: {
     nextEl: $stakeholderNext[0],
@@ -469,4 +474,89 @@ const teamsSwiper = new Swiper('.swiper_teams', {
   },
 });
 // Mobile Slider for Teams End
+
+// Mobile Slider for Innovation Cards Start
+const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
+  loop: true,
+  slidesPerView: 1.4,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.4,
+    },
+    0: {
+      slidesPerView: 1.4,
+    },
+  },
+});
+// Mobile Slider for Innovation Cards End
+
+
+// Start
+function Fn_And_Half_Col_Image_Slider() {
+  $(".stakeholder_slider").each(function () {
+    const slider = this;
+    const $slider = $(slider);
+    const $bottomBar = $slider.find(".bottom-bar");
+ 
+    const $indicator = $bottomBar.find(".progress-indicator");
+    const $prevBtn = $bottomBar.find(".prev");
+    const $nextBtn = $bottomBar.find(".next");
+ 
+    const swiper = new Swiper(slider, {
+      slidesPerView: 4.01,
+      spaceBetween: 20,
+      speed: 2000,
+      allowTouchMove: true,
+ 
+      navigation: {
+        nextEl: $nextBtn[0],
+        prevEl: $prevBtn[0],
+      },
+      breakpoints: {
+        0: { slidesPerView: 1.1 },
+        768: { slidesPerView: 2.1 },
+        1024: { slidesPerView: 3.1 },
+        1220: { slidesPerView: 4.01 },
+      },
+    });
+ 
+    const totalSlides = swiper.slides.length;
+ 
+    function updateProgress() {
+      let slidesPerView =
+        typeof swiper.params.slidesPerView === "number"
+          ? swiper.params.slidesPerView
+          : swiper.slidesPerViewDynamic();
+ 
+      const total = swiper.slides.length;
+      const maxIndex = total - slidesPerView;
+ 
+      let progress =
+        maxIndex > 0
+          ? ((swiper.activeIndex + slidesPerView) / total) * 100
+          : 100;
+ 
+      // Clamp between 0–100
+      progress = Math.min(100, Math.max(0, progress));
+ 
+      $indicator.css("width", progress + "%");
+    }
+ 
+    function updateButtons() {
+      $prevBtn.prop("disabled", swiper.isBeginning);
+      $nextBtn.prop("disabled", swiper.isEnd);
+    }
+ 
+    updateProgress();
+    updateButtons();
+ 
+    swiper.on("slideChange", () => {
+      updateProgress();
+      updateButtons();
+    });
+  });
+}
+ 
+// End
 });
