@@ -41,4 +41,10 @@ p {
 }
 .h2 {
     font-size: 4.4rem;
+    @include respond-to(mobile-large) {
+        font-size: 3.2rem;
+    }
+    @include respond-to(mobile) {
+        font-size: 2.4rem;
+    }
 }

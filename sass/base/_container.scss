@@ -27,7 +27,18 @@
 .section_padding {
   padding-top: 12rem;
   padding-bottom: 12rem;
+  @include respond-to(mobile-large) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  @include respond-to(mobile) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 .section_title {
   margin-bottom: 6rem;
+  @include respond-to(mobile-large) {
+    margin-bottom: 4rem;
+  }
 }

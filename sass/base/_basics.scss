@@ -64,6 +64,12 @@ a {
     overflow-y: visible;
 }
 
+.overflow-x-hidden-mob {
+    @include respond-to(mobile-large) {
+        overflow-x: hidden;
+    }
+}
+
 // Border Radius
 .br-10 {
     border-radius: 10px;

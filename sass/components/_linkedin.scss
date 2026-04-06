@@ -4,10 +4,23 @@
 .container_linkedin_posts {
     display: flex;
     gap: 8rem;
+    @include respond-to (mobile-large) {
+        max-width: 100%;
+        padding-left: 5%;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
     .block_left {
         width: 30%;
+        @include respond-to (mobile-large) {
+            width: 100%;
+            padding-right: 5%;
+        }
     }
     .block_right {
         width: 70%;
+        @include respond-to (mobile-large) {
+            width: 100%;
+        }
     }
 }

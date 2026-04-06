@@ -25,6 +25,9 @@
                 height: auto;
                 border: none;
                 cursor: pointer;
+                @include respond-to(mobile-large) {
+                    top: 30%;
+                }
                 img {
                     width: 100%;
                     height: auto;
@@ -42,8 +45,19 @@
             bottom: 8rem;
             left: 10%;
             background-color: #00000075;
+            @include respond-to(mobile-large) {
+                left: 0%;
+                bottom: 0;
+                padding: 3rem 2rem 10rem;
+                border-bottom-left-radius: 0rem;
+                border-bottom-right-radius: 0rem;
+                max-width: 100%;
+            }
             .video_slider_content {
                 max-width: 75%;
+                @include respond-to(mobile-large) {
+                    max-width: 100%;
+                }
             }
         }
 
@@ -53,8 +67,16 @@
     position: absolute;
     bottom: 110px;
     right: 10%;
+    @include respond-to(mobile-large) {
+        bottom: 2rem;
+        right: 5%;  
+        width: 100%;
+    }
     .utils {
         align-items: center;
         gap: 2rem;
+        @include respond-to(mobile-large) {
+           justify-content: space-between;
+        }
     }
 }

@@ -192,6 +192,7 @@ const videoSliderSwiper = new Swiper('.video_slider.swiper', {
 });
 // Video Slider Swiper End
 
+// Video Popup dynamic code start
   // Video Popup (opens on .play_button[data-src])
   const $videoPopup = $(".video_popup");
   const $videoPopupMedia = $(".video_popup_media");
@@ -381,4 +382,91 @@ const videoSliderSwiper = new Swiper('.video_slider.swiper', {
     if (e.key === "Escape") closeVideoPopup();
   });
 
+  
+// Video Popup dynamic code emd
+
+
+  // Video Hover Cards (play video only on active card) start -- uncomment below code for hover effect
+  // (function initVideoHoverCards() {
+  //   const $cards = $(".video_hover_container .card_item");
+  //   if (!$cards.length) return;
+
+  //   const getVideoEl = (cardEl) => {
+  //     const v = cardEl.querySelector("video");
+  //     return v instanceof HTMLVideoElement ? v : null;
+  //   };
+
+  //   const safePauseAndReset = (videoEl) => {
+  //     if (!videoEl) return;
+  //     try {
+  //       videoEl.pause();
+  //     } catch (e) {}
+  //     try {
+  //       videoEl.currentTime = 0;
+  //     } catch (e) {}
+  //   };
+
+  //   const safePlayFromStart = (videoEl) => {
+  //     if (!videoEl) return;
+  //     try {
+  //       if (videoEl.readyState >= 1) videoEl.currentTime = 0;
+  //     } catch (e) {}
+  //     try {
+  //       const p = videoEl.play();
+  //       if (p && typeof p.catch === "function") p.catch(() => {});
+  //     } catch (e) {}
+  //   };
+
+  //   let activeCardEl = null;
+
+  //   const deactivateCard = (cardEl) => {
+  //     if (!cardEl) return;
+  //     cardEl.classList.remove("active");
+  //     safePauseAndReset(getVideoEl(cardEl));
+  //     if (activeCardEl === cardEl) activeCardEl = null;
+  //   };
+
+  //   const activateCard = (cardEl) => {
+  //     if (!cardEl || activeCardEl === cardEl) return;
+
+  //     if (activeCardEl) deactivateCard(activeCardEl);
+
+  //     activeCardEl = cardEl;
+  //     cardEl.classList.add("active");
+  //     safePlayFromStart(getVideoEl(cardEl));
+  //   };
+
+  //   // Ensure all videos are stopped on load; keep any .active as initial state.
+  //   $cards.each(function () {
+  //     const v = getVideoEl(this);
+  //     safePauseAndReset(v);
+  //   });
+  //   const initialActive = $cards.filter(".active")[0] || null;
+  //   if (initialActive) {
+  //     activeCardEl = initialActive;
+  //     safePlayFromStart(getVideoEl(initialActive));
+  //   }
+
+  //   $cards.on("pointerenter", function () {
+  //     activateCard(this);
+  //   });
+  // })();
+// Video Hover Cards (play video only on active card) end
+
+
+// Mobile Slider for Teams Start
+const teamsSwiper = new Swiper('.swiper_teams', {
+  loop: true,
+  slidesPerView: 1.4,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.4,
+    },
+    0: {
+      slidesPerView: 1.4,
+    },
+  },
+});
+// Mobile Slider for Teams End
 });

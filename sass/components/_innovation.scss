@@ -4,9 +4,13 @@
 .container_innovation {
     @include respond-to(mobile-large) {
         grid-template-columns: 1fr !important;
+        gap: 4rem !important;
     }
     .video_block {
         aspect-ratio: 189 / 226;
+        @include respond-to(mobile-large) {
+            aspect-ratio:  340 / 220
+        }
         > video {
             height: 100%;
             object-fit: cover;

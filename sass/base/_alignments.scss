@@ -1,3 +1,6 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
 // Text Alignments
 .text-center {
     text-align: center;
@@ -19,12 +22,18 @@
     display: grid;
     &.gap80 {
         gap: 8rem;
+        @include respond-to(mobile-large) {
+            gap: 4rem;
+        }
     }
     &.gap {
         gap: 6rem;
     }
     &.g2 {
         grid-template-columns: repeat(2, 1fr);
+        @include respond-to(mobile-large) {
+            grid-template-columns: 1fr;
+        }
     }
     &.g3 {
         grid-template-columns: repeat(3, 1fr);
