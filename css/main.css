@@ -944,6 +944,11 @@ header .container_header .block_center .navigation ul {
   display: flex;
   gap: 4rem;
 }
+@media (max-width: 1281px) {
+  header .container_header .block_center .navigation ul {
+    gap: 2rem;
+  }
+}
 header .container_header .block_center .navigation ul li a {
   color: #fff;
   font-size: 1.6rem;
@@ -1423,9 +1428,6 @@ footer .block_bottom .block_right p {
   }
 }
 
-.stakeholder_section {
-  overflow-x: hidden;
-}
 .stakeholder_section .stakeholder_slider {
   box-sizing: content-box;
 }
@@ -1439,8 +1441,16 @@ footer .block_bottom .block_right p {
   height: auto;
 }
 
+.awards_container {
+  overflow-x: hidden;
+}
 @media (max-width: 992px) {
-  .awards_slider {
+  .awards_container {
+    overflow-x: visible;
+  }
+}
+@media (max-width: 992px) {
+  .awards_container .awards_slider {
     box-sizing: content-box;
   }
 }

@@ -51,14 +51,14 @@ const bannerSwiper = new Swiper('.banner_container', {
 
 
   // Awards Swiper Start
-  const $awardsSlider = $('.awards_slider.swiper');
+  const $awardsSlider = $('.awards_slider');
   const $awardsSection = $awardsSlider.closest('section');
   const $awardsTrack = $awardsSection.find('.progress-track');
   const $awardsIndicator = $awardsSection.find('.progress-indicator');
   const $awardsPrev = $awardsSection.find('.awards_slider_prev');
   const $awardsNext = $awardsSection.find('.awards_slider_next');
 
-  const awardsSwiper = new Swiper('.awards_slider.swiper', {
+  const awardsSwiper = new Swiper('.awards_slider', {
     slidesPerView: 4,
     // slidesPerGroup: 1,
     spaceBetween: 30,
@@ -111,11 +111,11 @@ const linkedinPostsSwiper = new Swiper('.linkedin_posts.swiper', {
     slidesPerView: 3,
     spaceBetween: 30,
     breakpoints: {
-        1024: {
+        1100: {
             slidesPerView: 3,
         },
         768: {
-            slidesPerView: 2.4,
+            slidesPerView: 2,
         },
         0: {
             slidesPerView: 1.3,

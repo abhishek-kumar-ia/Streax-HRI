@@ -2,7 +2,6 @@
 @use "../base/_mixins.scss" as *;
 
 .stakeholder_section {
-    overflow-x: hidden;
     .stakeholder_slider {
         // overflow: visible;
         box-sizing: content-box;
@@ -20,8 +19,14 @@
     }
 }
 
-.awards_slider {
+.awards_container {
+    overflow-x: hidden;
     @include respond-to(mobile-large) {
-        box-sizing: content-box;
+        overflow-x: visible;
+    }
+    .awards_slider {
+        @include respond-to(mobile-large) {
+            box-sizing: content-box;
+        }
     }
 }

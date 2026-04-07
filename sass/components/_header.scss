@@ -24,6 +24,9 @@ header {
                 ul {
                     display: flex;
                     gap: 4rem;
+                    @include respond-to(sm-desktop) {
+                        gap: 2rem;
+                    }
                     li {
                         a {
                             color: #fff;
