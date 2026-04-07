@@ -4,9 +4,11 @@
 .container_linkedin_posts {
     display: flex;
     gap: 8rem;
+    overflow-x: hidden;
     @include respond-to (mobile-large) {
-        max-width: 100%;
-        padding-left: 5%;
+        // max-width: 100%;
+        // padding-left: 5%;
+        overflow-x: visible;
         gap: 4rem;
         flex-wrap: wrap;
     }
@@ -21,6 +23,11 @@
         width: 70%;
         @include respond-to (mobile-large) {
             width: 100%;
+        }
+        .linkedin_posts {
+            @include respond-to (mobile-large) {
+                box-sizing: content-box;
+            }
         }
     }
 }

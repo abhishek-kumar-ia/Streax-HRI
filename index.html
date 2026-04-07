@@ -43,8 +43,17 @@
             <div class="search_icon">
                 <img src="./assets/icons/search.svg" alt="Search Icon" />
             </div>
-            <div class="accessiblity_icon">
+            <div class="accessiblity_icon pos-rel cursor-pointer" id="accessiblity_btn">
                 <img src="./assets/icons/accessiblity.svg" alt="Accessibility Icon" />
+                <div class="accessiblity_popup">
+
+                    <h3>Accessibility</h3>
+                    <div class="fonts_params">
+                        <button class="font_btn">A</button>
+                        <button class="font_btn">A</button>
+                        <button class="font_btn">A</button>
+                    </div>
+                </div>
             </div>
             <div class="phone_icon">
                 <img src="./assets/icons/phone.svg" alt="Menu Icon" />
@@ -435,8 +444,8 @@
 
 
 <!-- Video Popup Slider Start -->
-<section class="video_slider_section pos-rel">
-  <div class="swiper video_slider">
+<section class="video_slider_section pos-rel overflow-hidden">
+  <div class="video_slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="video_block">
@@ -917,7 +926,7 @@
 
 
 <!-- Latest Thought Section Start -->
-<section class="section_padding bg-primary-gradient">
+<section class="section_padding bg-primary-gradient overflow-x-hidden">
   <div class="container container_linkedin_posts">
       <div class="block block_left">
           <img src="./assets/icons/linkedin.svg" width="48" height="48" alt="Linkedin Logo" class="img-fluid mb-4">
@@ -930,7 +939,7 @@
             </a>
       </div>
       <div class="block block_right">
-          <div class="swiper linkedin_posts"
+          <div class="linkedin_posts"
         >
           <div class="swiper-wrapper">
             <div class="swiper-slide">

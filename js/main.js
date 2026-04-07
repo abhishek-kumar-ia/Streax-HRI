@@ -12,6 +12,12 @@ $(function () {
     }
   });
 
+  // Accessibility Button Start
+  $('#accessiblity_btn').on('click', function () {
+    $('.accessiblity_popup').toggleClass('is_open');
+  });
+  // Accessibility Button End
+
 //   Banner
 const bannerSwiper = new Swiper('.banner_container', {
     // loop: true,
@@ -106,7 +112,7 @@ const bannerSwiper = new Swiper('.banner_container', {
 
 
 // Linkedin Posts Swiper Start
-const linkedinPostsSwiper = new Swiper('.linkedin_posts.swiper', {
+const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
@@ -183,7 +189,7 @@ updateStakeholderProgress();
 
 
 // Video Slider Swiper Start
-const videoSliderSwiper = new Swiper('.video_slider.swiper', {
+const videoSliderSwiper = new Swiper('.video_slider', {
   // loop: true,
   slidesPerView: 1,
   pagination: {
