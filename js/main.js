@@ -48,7 +48,7 @@ $(function () {
     setActiveFontButton(idx);
     try {
       localStorage.setItem(FONT_ROOT_STORAGE_KEY, String(px));
-    } catch (_) {}
+    } catch (_) { }
   });
 
   (function initRootFontFromStorage() {
@@ -59,46 +59,30 @@ $(function () {
         const n = parseInt(saved, 10);
         if (FONT_ROOT_SIZES_PX.includes(n)) px = n;
       }
-    } catch (_) {}
+    } catch (_) { }
     applyRootFontSize(px);
     const idx = FONT_ROOT_SIZES_PX.indexOf(px);
     setActiveFontButton(idx >= 0 ? idx : 1);
   })();
   // Accessibility Button End
 
-// Search Button Start
-$(".search_icon").on("click", function () {
-  $(".search_popup").toggleClass("is_open");
-});
-
-$(".search_popup").on("click", function (e) {
-  e.stopPropagation();
-});
-
-$(".search_popup input").on("keydown", function (e) {
-  if (e.key === "Enter") {
-    $(".search_popup button").trigger("click");
-  }
-});
-// Search Button End
-
-//   Banner
-const bannerSwiper = new Swiper('.banner_container', {
+  //   Banner
+  const bannerSwiper = new Swiper('.banner_container', {
     // loop: true,
     slidesPerView: 1,
     pagination: {
-        el: '.swiper_pagination_banner',
-        clickable: true,
+      el: '.swiper_pagination_banner',
+      clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next-banner',
-        prevEl: '.swiper-button-prev-banner',
+      nextEl: '.swiper-button-next-banner',
+      prevEl: '.swiper-button-prev-banner',
     },
     // autoplay: {
     //     delay: 4000,
     //     disableOnInteraction: false,
     // },
-});
+  });
 
 
   // Brands Swiper
@@ -107,17 +91,17 @@ const bannerSwiper = new Swiper('.banner_container', {
     slidesPerView: 4,
     spaceBetween: 30,
     breakpoints: {
-        1024: {
-            slidesPerView: 4,
-        },
-        768: {
-            slidesPerView: 2.4,
-        },
-        0: {
-            slidesPerView: 1.4,
-        },
+      1024: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 2.4,
+      },
+      0: {
+        slidesPerView: 1.4,
+      },
     },
-});
+  });
 
 
   // Awards Swiper Start
@@ -172,102 +156,102 @@ const bannerSwiper = new Swiper('.banner_container', {
   awardsSwiper.on('breakpoint', updateAwardsProgress);
   $(window).on('resize', updateAwardsProgress);
   updateAwardsProgress();
-// Awards Swiper End
+  // Awards Swiper End
 
 
-// Linkedin Posts Swiper Start
-const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
+  // Linkedin Posts Swiper Start
+  const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
     breakpoints: {
-        1100: {
-            slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        0: {
-            slidesPerView: 1.3,
-        },
+      1100: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1.3,
+      },
     },
-});
+  });
 
-// Linkedin Posts Swiper End
+  // Linkedin Posts Swiper End
 
 
-// Stakeholder Swiper Start
-const $stakeholderSlider = $('.stakeholder_slider');
-const $stakeholderSection = $stakeholderSlider.closest('section');
-const $stakeholderTrack = $stakeholderSection.find('.progress-track');
-const $stakeholderIndicator = $stakeholderSection.find('.progress-indicator');
-const $stakeholderPrev = $stakeholderSection.find('.stakeholder_slider_prev');
-const $stakeholderNext = $stakeholderSection.find('.stakeholder_slider_next');
+  // Stakeholder Swiper Start
+  const $stakeholderSlider = $('.stakeholder_slider');
+  const $stakeholderSection = $stakeholderSlider.closest('section');
+  const $stakeholderTrack = $stakeholderSection.find('.progress-track');
+  const $stakeholderIndicator = $stakeholderSection.find('.progress-indicator');
+  const $stakeholderPrev = $stakeholderSection.find('.stakeholder_slider_prev');
+  const $stakeholderNext = $stakeholderSection.find('.stakeholder_slider_next');
 
-const stakeholderSwiper = new Swiper('.stakeholder_slider', {
-  // loop: true,
-  slidesPerView: 4.5,
-  // slidesPerGroup: 1,
-  spaceBetween: 40,
-  navigation: {
-    nextEl: $stakeholderNext[0],
-    prevEl: $stakeholderPrev[0],
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 4.5,
+  const stakeholderSwiper = new Swiper('.stakeholder_slider', {
+    // loop: true,
+    slidesPerView: 4.5,
+    // slidesPerGroup: 1,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: $stakeholderNext[0],
+      prevEl: $stakeholderPrev[0],
     },
-    768: {
-      slidesPerView: 2.4,
+    breakpoints: {
+      1024: {
+        slidesPerView: 4.5,
+      },
+      768: {
+        slidesPerView: 2.4,
+      },
+      0: {
+        slidesPerView: 1.4,
+      },
     },
-    0: {
-      slidesPerView: 1.4,
-    },
-  },
-});
+  });
 
 
   function updateStakeholderProgress() {
-  const totalSteps = stakeholderSwiper.snapGrid.length;
-  if (!totalSteps || !$stakeholderTrack.length) return;
+    const totalSteps = stakeholderSwiper.snapGrid.length;
+    if (!totalSteps || !$stakeholderTrack.length) return;
 
-  const trackWidth = $stakeholderTrack.width();
-  const stepWidth = trackWidth / totalSteps;
-  // snapIndex aligns with snapGrid; with loop, activeIndex does not
-  const stepIndex =
-    typeof stakeholderSwiper.snapIndex === 'number'
-      ? stakeholderSwiper.snapIndex
-      : stakeholderSwiper.activeIndex;
+    const trackWidth = $stakeholderTrack.width();
+    const stepWidth = trackWidth / totalSteps;
+    // snapIndex aligns with snapGrid; with loop, activeIndex does not
+    const stepIndex =
+      typeof stakeholderSwiper.snapIndex === 'number'
+        ? stakeholderSwiper.snapIndex
+        : stakeholderSwiper.activeIndex;
 
-  $stakeholderIndicator.width((stepIndex + 1) * stepWidth);
-  $stakeholderPrev.prop('disabled', stakeholderSwiper.isBeginning);
-  $stakeholderNext.prop('disabled', stakeholderSwiper.isEnd);
-}
+    $stakeholderIndicator.width((stepIndex + 1) * stepWidth);
+    $stakeholderPrev.prop('disabled', stakeholderSwiper.isBeginning);
+    $stakeholderNext.prop('disabled', stakeholderSwiper.isEnd);
+  }
 
-stakeholderSwiper.on('slideChange', updateStakeholderProgress);
-stakeholderSwiper.on('resize', updateStakeholderProgress);
-stakeholderSwiper.on('breakpoint', updateStakeholderProgress);
-$(window).on('resize', updateStakeholderProgress);
-updateStakeholderProgress();
-// Stakeholder Swiper End
+  stakeholderSwiper.on('slideChange', updateStakeholderProgress);
+  stakeholderSwiper.on('resize', updateStakeholderProgress);
+  stakeholderSwiper.on('breakpoint', updateStakeholderProgress);
+  $(window).on('resize', updateStakeholderProgress);
+  updateStakeholderProgress();
+  // Stakeholder Swiper End
 
 
-// Video Slider Swiper Start
-const videoSliderSwiper = new Swiper('.video_slider', {
-  // loop: true,
-  slidesPerView: 1,
-  pagination: {
+  // Video Slider Swiper Start
+  const videoSliderSwiper = new Swiper('.video_slider', {
+    // loop: true,
+    slidesPerView: 1,
+    pagination: {
       el: '.swiper_pagination_videos',
       clickable: true,
-  },
-  navigation: {
+    },
+    navigation: {
       nextEl: '.swiper-button-next-videos',
       prevEl: '.swiper-button-prev-videos',
-  },
-});
-// Video Slider Swiper End
+    },
+  });
+  // Video Slider Swiper End
 
-// Video Popup dynamic code start
+  // Video Popup dynamic code start
   // Video Popup (opens on .play_button[data-src])
   const $videoPopup = $(".video_popup");
   const $videoPopupMedia = $(".video_popup_media");
@@ -362,7 +346,7 @@ const videoSliderSwiper = new Swiper('.video_slider', {
     $bgVideos.each(function () {
       try {
         this.pause();
-      } catch (e) {}
+      } catch (e) { }
     });
   }
 
@@ -372,9 +356,9 @@ const videoSliderSwiper = new Swiper('.video_slider', {
         el.currentTime = time;
         if (!wasPaused) {
           const p = el.play();
-          if (p && typeof p.catch === "function") p.catch(() => {});
+          if (p && typeof p.catch === "function") p.catch(() => { });
         }
-      } catch (e) {}
+      } catch (e) { }
     });
     backgroundVideoState = [];
   }
@@ -415,7 +399,7 @@ const videoSliderSwiper = new Swiper('.video_slider', {
     if ($video.length) {
       try {
         $video[0].pause();
-      } catch (e) {}
+      } catch (e) { }
       $video.attr("src", "");
     }
 
@@ -457,8 +441,8 @@ const videoSliderSwiper = new Swiper('.video_slider', {
     if (e.key === "Escape") closeVideoPopup();
   });
 
-  
-// Video Popup dynamic code emd
+
+  // Video Popup dynamic code emd
 
 
   // Video Hover Cards (play video only on active card) start -- uncomment below code for hover effect
@@ -526,107 +510,151 @@ const videoSliderSwiper = new Swiper('.video_slider', {
   //     activateCard(this);
   //   });
   // })();
-// Video Hover Cards (play video only on active card) end
+  // Video Hover Cards (play video only on active card) end
 
 
-// Mobile Slider for Teams Start
-const teamsSwiper = new Swiper('.swiper_teams', {
-  loop: true,
-  slidesPerView: 1.4,
-  spaceBetween: 20,
-  breakpoints: {
-    768: {
-      slidesPerView: 2.4,
-    },
-    0: {
-      slidesPerView: 1.4,
-    },
-  },
-});
-// Mobile Slider for Teams End
-
-// Mobile Slider for Innovation Cards Start
-const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
-  loop: true,
-  slidesPerView: 1.4,
-  spaceBetween: 20,
-  breakpoints: {
-    768: {
-      slidesPerView: 2.4,
-    },
-    0: {
-      slidesPerView: 1.4,
-    },
-  },
-});
-// Mobile Slider for Innovation Cards End
-
-
-// Start
-function Fn_And_Half_Col_Image_Slider() {
-  $(".stakeholder_slider").each(function () {
-    const slider = this;
-    const $slider = $(slider);
-    const $bottomBar = $slider.find(".bottom-bar");
- 
-    const $indicator = $bottomBar.find(".progress-indicator");
-    const $prevBtn = $bottomBar.find(".prev");
-    const $nextBtn = $bottomBar.find(".next");
- 
-    const swiper = new Swiper(slider, {
-      slidesPerView: 4.01,
-      spaceBetween: 20,
-      speed: 2000,
-      allowTouchMove: true,
- 
-      navigation: {
-        nextEl: $nextBtn[0],
-        prevEl: $prevBtn[0],
+  // Mobile Slider for Teams Start
+  const teamsSwiper = new Swiper('.swiper_teams', {
+    loop: true,
+    slidesPerView: 1.4,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.4,
       },
-      breakpoints: {
-        0: { slidesPerView: 1.1 },
-        768: { slidesPerView: 2.1 },
-        1024: { slidesPerView: 3.1 },
-        1220: { slidesPerView: 4.01 },
+      0: {
+        slidesPerView: 1.4,
       },
-    });
- 
-    const totalSlides = swiper.slides.length;
- 
-    function updateProgress() {
-      let slidesPerView =
-        typeof swiper.params.slidesPerView === "number"
-          ? swiper.params.slidesPerView
-          : swiper.slidesPerViewDynamic();
- 
-      const total = swiper.slides.length;
-      const maxIndex = total - slidesPerView;
- 
-      let progress =
-        maxIndex > 0
-          ? ((swiper.activeIndex + slidesPerView) / total) * 100
-          : 100;
- 
-      // Clamp between 0–100
-      progress = Math.min(100, Math.max(0, progress));
- 
-      $indicator.css("width", progress + "%");
-    }
- 
-    function updateButtons() {
-      $prevBtn.prop("disabled", swiper.isBeginning);
-      $nextBtn.prop("disabled", swiper.isEnd);
-    }
- 
-    updateProgress();
-    updateButtons();
- 
-    swiper.on("slideChange", () => {
+    },
+  });
+  // Mobile Slider for Teams End
+
+  // Mobile Slider for Innovation Cards Start
+  const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
+    loop: true,
+    slidesPerView: 1.4,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.4,
+      },
+      0: {
+        slidesPerView: 1.4,
+      },
+    },
+  });
+  // Mobile Slider for Innovation Cards End
+
+
+  // Start
+  function Fn_And_Half_Col_Image_Slider() {
+    $(".stakeholder_slider").each(function () {
+      const slider = this;
+      const $slider = $(slider);
+      const $bottomBar = $slider.find(".bottom-bar");
+
+      const $indicator = $bottomBar.find(".progress-indicator");
+      const $prevBtn = $bottomBar.find(".prev");
+      const $nextBtn = $bottomBar.find(".next");
+
+      const swiper = new Swiper(slider, {
+        slidesPerView: 4.01,
+        spaceBetween: 20,
+        speed: 2000,
+        allowTouchMove: true,
+
+        navigation: {
+          nextEl: $nextBtn[0],
+          prevEl: $prevBtn[0],
+        },
+        breakpoints: {
+          0: { slidesPerView: 1.1 },
+          768: { slidesPerView: 2.1 },
+          1024: { slidesPerView: 3.1 },
+          1220: { slidesPerView: 4.01 },
+        },
+      });
+
+      const totalSlides = swiper.slides.length;
+
+      function updateProgress() {
+        let slidesPerView =
+          typeof swiper.params.slidesPerView === "number"
+            ? swiper.params.slidesPerView
+            : swiper.slidesPerViewDynamic();
+
+        const total = swiper.slides.length;
+        const maxIndex = total - slidesPerView;
+
+        let progress =
+          maxIndex > 0
+            ? ((swiper.activeIndex + slidesPerView) / total) * 100
+            : 100;
+
+        // Clamp between 0–100
+        progress = Math.min(100, Math.max(0, progress));
+
+        $indicator.css("width", progress + "%");
+      }
+
+      function updateButtons() {
+        $prevBtn.prop("disabled", swiper.isBeginning);
+        $nextBtn.prop("disabled", swiper.isEnd);
+      }
+
       updateProgress();
       updateButtons();
+
+      swiper.on("slideChange", () => {
+        updateProgress();
+        updateButtons();
+      });
     });
+  }
+
+  // End
+
+  // Thumbnail Slider Swiper Start (main + thumbs bound via Swiper Thumbs module)
+  const $thumbMain = document.querySelector(".thumbnail_slider");
+  const $thumbNav = document.querySelector(".thumbnail_slider_thumbs");
+  if ($thumbMain && $thumbNav) {
+    const thumbnailThumbsSwiper = new Swiper(".thumbnail_slider_thumbs", {
+      spaceBetween: 16,
+      slidesPerView: 3,
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+    });
+
+    const thumbnailSliderSwiper = new Swiper(".thumbnail_slider", {
+      slidesPerView: 2.2,
+      spaceBetween: 30,
+      thumbs: {
+        swiper: thumbnailThumbsSwiper,
+      },
+
+    });
+  }
+  // Thumbnail Slider Swiper End
+
+  // Awards Achievements Swiper Start
+  const awardsAchievementsSwiper = new Swiper('.awards_achievements_slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    direction: 'vertical',
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        direction: 'vertical',
+      },
+      768: {
+        direction: 'horizontal',
+        slidesPerView: 2.4,
+      },
+      0: {
+        direction: 'horizontal',
+        slidesPerView: 1.4,
+      },
+    },
   });
-}
- 
-// End
+  // Awards Achievements Swiper End
 });

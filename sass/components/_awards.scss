@@ -1,0 +1,35 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+
+.awards_achievements_slider_container {
+    margin-bottom: 8rem;
+    @include respond-to(mobile-large) {
+        margin-bottom: 4rem;
+    }
+.awards_achievements_slider {
+    height: 610px;
+    @include respond-to(mobile-large) {
+        height: auto;
+    }
+    .swiper-wrapper {
+        .swiper-slide {
+            .award_item {
+                display: grid;
+                grid-template-columns: 180px 1fr;
+                gap: 4rem;
+                align-items: center;
+                margin-bottom: 4rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @include respond-to(mobile-large) {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}
+}
