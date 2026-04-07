@@ -19,3 +19,9 @@
         }
     }
 }
+
+.awards_slider {
+    @include respond-to(mobile-large) {
+        box-sizing: content-box;
+    }
+}

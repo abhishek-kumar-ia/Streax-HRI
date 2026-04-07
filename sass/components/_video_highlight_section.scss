@@ -1,0 +1,42 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.video_highlight_section {
+    .video_block {
+        position: relative;
+        video {
+
+            width: 100%;
+    height: 100vh;
+    object-fit: cover;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .video_highlight_container {
+        position: absolute;
+        left: 10%;
+        width: 80%;
+        z-index: 1;
+        bottom: 8rem;
+        background-color: rgba(0, 0, 0, 0.4588235294);
+        @include respond-to(mobile-large) {
+            left: 0%;
+            width: 100%;
+            bottom: 0rem;
+            
+            border-bottom-left-radius: 0rem;
+            border-bottom-right-radius: 0rem;
+        }
+        .content_block {
+            padding: 3rem;
+        }
+    }
+}

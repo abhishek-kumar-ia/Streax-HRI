@@ -40,7 +40,6 @@
             }
         }
         .video_slider_container {
-            padding: 3rem;
             position: absolute;
             bottom: 8rem;
             left: 10%;
@@ -55,8 +54,10 @@
             }
             .video_slider_content {
                 max-width: 75%;
+                padding: 3rem;
                 @include respond-to(mobile-large) {
                     max-width: 100%;
+
                 }
             }
         }
@@ -66,7 +67,7 @@
 .video_slider_utils {
     position: absolute;
     bottom: 110px;
-    right: 10%;
+    right: 12%;
     @include respond-to(mobile-large) {
         bottom: 2rem;
         right: 5%;  

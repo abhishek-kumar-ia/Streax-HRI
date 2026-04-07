@@ -60,7 +60,7 @@ const bannerSwiper = new Swiper('.banner_container', {
 
   const awardsSwiper = new Swiper('.awards_slider.swiper', {
     slidesPerView: 4,
-    slidesPerGroup: 1,
+    // slidesPerGroup: 1,
     spaceBetween: 30,
     navigation: {
       nextEl: $awardsNext[0],
