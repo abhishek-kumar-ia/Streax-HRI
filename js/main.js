@@ -13,10 +13,74 @@ $(function () {
   });
 
   // Accessibility Button Start
-  $('#accessiblity_btn').on('click', function () {
-    $('.accessiblity_popup').toggleClass('is_open');
+  const FONT_ROOT_BASE_PX = 10;
+  const FONT_ROOT_SIZES_PX = [
+    FONT_ROOT_BASE_PX - 1,
+    FONT_ROOT_BASE_PX,
+    FONT_ROOT_BASE_PX + 1,
+  ];
+  const FONT_ROOT_STORAGE_KEY = "streax-root-font-px";
+
+  function applyRootFontSize(px) {
+    document.documentElement.style.fontSize = px + "px";
+  }
+
+  function setActiveFontButton(index) {
+    $(".fonts_params .font_btn").each(function (i) {
+      const on = i === index;
+      $(this).toggleClass("is_active", on).attr("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  $("#accessiblity_btn").on("click", function () {
+    $(".accessiblity_popup").toggleClass("is_open");
   });
+
+  $(".accessiblity_popup").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $(".fonts_params .font_btn").on("click", function () {
+    const idx = $(this).index();
+    const px = FONT_ROOT_SIZES_PX[idx];
+    if (px === undefined) return;
+    applyRootFontSize(px);
+    setActiveFontButton(idx);
+    try {
+      localStorage.setItem(FONT_ROOT_STORAGE_KEY, String(px));
+    } catch (_) {}
+  });
+
+  (function initRootFontFromStorage() {
+    let px = FONT_ROOT_BASE_PX;
+    try {
+      const saved = localStorage.getItem(FONT_ROOT_STORAGE_KEY);
+      if (saved) {
+        const n = parseInt(saved, 10);
+        if (FONT_ROOT_SIZES_PX.includes(n)) px = n;
+      }
+    } catch (_) {}
+    applyRootFontSize(px);
+    const idx = FONT_ROOT_SIZES_PX.indexOf(px);
+    setActiveFontButton(idx >= 0 ? idx : 1);
+  })();
   // Accessibility Button End
+
+// Search Button Start
+$(".search_icon").on("click", function () {
+  $(".search_popup").toggleClass("is_open");
+});
+
+$(".search_popup").on("click", function (e) {
+  e.stopPropagation();
+});
+
+$(".search_popup input").on("keydown", function (e) {
+  if (e.key === "Enter") {
+    $(".search_popup button").trigger("click");
+  }
+});
+// Search Button End
 
 //   Banner
 const bannerSwiper = new Swiper('.banner_container', {
