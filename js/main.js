@@ -158,28 +158,6 @@ $(function () {
   updateAwardsProgress();
   // Awards Swiper End
 
-
-  // Linkedin Posts Swiper Start
-  const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      1100: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1.3,
-      },
-    },
-  });
-
-  // Linkedin Posts Swiper End
-
-
   // Stakeholder Swiper Start
   const $stakeholderSlider = $('.stakeholder_slider');
   const $stakeholderSection = $stakeholderSlider.closest('section');
@@ -236,20 +214,7 @@ $(function () {
   // Stakeholder Swiper End
 
 
-  // Video Slider Swiper Start
-  const videoSliderSwiper = new Swiper('.video_slider', {
-    // loop: true,
-    slidesPerView: 1,
-    pagination: {
-      el: '.swiper_pagination_videos',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next-videos',
-      prevEl: '.swiper-button-prev-videos',
-    },
-  });
-  // Video Slider Swiper End
+
 
   // Video Popup dynamic code start
   // Video Popup (opens on .play_button[data-src])
@@ -512,108 +477,6 @@ $(function () {
   // })();
   // Video Hover Cards (play video only on active card) end
 
-
-  // Mobile Slider for Teams Start
-  const teamsSwiper = new Swiper('.swiper_teams', {
-    loop: true,
-    slidesPerView: 1.4,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2.4,
-      },
-      0: {
-        slidesPerView: 1.4,
-      },
-    },
-  });
-  // Mobile Slider for Teams End
-
-  // Mobile Slider for Innovation Cards Start
-  const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
-    loop: true,
-    slidesPerView: 1.4,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2.4,
-      },
-      0: {
-        slidesPerView: 1.4,
-      },
-    },
-  });
-  // Mobile Slider for Innovation Cards End
-
-
-  // Start
-  function Fn_And_Half_Col_Image_Slider() {
-    $(".stakeholder_slider").each(function () {
-      const slider = this;
-      const $slider = $(slider);
-      const $bottomBar = $slider.find(".bottom-bar");
-
-      const $indicator = $bottomBar.find(".progress-indicator");
-      const $prevBtn = $bottomBar.find(".prev");
-      const $nextBtn = $bottomBar.find(".next");
-
-      const swiper = new Swiper(slider, {
-        slidesPerView: 4.01,
-        spaceBetween: 20,
-        speed: 2000,
-        allowTouchMove: true,
-
-        navigation: {
-          nextEl: $nextBtn[0],
-          prevEl: $prevBtn[0],
-        },
-        breakpoints: {
-          0: { slidesPerView: 1.1 },
-          768: { slidesPerView: 2.1 },
-          1024: { slidesPerView: 3.1 },
-          1220: { slidesPerView: 4.01 },
-        },
-      });
-
-      const totalSlides = swiper.slides.length;
-
-      function updateProgress() {
-        let slidesPerView =
-          typeof swiper.params.slidesPerView === "number"
-            ? swiper.params.slidesPerView
-            : swiper.slidesPerViewDynamic();
-
-        const total = swiper.slides.length;
-        const maxIndex = total - slidesPerView;
-
-        let progress =
-          maxIndex > 0
-            ? ((swiper.activeIndex + slidesPerView) / total) * 100
-            : 100;
-
-        // Clamp between 0–100
-        progress = Math.min(100, Math.max(0, progress));
-
-        $indicator.css("width", progress + "%");
-      }
-
-      function updateButtons() {
-        $prevBtn.prop("disabled", swiper.isBeginning);
-        $nextBtn.prop("disabled", swiper.isEnd);
-      }
-
-      updateProgress();
-      updateButtons();
-
-      swiper.on("slideChange", () => {
-        updateProgress();
-        updateButtons();
-      });
-    });
-  }
-
-  // End
-
   // Thumbnail Slider Swiper Start (main + thumbs bound via Swiper Thumbs module)
   const $thumbMain = document.querySelector(".thumbnail_slider");
   const $thumbNav = document.querySelector(".thumbnail_slider_thumbs");
@@ -636,25 +499,107 @@ $(function () {
   }
   // Thumbnail Slider Swiper End
 
-  // Awards Achievements Swiper Start
-  const awardsAchievementsSwiper = new Swiper('.awards_achievements_slider', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    direction: 'vertical',
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-        direction: 'vertical',
-      },
-      768: {
-        direction: 'horizontal',
-        slidesPerView: 2.4,
-      },
-      0: {
-        direction: 'horizontal',
-        slidesPerView: 1.4,
-      },
-    },
-  });
-  // Awards Achievements Swiper End
+
+  // All Sliders Function Start
+  function allSliders() {
+    awardsAchievementsSwiper.init();
+    teamsSwiper.init();
+    innovationCardsSwiper.init();
+    videoSliderSwiper.init();
+    linkedinPostsSwiper.init();
+  }
+  allSliders();
+    // All Sliders Function End
 });
+// jQuery End
+
+
+// Swipers Outside jQuery Start
+// Awards Achievements Swiper Start
+const awardsAchievementsSwiper = new Swiper('.awards_achievements_slider', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  direction: 'vertical',
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      direction: 'vertical',
+    },
+    768: {
+      direction: 'horizontal',
+      slidesPerView: 2.4,
+    },
+    0: {
+      direction: 'horizontal',
+      slidesPerView: 1.4,
+    },
+  },
+});
+// Awards Achievements Swiper End
+
+// Mobile Slider for Teams Start
+const teamsSwiper = new Swiper('.swiper_teams', {
+  loop: true,
+  slidesPerView: 1.4,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.4,
+    },
+    0: {
+      slidesPerView: 1.4,
+    },
+  },
+});
+// Mobile Slider for Teams End
+
+// Mobile Slider for Innovation Cards Start
+const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
+  loop: true,
+  slidesPerView: 1.4,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.4,
+    },
+    0: {
+      slidesPerView: 1.4,
+    },
+  },
+});
+// Mobile Slider for Innovation Cards End
+
+// Video Slider Swiper Start
+const videoSliderSwiper = new Swiper('.video_slider', {
+  // loop: true,
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper_pagination_videos',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next-videos',
+    prevEl: '.swiper-button-prev-videos',
+  },
+});
+// Video Slider Swiper End
+
+// Linkedin Posts Swiper Start
+const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  breakpoints: {
+    1100: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.3,
+    },
+  },
+});
+// Linkedin Posts Swiper End
+// Swipers Outside jQuery End
