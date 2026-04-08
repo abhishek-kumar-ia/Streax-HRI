@@ -14,10 +14,23 @@ html {
     }
 }
 
+.d-desktop-block-imp {
+    display: block !important;
+    @include respond-to(mobile-large) {
+        display: none !important;
+    }
+}
 .d-mobile-block {
     display: none;
     @include respond-to(mobile-large) {
         display: block;
+    }
+}
+
+.d-mobile-block-imp {
+    display: none !important;
+    @include respond-to(mobile-large) {
+        display: block !important;
     }
 }
 

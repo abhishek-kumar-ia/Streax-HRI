@@ -509,7 +509,80 @@ $(function () {
     linkedinPostsSwiper.init();
   }
   allSliders();
-    // All Sliders Function End
+  // All Sliders Function End
+
+  // Products tabs + slider Start
+  $(".container_products").each(function () {
+    const $container = $(this);
+    const $tabItems = $container.find(".tabs_list_item");
+    const $tabDataItems = $container.find(".tabs_data_item");
+    const productSwipers = new Map();
+
+    function initOrUpdateProductsSlider(sliderEl) {
+      if (!sliderEl) return;
+      const existingSwiper = productSwipers.get(sliderEl);
+      if (existingSwiper && !existingSwiper.destroyed) {
+        existingSwiper.update();
+        return;
+      }
+
+      const swiper = new Swiper(sliderEl, {
+        slidesPerView: 3.5,
+        loop: true,
+        spaceBetween: 30,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3.5,
+          },
+          768: {
+            slidesPerView: 2.4,
+          },
+          0: {
+            slidesPerView: 1.4,
+          },
+        },
+      });
+
+      productSwipers.set(sliderEl, swiper);
+    }
+
+    function activateProductsTab(tabKey) {
+      if (!tabKey) return;
+
+      $tabItems.each(function () {
+        const isActive = $(this).data("tab") === tabKey;
+        $(this).toggleClass("is_active", isActive).attr("aria-selected", isActive ? "true" : "false");
+      });
+
+      let $activePanel = $();
+      $tabDataItems.each(function () {
+        const isActive = $(this).data("tab") === tabKey;
+        $(this).toggleClass("is_active", isActive).attr("aria-hidden", isActive ? "false" : "true");
+        if (isActive) $activePanel = $(this);
+      });
+
+      if ($activePanel.length) {
+        $activePanel.find(".products_slider").each(function () {
+          initOrUpdateProductsSlider(this);
+        });
+      }
+    }
+
+    $tabItems.on("click", function () {
+      const tabKey = $(this).data("tab");
+      activateProductsTab(tabKey);
+    });
+
+    const initialTab = $tabItems.filter(".is_active").first().data("tab") || $tabItems.first().data("tab");
+    activateProductsTab(initialTab);
+
+    $(window).on("resize", function () {
+      $container.find(".tabs_data_item.is_active .products_slider").each(function () {
+        initOrUpdateProductsSlider(this);
+      });
+    });
+  });
+  // Products tabs + slider End
 });
 // jQuery End
 
@@ -602,4 +675,5 @@ const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
   },
 });
 // Linkedin Posts Swiper End
+
 // Swipers Outside jQuery End

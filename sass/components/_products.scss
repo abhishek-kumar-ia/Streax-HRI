@@ -1,0 +1,89 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.container_products {
+    display: flex;
+    position: relative;
+    left: 10%;
+    gap: 8rem;
+    width: 90%;
+    @include respond-to(mobile-large) {
+        flex-wrap: wrap;
+        gap: 4rem;
+        width: 95%;
+        left: 5%;
+    }
+    .tabs_list {
+        width: calc(25% - 4rem);
+        &.mob {
+            @include respond-to(mobile-large) {
+                width: 100%;
+                display: flex;
+                overflow-x: auto;      /* enables horizontal scroll */
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch; /* smooth on mobile */
+                gap: 0px;             /* spacing between tabs */
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                margin-right: 5%;
+                &::webkit-scrollbar {
+                    display: none;
+                }
+            }
+            > h4 {
+                flex: 0 0 auto;        /* prevents shrinking */
+                min-width: 120px;      /* adjust based on design */
+                white-space: nowrap;  
+            }
+        }
+        .tabs_list_item {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            @include respond-to(mobile-large) {
+                padding-top: 0rem;
+                border-color: #5C5C5C;
+            }
+            > p {
+                display: none;
+            }
+            > h4 {
+                color: $gray;
+                display: flex;
+                justify-content: space-between;
+            }
+            &.is_active {
+                opacity: 1;
+                @include respond-to(mobile-large) {
+                    border-bottom: 3px solid #B29142;
+                }
+                > h4 {
+                    margin-bottom: 1rem;
+                    color: $black;
+                    font-weight: 600;
+                }
+                > p {
+                    display: block;
+                }
+            }
+        }
+    }
+    .tabs_data {
+        width: calc(75% - 4rem);
+        @include respond-to(mobile-large) {
+            width: 100%;
+        }
+        .tabs_data_item {
+            display: none;
+            &.is_active {
+                display: block;
+            }
+            .products_slider {
+                overflow-x: hidden;
+            }
+        }
+    }
+}

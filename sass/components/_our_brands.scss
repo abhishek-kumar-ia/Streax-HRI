@@ -27,9 +27,9 @@
             gap: 2rem;
         }
         > a {
-            @include respond-to(mobile-large) {
-                width: 45%;
-            }
+            // @include respond-to(mobile-large) {
+            //     width: 45%;
+            // }
             &:last-child {
                 @include respond-to(mobile-large) {
                     width: 100%;
