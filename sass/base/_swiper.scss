@@ -3,7 +3,6 @@
 
 // Swiper Progressbar
 .progress-track {
-    width: calc(100% - 120px);
     height: 2px;
     background: #bbbbbb;
     position: relative;
@@ -23,21 +22,16 @@
 }
 
 .bottom-bar {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 30px;
     margin-top: 40px;
     width: fit-content;
     width: 100%;
-    .btn_block {
-        flex-basis: 20%;
-        @include respond-to(md-desktop) {
-            flex-basis: 25%;
-        }
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr auto;
     }
-    // .progress-track {
-    //     flex-basis: 70%;
-    // }
     .actions {
         flex-basis: fit-content;
         display: flex;

@@ -33,6 +33,7 @@
                         left: -52px;
                         top: auto;
                         bottom: 0;
+                        animation: pulse 3s infinite;
                         @include respond-to(mobile-large) {
                             display: none;
                         }
@@ -50,6 +51,7 @@
                         position: absolute;
                         top: -36px;
                         left: 0px;
+                        animation: pulse 4s infinite;
                         @include respond-to(mobile-large) {
                             display: none;
                         }
@@ -64,6 +66,7 @@
                         top: auto;
                         bottom: -67px;
                         left: 0px;
+                        animation: pulse 3.4s infinite;
                         @include respond-to(mobile-large) {
                             display: none;
                         }
@@ -71,5 +74,18 @@
                 }
             }
         }
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }

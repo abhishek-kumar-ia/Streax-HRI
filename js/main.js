@@ -516,6 +516,7 @@ $(function () {
     const $container = $(this);
     const $tabItems = $container.find(".tabs_list_item");
     const $tabDataItems = $container.find(".tabs_data_item");
+    const $mobileDescriptionItems = $container.find(".tabs_list_description_item");
     const productSwipers = new Map();
 
     function initOrUpdateProductsSlider(sliderEl) {
@@ -560,6 +561,13 @@ $(function () {
         $(this).toggleClass("is_active", isActive).attr("aria-hidden", isActive ? "false" : "true");
         if (isActive) $activePanel = $(this);
       });
+
+      if ($mobileDescriptionItems.length) {
+        $mobileDescriptionItems.each(function () {
+          const isActive = $(this).data("tab") === tabKey;
+          $(this).toggleClass("is_active", isActive).attr("aria-hidden", isActive ? "false" : "true");
+        });
+      }
 
       if ($activePanel.length) {
         $activePanel.find(".products_slider").each(function () {
