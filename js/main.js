@@ -12,6 +12,26 @@ $(function () {
     }
   });
 
+  // Mobile dropdown menu toggle
+  $(".mobile_menu .mobile_dropdown_toggle").on("click", function (e) {
+    e.preventDefault();
+
+    const $parentItem = $(this).closest("li.has-child");
+    const $submenu = $parentItem.children(".mobile_dropdown_menu");
+    const isOpening = !$parentItem.hasClass("is_open");
+
+    // Keep accordion behavior: only one submenu open at a time.
+    $(".mobile_menu li.has-child")
+      .not($parentItem)
+      .removeClass("is_open")
+      .children(".mobile_dropdown_menu")
+      .stop(true, true)
+      .slideUp(250);
+
+    $parentItem.toggleClass("is_open", isOpening);
+    $submenu.stop(true, true).slideToggle(250);
+  });
+
   // Accessibility Button Start
   const FONT_ROOT_BASE_PX = 10;
   const FONT_ROOT_SIZES_PX = [
@@ -121,11 +141,11 @@ $(function () {
       prevEl: $awardsPrev[0],
     },
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 4,
       },
       768: {
-        slidesPerView: 2.4,
+        slidesPerView: 3,
       },
       0: {
         slidesPerView: 1.4,
@@ -176,7 +196,7 @@ $(function () {
       prevEl: $stakeholderPrev[0],
     },
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 4.5,
       },
       768: {
