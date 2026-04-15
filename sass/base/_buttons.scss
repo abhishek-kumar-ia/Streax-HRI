@@ -198,4 +198,18 @@
     }
 
   }
+  &.arrow_btn {
+      padding: 0;
+      .arrow_parent {
+        background: $secondary;
+        .arrow {
+          color: $white;
+          background: $white;
+          &::before,
+          &::after {
+            background: $white;
+          }
+        }
+      }
+  } 
 }

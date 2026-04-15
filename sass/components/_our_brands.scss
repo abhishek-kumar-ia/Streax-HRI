@@ -2,79 +2,97 @@
 @use '../base/_vars.scss' as *;
 
 
-    .brand_card {
-        background-color: $white;
-        padding: 3rem 2rem;
-        border-radius: 2rem;
-        > h3 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            @include respond-to(md-desktop) {
-                font-size: 2rem;
+.brand_card {
+    background-color: $white;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+
+    >h3 {
+        font-size: 2.2rem;
+        font-weight: 600;
+
+        @include respond-to(md-desktop) {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Outer Brands
+.other_brands {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+
+    @include respond-to(mobile-large) {
+        gap: 2rem;
+    }
+
+    >a {
+
+        // @include respond-to(mobile-large) {
+        //     width: 45%;
+        // }
+        &:last-child {
+            @include respond-to(mobile-large) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        >img {
+            max-width: 300px;
+
+            @include respond-to(mobile-large) {
+                max-width: 150px;
+                width: 100%;
             }
         }
     }
+}
 
-    // Outer Brands
-    .other_brands {
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 980px;
+
+    .social_links_block {
+        width: 100%;
+        padding: 4rem;
         display: flex;
-        align-items: center;
-        gap: 4rem;
         justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 8rem;
+        gap: 3rem;
+
         @include respond-to(mobile-large) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
         }
-        > a {
-            // @include respond-to(mobile-large) {
-            //     width: 45%;
-            // }
-            &:last-child {
-                @include respond-to(mobile-large) {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-            > img {
-                max-width: 300px;
-                @include respond-to(mobile-large) {
-                    max-width: 150px;
-                    width: 100%;
-                }
-            }
-        }
-    }
 
-    .social_links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        width: 980px;
-        .social_links_block {
-            width: 100%;
-            padding: 4rem;
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
+        >p {
+            font-size: 2.2rem;
+
             @include respond-to(mobile-large) {
-                flex-wrap: wrap;
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-            }
-            > p { 
-                font-size: 2.2rem;
-                @include respond-to(mobile-large) {
-                    font-size: 1.8rem;
-                }
-            }
-            .socials {
-                display: flex;
-                gap: 2rem;
+                font-size: 1.8rem;
             }
         }
 
+        .socials {
+            display: flex;
+            gap: 2rem;
+        }
     }
+}
+
+.brand_card:hover .logo_img { 
+    transform: translateX(5px);
+}
+.brand_card .logo_img { 
+    transition: 1s linear;
+}

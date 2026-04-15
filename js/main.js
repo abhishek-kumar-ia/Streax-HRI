@@ -421,9 +421,42 @@ $(function () {
     e.stopPropagation();
   });
 
-  // Escape key to close
+  // Legacy profile modal (leadership — Our Legacy)
+  const $legacyModal = $(".legacy_profile_modal_wrap");
+  const $legacyBackdrop = $(".legacy_profile_backdrop");
+  const $legacyClose = $(".legacy_profile_close");
+
+  function openLegacyProfileModal($card) {
+    if (!$legacyModal.length) return;
+
+    $legacyModal.addClass("is_open").attr("aria-hidden", "false");
+    $("body").css("overflow", "hidden");
+    $legacyClose.trigger("focus");
+  }
+
+  function closeLegacyProfileModal() {
+    if (!$legacyModal.hasClass("is_open")) return;
+    $legacyModal.removeClass("is_open").attr("aria-hidden", "true");
+    $("body").css("overflow", "auto");
+  }
+
+  $(document).on("click", ".legacy_profile_open", function (e) {
+    e.preventDefault();
+    const $card = $(this).closest(".single_block");
+    openLegacyProfileModal($card);
+  });
+
+  $legacyClose.on("click", closeLegacyProfileModal);
+  $legacyBackdrop.on("click", closeLegacyProfileModal);
+
+  // Escape key to close (legacy modal first, then video)
   $(document).on("keydown", function (e) {
-    if (e.key === "Escape") closeVideoPopup();
+    if (e.key !== "Escape") return;
+    if ($legacyModal.hasClass("is_open")) {
+      closeLegacyProfileModal();
+      return;
+    }
+    closeVideoPopup();
   });
 
 

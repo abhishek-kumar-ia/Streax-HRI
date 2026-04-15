@@ -1,0 +1,145 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.legacy_grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    @include respond-to(sm-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr
+    }
+    .single_block {
+        .img_block {
+            margin-bottom: 2rem;
+        }
+        .heading_block {
+            display: grid;
+            grid-template-columns: 1fr 40px;
+            margin-bottom: 1rem;
+            h4 {
+                color: $primary;
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+        }
+
+        .legacy_profile_open {
+            border: none;
+            cursor: pointer;
+            font: inherit;
+            appearance: none;
+        }
+    }
+}
+
+// Legacy profile popup (Our Legacy cards)
+.legacy_profile_modal_wrap {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    &.is_open {
+        display: block;
+    }
+}
+
+.legacy_profile_backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.legacy_profile_modal {
+    position: relative;
+    max-width: 90%;
+    max-height: min(90vh, 900px);
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $white;
+    border-radius: 20px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.legacy_profile_close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 2;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: $gray;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+        color: $primary;
+        background: rgba($primary, 0.06);
+    }
+}
+
+.legacy_profile_inner {
+    display: grid;
+    grid-template-columns: minmax(220px, 340px) 1fr;
+    gap: 8rem;
+    padding: 10rem;
+    align-items: start;
+
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+        padding: 3rem 2.4rem 3rem 2.4rem;
+        padding-top: 5rem;
+    }
+}
+
+.legacy_profile_photo .legacy_profile_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+.legacy_profile_name {
+    color: $primary;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.8rem;
+    @include respond-to(md-desktop) {
+        font-size: 3.6rem;
+    }
+    @include respond-to(mobile-large) {
+        font-size: 3.2rem;
+    }
+    @include respond-to(mobile) {
+        font-size: 2.4rem;
+    }
+}
+
+.legacy_profile_role {
+    margin: 0 0 2rem;
+}
+
+.legacy_profile_bio {
+       p {
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

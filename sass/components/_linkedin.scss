@@ -21,8 +21,10 @@
     }
     .block_right {
         width: 70%;
+        overflow-x: hidden;
         @include respond-to (mobile-large) {
             width: 100%;
+            overflow-x: visible;
         }
         .linkedin_posts {
             @include respond-to (mobile-large) {

@@ -1,4 +1,5 @@
 @use "./_mixins.scss" as *;
+@use "./_vars.scss" as *;
 
 html {
     font-size: 10px;
@@ -94,4 +95,38 @@ a {
 // Cursor
 .cursor-pointer {
     cursor: pointer;
+}
+
+// Image hover effect
+.hover_block {
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.05);
+    }
+    > img {
+        transition: 1s linear;
+    }
+}
+
+// Dotted list
+.dotted_list {
+    li {
+        position: relative;
+        font-size: 1.8rem;
+        padding-left: 1.6rem;
+        margin-bottom: 1rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.6rem;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            background-color: $gray;
+        }
+    }
 }
