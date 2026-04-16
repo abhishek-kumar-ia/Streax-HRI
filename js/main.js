@@ -547,7 +547,17 @@ $(function () {
       thumbs: {
         swiper: thumbnailThumbsSwiper,
       },
-
+      breakpoints: {
+        1024: {
+          slidesPerView: 2.2,
+        },
+        768: {
+          slidesPerView: 1.4,
+        },
+        0: {
+          slidesPerView: 1.4,
+        },
+      },
     });
   }
   // Thumbnail Slider Swiper End

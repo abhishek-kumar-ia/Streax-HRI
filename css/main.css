@@ -2297,13 +2297,26 @@ footer .block_bottom .block_right p {
 
 .thumbnail_slider_thumbs_container {
   max-width: 920px;
+  margin-top: 6rem;
+}
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container {
+    max-width: 720px;
+    margin-top: 3rem;
+  }
 }
 .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs {
   position: relative;
   margin: 0 auto;
 }
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs {
+    padding: 0 2rem;
+  }
+}
 .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper {
   position: relative;
+  align-items: center;
 }
 .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper::before {
   content: "";
@@ -2314,25 +2327,88 @@ footer .block_bottom .block_right p {
   background: #B29142;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: -2;
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  height: 100%;
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail .active_circle {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #005039;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #fff;
+  position: relative;
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail .active_circle::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #B29142;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail .active_circle::before {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail .active_circle {
+    width: 25px;
+    height: 25px;
+  }
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail > img {
+  display: none;
 }
 .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail p {
   display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #fff;
+}
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .thumbnail p {
+    display: none;
+  }
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail {
+  display: flex;
+  align-items: center;
 }
 .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail p {
   display: none;
 }
-.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail .thumbnail_1 {
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail.thumbnail_1 {
   display: flex;
   justify-content: flex-start;
 }
-.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail .thumbnail_2 {
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail.thumbnail_2 {
   display: flex;
   justify-content: center;
 }
-.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail .thumbnail_3 {
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail.thumbnail_3 {
   display: flex;
   justify-content: flex-end;
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail .active_circle {
+  display: none;
+}
+.thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail > img {
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .thumbnail_slider_thumbs_container .thumbnail_slider_thumbs .swiper-wrapper .swiper-slide .thumbnail > img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .awards_achievements_slider_container {

@@ -3,14 +3,20 @@
 
 .thumbnail_slider_thumbs_container {
     max-width: 920px;
-
+    margin-top: 6rem;
+    @include respond-to(mobile-large) {
+        max-width: 720px;
+        margin-top: 3rem;
+    }
     .thumbnail_slider_thumbs {
         position: relative;
         margin: 0 auto;
-
+        @include respond-to(mobile-large) {
+            padding: 0 2rem;
+        }
         .swiper-wrapper {
             position: relative;
-
+            align-items: center;
             &::before {
                 content: "";
                 position: absolute;
@@ -20,34 +26,90 @@
                 background: $secondary;
                 top: 50%;
                 transform: translateY(-50%);
-                z-index: 1;
+                z-index: -2;
             }
+
             .swiper-slide {
                 &.swiper-slide-thumb-active {
+                    height: 100%;
                     .thumbnail {
+                        .active_circle {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid $primary;
+                            border-radius: 50%;
+                            z-index: -1;
+                            background-color: #fff;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 15px;
+                                height: 15px;
+                                background: #B29142;
+                                border-radius: 50%;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                @include respond-to(mobile-large) {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                            @include respond-to(mobile-large) {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                        >img {
+                            display: none;
+                        }
+
                         p {
                             display: block;
+                            padding-left: 2rem;
+                            padding-right: 2rem;
+                            background-color: #fff;
+                            @include respond-to(mobile-large) {
+                                display: none;
+                            }
                         }
                     }
                 }
+
                 .thumbnail {
+                    display: flex;
+                    align-items: center;
                     p {
                         display: none;
                     }
-                    
-                .thumbnail_1 {
-                    display: flex;
-                    justify-content: flex-start;
+
+                    &.thumbnail_1 {
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+
+                    &.thumbnail_2 {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    &.thumbnail_3 {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    .active_circle {
+                        display: none;
+                    }
+                    > img {
+                        cursor: pointer;
+                        @include respond-to(mobile-large) {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
                 }
-                .thumbnail_2 {
-                    display: flex;
-                    justify-content: center;
-                }
-                .thumbnail_3 {
-                    display: flex;
-                    justify-content: flex-end;
-                }
-            }
             }
         }
     }
