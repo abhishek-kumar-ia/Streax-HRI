@@ -8,7 +8,7 @@ header {
     position: relative;
 
     @include respond-to(mobile-large) {
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
 
     .container_header {

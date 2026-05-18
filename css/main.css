@@ -1068,7 +1068,7 @@ header {
 }
 @media (max-width: 992px) {
   header {
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 }
 header .container_header {
@@ -1391,7 +1391,7 @@ footer .block_top .block_left {
   }
 }
 footer .block_top .block_left .logo img {
-  width: 160px;
+  width: 135px;
   height: auto;
 }
 footer .block_top .block_left .social-icons {
