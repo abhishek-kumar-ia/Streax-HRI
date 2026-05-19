@@ -10,9 +10,14 @@
     //     background-position: right bottom;
     //     background-size: 50%;
     // }
+    @include respond-to(sm-desktop) {
+      background-position: center;
+      background-size: cover;
+    }
     @include respond-to(mobile-large) {
             background-position: right bottom;    
             padding-bottom: 200px;
+            background-size: contain;
         }
     .block_left {
         width: 60%;
@@ -27,6 +32,7 @@
   margin-top: 8rem;
   @include respond-to(md-desktop) {
     gap: 4rem;
+    flex-direction: column;
   }
   @include respond-to(mobile-large) {
     flex-direction: column;

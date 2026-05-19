@@ -47,6 +47,9 @@
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
             display: block;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: left;
         }
     }
 

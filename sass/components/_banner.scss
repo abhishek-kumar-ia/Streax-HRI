@@ -8,6 +8,14 @@
     }
     .banner_container {
         height: 100%;
+        .video_slide {
+            video {
+                @include respond-to(mobile-large) {
+                    aspect-ratio: 9 / 16;
+                    object-fit: cover;
+                }
+            }
+        }
         .button_utils {
             bottom: 10%;
             width: 90%;

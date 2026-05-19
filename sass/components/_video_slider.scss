@@ -28,6 +28,9 @@
                 @include respond-to(mobile-large) {
                     top: 30%;
                 }
+                @include respond-to(mobile) {
+                    top: 20%;
+                }
                 img {
                     width: 100%;
                     height: auto;

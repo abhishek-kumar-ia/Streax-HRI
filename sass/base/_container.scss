@@ -32,6 +32,10 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
+  @include respond-to(sm-desktop) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   @include respond-to(mobile-large) {
     padding-top: 8rem;
     padding-bottom: 8rem;
