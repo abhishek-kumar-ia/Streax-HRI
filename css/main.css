@@ -2595,6 +2595,7 @@ footer .block_bottom .block_right p {
   }
 }
 .container_products .tabs_data .tabs_data_item {
+  display: none;
   max-height: 0;
   opacity: 0;
   visibility: hidden;
@@ -2603,11 +2604,26 @@ footer .block_bottom .block_right p {
 }
 .container_products .tabs_data .tabs_data_item.is_active {
   max-height: 500px;
+  display: block;
   opacity: 1;
   visibility: visible;
 }
 .container_products .tabs_data .tabs_data_item .products_slider {
   overflow-x: hidden;
+}
+.container_products .btns_block {
+  display: none;
+}
+@media (max-width: 992px) {
+  .container_products .btns_block {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+  }
+}
+.container_products .btns_block .actions {
+  gap: 20px;
+  display: flex;
 }
 
 .tabs_list_description .tabs_list_description_item {

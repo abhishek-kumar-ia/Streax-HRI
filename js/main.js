@@ -591,6 +591,12 @@ $(function () {
       }
 
       const swiper = new Swiper(sliderEl, {
+        // prevEl: "#prevBtn",
+        // nextEl: "#nextBtn",
+        navigation: {
+          nextEl: "#nextBtn",
+          prevEl: "#prevBtn",
+        },
         slidesPerView: 3.5,
         loop: true,
         spaceBetween: 30,
