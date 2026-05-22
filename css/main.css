@@ -738,6 +738,10 @@ p {
   }
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
 .pt-1 {
   padding-top: 1rem;
 }
@@ -756,6 +760,10 @@ p {
 
 .pt-5 {
   padding-top: 5rem;
+}
+
+.pb-0 {
+  padding-bottom: 0;
 }
 
 .pb-1 {
