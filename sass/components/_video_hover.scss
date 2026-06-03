@@ -85,7 +85,7 @@
             line-height: 0.8;
             transition: color 220ms ease;
             @include respond-to(sm-desktop) {
-                font-size: 7.8rem;
+                font-size: 6rem;
             }
             @include respond-to(mobile-large) {
                 font-size: 6rem;

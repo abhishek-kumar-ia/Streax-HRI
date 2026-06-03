@@ -1140,11 +1140,7 @@ header .container_header .block_center .navigation ul li a.has-child::after {
   border-left: 2px solid #B29142;
   background: 0 0;
   transform: rotate(-135deg);
-}
-@media (max-width: 1536px) {
-  header .container_header .block_center .navigation ul li a.has-child::after {
-    right: -5px;
-  }
+  transition: 0.3s;
 }
 header .container_header .block_center .navigation ul li .dropdown-menu {
   top: 89px;
@@ -1171,6 +1167,14 @@ header .container_header .block_center .navigation ul li .dropdown-menu > ul > l
   padding: 10px 20px;
   border-radius: 5px;
   transition: all 0.3s ease;
+}
+header .container_header .block_center .navigation ul li:hover > a.has-child::after {
+  transform: rotate(45deg) translate(2px, 3px);
+}
+@media (max-width: 1281px) {
+  header .container_header .block_center .navigation ul li:hover > a.has-child::after {
+    transform: rotate(45deg);
+  }
 }
 header .container_header .block_center .navigation ul li:hover .dropdown-menu {
   height: auto;
@@ -2102,7 +2106,7 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 1281px) {
   .card_item .card_content > h2 {
-    font-size: 7.8rem;
+    font-size: 6rem;
   }
 }
 @media (max-width: 992px) {
@@ -2509,6 +2513,47 @@ footer .block_bottom .block_right p {
     gap: 2rem;
     align-items: flex-start;
   }
+}
+
+.awards_container .tab-nav {
+  display: flex;
+  gap: 12rem;
+  margin-bottom: 9rem;
+}
+.awards_container .tab-nav .tab-btn {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #C9C9C9;
+  position: relative;
+  padding: 0;
+  font-family: "Open Sans";
+}
+.awards_container .tab-nav .tab-btn.active, .awards_container .tab-nav .tab-btn[aria-selected=true] {
+  color: #005039;
+}
+.awards_container .tab-panel {
+  display: none;
+}
+.awards_container .tab-panel.active {
+  display: block;
+}
+.awards_container .award-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+.awards_container .award-card img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+.awards_container .award-card p {
+  font-weight: 600;
+  font-size: 2.2rem;
 }
 
 .container_products {

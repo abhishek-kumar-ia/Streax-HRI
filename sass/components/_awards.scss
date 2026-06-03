@@ -33,3 +33,57 @@
     }
 }
 }
+
+.awards_container {
+
+  .tab-nav {
+    display: flex;
+    gap: 12rem;
+    margin-bottom: 9rem;
+  
+    .tab-btn {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      font-size: 4.4rem;
+      font-weight: 700;
+      color: #C9C9C9;
+      position: relative;
+      padding: 0;
+      font-family: 'Open Sans';
+      &.active,
+      &[aria-selected="true"] {
+        color: #005039;
+
+      }
+    }
+  }
+  
+  .tab-panel {
+    display: none;
+  
+    &.active {
+      display: block;
+    }
+  }
+  .award-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+  
+  .award-card {
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+  
+    p {
+        font-weight: 600;
+      font-size: 2.2rem;
+    }
+  }
+}
+  

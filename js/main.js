@@ -33,57 +33,57 @@ $(function () {
   });
 
   // Accessibility Button Start
-  const FONT_ROOT_BASE_PX = 10;
-  const FONT_ROOT_SIZES_PX = [
-    FONT_ROOT_BASE_PX - 1,
-    FONT_ROOT_BASE_PX,
-    FONT_ROOT_BASE_PX + 1,
-  ];
-  const FONT_ROOT_STORAGE_KEY = "streax-root-font-px";
+  // const FONT_ROOT_BASE_PX = 10;
+  // const FONT_ROOT_SIZES_PX = [
+  //   FONT_ROOT_BASE_PX - 1,
+  //   FONT_ROOT_BASE_PX,
+  //   FONT_ROOT_BASE_PX + 1,
+  // ];
+  // const FONT_ROOT_STORAGE_KEY = "streax-root-font-px";
 
-  function applyRootFontSize(px) {
-    document.documentElement.style.fontSize = px + "px";
-  }
+  // function applyRootFontSize(px) {
+  //   document.documentElement.style.fontSize = px + "px";
+  // }
 
-  function setActiveFontButton(index) {
-    $(".fonts_params .font_btn").each(function (i) {
-      const on = i === index;
-      $(this).toggleClass("is_active", on).attr("aria-pressed", on ? "true" : "false");
-    });
-  }
+  // function setActiveFontButton(index) {
+  //   $(".fonts_params .font_btn").each(function (i) {
+  //     const on = i === index;
+  //     $(this).toggleClass("is_active", on).attr("aria-pressed", on ? "true" : "false");
+  //   });
+  // }
 
-  $("#accessiblity_btn").on("click", function () {
-    $(".accessiblity_popup").toggleClass("is_open");
-  });
+  // $("#accessiblity_btn").on("click", function () {
+  //   $(".accessiblity_popup").toggleClass("is_open");
+  // });
 
-  $(".accessiblity_popup").on("click", function (e) {
-    e.stopPropagation();
-  });
+  // $(".accessiblity_popup").on("click", function (e) {
+  //   e.stopPropagation();
+  // });
 
-  $(".fonts_params .font_btn").on("click", function () {
-    const idx = $(this).index();
-    const px = FONT_ROOT_SIZES_PX[idx];
-    if (px === undefined) return;
-    applyRootFontSize(px);
-    setActiveFontButton(idx);
-    try {
-      localStorage.setItem(FONT_ROOT_STORAGE_KEY, String(px));
-    } catch (_) { }
-  });
+  // $(".fonts_params .font_btn").on("click", function () {
+  //   const idx = $(this).index();
+  //   const px = FONT_ROOT_SIZES_PX[idx];
+  //   if (px === undefined) return;
+  //   applyRootFontSize(px);
+  //   setActiveFontButton(idx);
+  //   try {
+  //     localStorage.setItem(FONT_ROOT_STORAGE_KEY, String(px));
+  //   } catch (_) { }
+  // });
 
-  (function initRootFontFromStorage() {
-    let px = FONT_ROOT_BASE_PX;
-    try {
-      const saved = localStorage.getItem(FONT_ROOT_STORAGE_KEY);
-      if (saved) {
-        const n = parseInt(saved, 10);
-        if (FONT_ROOT_SIZES_PX.includes(n)) px = n;
-      }
-    } catch (_) { }
-    applyRootFontSize(px);
-    const idx = FONT_ROOT_SIZES_PX.indexOf(px);
-    setActiveFontButton(idx >= 0 ? idx : 1);
-  })();
+  // (function initRootFontFromStorage() {
+  //   let px = FONT_ROOT_BASE_PX;
+  //   try {
+  //     const saved = localStorage.getItem(FONT_ROOT_STORAGE_KEY);
+  //     if (saved) {
+  //       const n = parseInt(saved, 10);
+  //       if (FONT_ROOT_SIZES_PX.includes(n)) px = n;
+  //     }
+  //   } catch (_) { }
+  //   applyRootFontSize(px);
+  //   const idx = FONT_ROOT_SIZES_PX.indexOf(px);
+  //   setActiveFontButton(idx >= 0 ? idx : 1);
+  // })();
   // Accessibility Button End
 
   //   Banner
@@ -460,6 +460,7 @@ $(function () {
   });
 
 
+
   // Video Popup dynamic code emd
 
 
@@ -660,6 +661,55 @@ $(function () {
     });
   });
   // Products tabs + slider End
+
+  // Awards Page Tab clicks Functionality
+  function activateTab($tab) {
+
+    const targetPanel = $tab.data("tab-target");
+
+    // Reset tabs
+    $('[role="tab"]')
+        .removeClass('active')
+        .attr('aria-selected', 'false');
+
+    // Reset panels
+    $('[role="tabpanel"]')
+        .removeClass('active')
+        .attr('hidden', true);
+
+    // Activate current tab
+    $tab
+        .addClass('active')
+        .attr('aria-selected', 'true');
+
+    // Activate panel
+    $(targetPanel)
+        .addClass('active')
+        .removeAttr('hidden');
+}
+
+// Click
+$('[role="tab"]').on('click', function () {
+    activateTab($(this));
+});
+
+// Keyboard support
+$('[role="tab"]').on('keydown', function (e) {
+
+    const $tabs = $('[role="tab"]');
+    let index = $tabs.index(this);
+
+    if (e.key === 'ArrowRight') {
+        index = (index + 1) % $tabs.length;
+        $tabs.eq(index).focus().click();
+    }
+
+    if (e.key === 'ArrowLeft') {
+        index = (index - 1 + $tabs.length) % $tabs.length;
+        $tabs.eq(index).focus().click();
+    }
+});
+
 });
 // jQuery End
 
