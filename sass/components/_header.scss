@@ -57,17 +57,15 @@ header {
                 &::after {
                   content: "";
                   position: absolute;
-                  right: 0px;
-                  top: 42%;
-                  transform: translateY(-50%);
+                  right: 0;
+                  top: 50%;
                   width: 7px;
-                  left: auto;
                   height: 7px;
                   border-top: 2px solid $secondary;
                   border-left: 2px solid $secondary;
-                  background: 0 0;
-                  transform: rotate(-135deg);
-                  transition: 0.3s;
+                  transform: translateY(-50%) rotate(-135deg);
+                  transition: transform 0.3s ease;
+
                 }
               }
             }
@@ -122,11 +120,8 @@ header {
 
             &:hover {
               > a.has-child::after {
-                transform: rotate(45deg) translate(2px, 3px);
+                transform: translateY(-50%) rotate(45deg);
 
-                @include respond-to(sm-desktop) {
-                  transform: rotate(45deg);
-                }
               }
 
               .dropdown-menu {

@@ -1147,17 +1147,14 @@ header .container_header .block_center .navigation ul li a.has-child {
 header .container_header .block_center .navigation ul li a.has-child::after {
   content: "";
   position: absolute;
-  right: 0px;
-  top: 42%;
-  transform: translateY(-50%);
+  right: 0;
+  top: 50%;
   width: 7px;
-  left: auto;
   height: 7px;
   border-top: 2px solid #B29142;
   border-left: 2px solid #B29142;
-  background: 0 0;
-  transform: rotate(-135deg);
-  transition: 0.3s;
+  transform: translateY(-50%) rotate(-135deg);
+  transition: transform 0.3s ease;
 }
 header .container_header .block_center .navigation ul li .dropdown-menu {
   top: 89px;
@@ -1204,12 +1201,7 @@ header .container_header .block_center .navigation ul li .dropdown-menu > ul > l
   transition: all 0.3s ease;
 }
 header .container_header .block_center .navigation ul li:hover > a.has-child::after {
-  transform: rotate(45deg) translate(2px, 3px);
-}
-@media (max-width: 1281px) {
-  header .container_header .block_center .navigation ul li:hover > a.has-child::after {
-    transform: rotate(45deg);
-  }
+  transform: translateY(-50%) rotate(45deg);
 }
 header .container_header .block_center .navigation ul li:hover .dropdown-menu {
   height: auto;
