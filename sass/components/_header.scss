@@ -312,7 +312,7 @@ header {
 
   .mobile_menu {
     display: none;
-    background-color: $primary;
+    background-color: rgba(0, 0, 0, 0.8784313725);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     position: absolute;
     left: 0;
@@ -322,7 +322,7 @@ header {
 
     @include respond-to(mobile-large) {
       padding: 3rem 2rem;
-      height: calc(100dvh - 83px);
+      height: calc(100dvh - 81px);
     }
 
     nav {

@@ -1384,7 +1384,7 @@ header .container_header .hamburger_icon.is_open span:nth-child(3) {
 }
 header .mobile_menu {
   display: none;
-  background-color: #005039;
+  background-color: rgba(0, 0, 0, 0.8784313725);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   left: 0;
@@ -1395,7 +1395,7 @@ header .mobile_menu {
 @media (max-width: 992px) {
   header .mobile_menu {
     padding: 3rem 2rem;
-    height: calc(100dvh - 83px);
+    height: calc(100dvh - 81px);
   }
 }
 header .mobile_menu nav {
