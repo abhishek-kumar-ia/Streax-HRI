@@ -48,6 +48,10 @@
             bottom: 8rem;
             left: 10%;
             background-color: #00000075;
+            @include respond-to(xxl-desktop-up) {
+                max-width: 80%;
+            }
+
             @include respond-to(mobile-large) {
                 left: 0%;
                 bottom: 0;

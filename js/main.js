@@ -12,6 +12,25 @@ $(function () {
     }
   });
 
+  // Search Btn Functionality Start
+  $("#search_btn").on("click", function (e) {
+        e.stopPropagation();
+        $(".search_menu").toggleClass("is_open");
+    });
+
+    $(document).on("click", function () {
+        $(".search_menu").removeClass("is_open");
+    });
+
+    $(".search_menu").on("click", function (e) {
+        e.stopPropagation();
+    });
+        // Hide menu on scroll
+    $(window).on("scroll", function () {
+        $(".search_menu").removeClass("is_open");
+    });
+  // Search Btn Functionality End
+
   // Mobile dropdown menu toggle
   $(".mobile_menu .mobile_dropdown_toggle").on("click", function (e) {
     e.preventDefault();
@@ -177,64 +196,6 @@ $(function () {
   $(window).on('resize', updateAwardsProgress);
   updateAwardsProgress();
   // Awards Swiper End
-
-  // Stakeholder Swiper Start
-  const $stakeholderSlider = $('.stakeholder_slider');
-  const $stakeholderSection = $stakeholderSlider.closest('section');
-  const $stakeholderTrack = $stakeholderSection.find('.progress-track');
-  const $stakeholderIndicator = $stakeholderSection.find('.progress-indicator');
-  const $stakeholderPrev = $stakeholderSection.find('.stakeholder_slider_prev');
-  const $stakeholderNext = $stakeholderSection.find('.stakeholder_slider_next');
-
-  const stakeholderSwiper = new Swiper('.stakeholder_slider', {
-    // loop: true,
-    slidesPerView: 4.5,
-    // slidesPerGroup: 1,
-    spaceBetween: 40,
-    navigation: {
-      nextEl: $stakeholderNext[0],
-      prevEl: $stakeholderPrev[0],
-    },
-    breakpoints: {
-      1025: {
-        slidesPerView: 4.5,
-      },
-      768: {
-        slidesPerView: 2.4,
-      },
-      0: {
-        slidesPerView: 1.4,
-      },
-    },
-  });
-
-
-  function updateStakeholderProgress() {
-    const totalSteps = stakeholderSwiper.snapGrid.length;
-    if (!totalSteps || !$stakeholderTrack.length) return;
-
-    const trackWidth = $stakeholderTrack.width();
-    const stepWidth = trackWidth / totalSteps;
-    // snapIndex aligns with snapGrid; with loop, activeIndex does not
-    const stepIndex =
-      typeof stakeholderSwiper.snapIndex === 'number'
-        ? stakeholderSwiper.snapIndex
-        : stakeholderSwiper.activeIndex;
-
-    $stakeholderIndicator.width((stepIndex + 1) * stepWidth);
-    $stakeholderPrev.prop('disabled', stakeholderSwiper.isBeginning);
-    $stakeholderNext.prop('disabled', stakeholderSwiper.isEnd);
-  }
-
-  stakeholderSwiper.on('slideChange', updateStakeholderProgress);
-  stakeholderSwiper.on('resize', updateStakeholderProgress);
-  stakeholderSwiper.on('breakpoint', updateStakeholderProgress);
-  $(window).on('resize', updateStakeholderProgress);
-  updateStakeholderProgress();
-  // Stakeholder Swiper End
-
-
-
 
   // Video Popup dynamic code start
   // Video Popup (opens on .play_button[data-src])
@@ -710,6 +671,45 @@ $('[role="tab"]').on('keydown', function (e) {
     }
 });
 
+
+// Awards Popup Start
+// Awards modal
+const $awardsModal = $(".awards_profile_modal_wrap");
+const $awardsBackdrop = $(".awards_profile_backdrop");
+const $awardsClose = $(".awards_profile_close");
+
+function openAwardsModal() {
+  if (!$awardsModal.length) return;
+
+  $awardsModal.addClass("is_open").attr("aria-hidden", "false");
+  $("body").css("overflow", "hidden");
+  $awardsClose.trigger("focus");
+}
+
+function closeAwardsModal() {
+  if (!$awardsModal.hasClass("is_open")) return;
+
+  $awardsModal.removeClass("is_open").attr("aria-hidden", "true");
+  $("body").css("overflow", "auto");
+}
+
+// Open modal on award card click
+$(document).on("click", ".award-card", function (e) {
+  e.preventDefault();
+  openAwardsModal();
+});
+
+// Close modal
+$awardsClose.on("click", closeAwardsModal);
+$awardsBackdrop.on("click", closeAwardsModal);
+
+// Escape key support
+$(document).on("keydown", function (e) {
+  if (e.key === "Escape" && $awardsModal.hasClass("is_open")) {
+    closeAwardsModal();
+  }
+});
+// Awards Popup End
 });
 // jQuery End
 

@@ -3,7 +3,6 @@
 
 .video_hover_container {
     display: flex;
-
     gap: 4rem;
     @include respond-to(mobile-large) {
         flex-direction: column;

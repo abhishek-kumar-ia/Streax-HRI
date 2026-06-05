@@ -76,6 +76,9 @@
     bottom: 12rem;
     left: 10%;
     max-width: 50%;
+    @include respond-to(xxl-desktop-up) {
+        left: calc((100vw - 1524px) / 2);
+    }
     @include respond-to(mobile-large) {
       left: 5%;
       bottom: 6rem;

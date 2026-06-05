@@ -52,6 +52,9 @@ footer {
                     grid-template-columns: 1fr 1fr;
                     gap: 6rem;
                 }
+                @include respond-to(mobile){
+                    gap: 3rem;
+                }
                 ul {
                     li {
                         &.title {

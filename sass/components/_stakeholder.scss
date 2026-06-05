@@ -2,31 +2,134 @@
 @use "../base/_mixins.scss" as *;
 
 .stakeholder_section {
-    .stakeholder_slider {
-        // overflow: visible;
-        box-sizing: content-box;
-        .swiper-wrapper {
-            .card {
-                background-color: #fff;
-                padding: 2rem;
-                border-radius: 2rem;
-                > img {
-                    max-width: 300px;
-                    height: auto;
-                }
-            }
-        }
+  .stakeholder_block {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1.1fr 1.2fr;
+    @include respond-to(sm-desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    @include respond-to(break-desktop) {
+      gap: 2rem;
+    }
+    @include respond-to(mobile-horizontal) {
+        grid-template-columns: 1fr;
+    }
+    .left {
+      background-color: #ffffff;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      .tag {
+        background-color: #f6f0e7;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        color: #000000;
+        border-radius: 2rem;
+        margin-top: 3rem;
+        
+          @include respond-to(mobile-horizontal) {
+            font-size: 1.6rem;
+            margin-top: 1.6rem;
+          }
+      }
+    }
+    .center {
+      > ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        > li {
+          margin-bottom: 4rem;
+          @include respond-to(mobile-horizontal) {
+            margin-bottom: 1.6rem;
+        }
+          &:last-child {
+            margin-bottom: 0rem;
+          }
+          .descp {
+            font-size: 2.2rem;
+            color: #4c4c4c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            @include respond-to(md-desktop) {
+              font-size: 2rem;
+            }
+
+            @include respond-to(break-desktop) {
+              font-size: 1.8rem;
+            }
+          }
+          .value {
+            font-size: 4rem;
+            color: $primary;
+            line-height: 1;
+            @include respond-to(md-desktop) {
+              font-size: 3.2rem;
+            }
+                        @include respond-to(break-desktop) {
+              font-size: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      padding: 4rem;
+      background-color: $primary;
+      border-radius: 2rem;
+      text-align: center;
+
+      @include respond-to(md-desktop) {
+        padding: 2rem;
+      }
+      .block {
+        @include respond-to(sm-desktop) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 2rem;
+          height: 100%;
+        }
+        .testimonial {
+          font-size: 3rem;
+          color: #fff;
+          line-height: 44px;
+          font-style: italic;
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+          @include respond-to(md-desktop) {
+            font-size: 2.4rem;
+            line-height: 1.4;
+          }
+          @include respond-to(sm-desktop) {
+            margin-top: 0;
+            font-size: 2rem;
+            margin-bottom: 0;
+          }
+        }
+        .name {
+          color: #f6f0e7;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
 }
 
 .awards_container {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  @include respond-to(mobile-large) {
+    overflow-x: visible;
+  }
+  .awards_slider {
     @include respond-to(mobile-large) {
-        overflow-x: visible;
+      box-sizing: content-box;
     }
-    .awards_slider {
-        @include respond-to(mobile-large) {
-            box-sizing: content-box;
-        }
-    }
+  }
 }
