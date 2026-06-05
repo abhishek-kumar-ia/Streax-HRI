@@ -5,6 +5,10 @@
 .brand_card {
     background-color: $white;
     border-radius: 2rem;
+    img {
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
     .brand_details {
         padding: 2rem;
         >h3 {

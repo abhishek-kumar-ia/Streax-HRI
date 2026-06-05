@@ -44,7 +44,7 @@
                     <li><a href="#" class="has-child">About Us</a>
                       <div class="sub-menu dropdown-menu">
                         <ul>
-                                                    <li class="first-child"><a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg" alt=""></span></a></li>
+                          <li class="first-child"><a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg" alt=""></span></a></li>
                           <li><a href="#" title="" target="" class=" ">Our Journey</a></li>
                           <li><a href="#" title="" target="" class=" ">Global Presence</a></li>
                           <li><a href="#" title="" target="" class=" ">Innovations</a></li>
@@ -737,7 +737,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
           <!-- fourtwocolumslider -->
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/Revolutionary-Leader.png"
@@ -753,7 +753,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/promising_leader.png"
@@ -768,7 +768,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
               </p>
               </div>
             </div>            <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/national_award.png"
@@ -783,7 +783,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
               </p>
               </div>
             </div>            <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/special_award.png"
@@ -798,7 +798,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
               </p>
               </div>
             </div>            <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/awards_dummy.png"
@@ -811,7 +811,7 @@ long-term vision, creating enduring value for all stakeholders.</p>
               </p>
               </div>
             </div>            <div class="swiper-slide">
-              <div class="card">
+              <div class="card awardsHome_profile_open">
                 <div class="hover_block overflow-hidden br-20 mb-2">
               <img
                 src="./assets/awards_dummy.png"
@@ -1014,8 +1014,55 @@ long-term vision, creating enduring value for all stakeholders.</p>
   </div>
 </div>
 
+
+    <!-- awardsHome Popup modal start -->
+    <div
+      class="awardsHome_profile_modal_wrap"
+      aria-hidden="true"
+      id="awardsHome_profile_modal_root"
+    >
+      <div class="awardsHome_profile_backdrop" tabindex="-1"></div>
+      <div
+        class="awardsHome_profile_modal"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button
+          type="button"
+          class="awardsHome_profile_close"
+          aria-label="Close profile"
+        >
+          &times;
+        </button>
+        <div class="awardsHome_profile_inner">
+          <div class="awardsHome_profile_photo">
+            <img
+              src="./assets/awards_page_dummy.png"
+              alt=""
+              class="awardsHome_profile_img img-fluid br-20"
+              width="390"
+              height="390"
+            />
+          </div>
+         <div class="awards_profile_body">
+            <h3 id="awards_profile_name" class="awards_profile_name mb-3">
+              India's Best Workplaces in Manufacturing 2025
+            </h3>
+            <div class="awards_profile_bio">
+              <p class="mb-4">
+For yet another consecutive year, HRIPL has been named among India's Best Workplaces in Manufacturing 2025 by Great Place to Work® — reaffirming our culture of care, collaboration, and excellence. 
+              </p>
+              <p>Source: Great Place to Work® India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Awards Popup modal end -->
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/homepage.js"></script>
+  <script src="./js/misc.js"></script>
 </html>
