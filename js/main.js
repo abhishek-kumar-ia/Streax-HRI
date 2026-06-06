@@ -492,42 +492,9 @@ $(function () {
   // })();
   // Video Hover Cards (play video only on active card) end
 
-  // Thumbnail Slider Swiper Start (main + thumbs bound via Swiper Thumbs module)
-  const $thumbMain = document.querySelector(".thumbnail_slider");
-  const $thumbNav = document.querySelector(".thumbnail_slider_thumbs");
-  if ($thumbMain && $thumbNav) {
-    const thumbnailThumbsSwiper = new Swiper(".thumbnail_slider_thumbs", {
-      spaceBetween: 16,
-      slidesPerView: 3,
-      watchSlidesProgress: true,
-      slideToClickedSlide: true,
-    });
-
-    const thumbnailSliderSwiper = new Swiper(".thumbnail_slider", {
-      slidesPerView: 2.2,
-      spaceBetween: 30,
-      thumbs: {
-        swiper: thumbnailThumbsSwiper,
-      },
-      breakpoints: {
-        1024: {
-          slidesPerView: 2.2,
-        },
-        768: {
-          slidesPerView: 1.4,
-        },
-        0: {
-          slidesPerView: 1.4,
-        },
-      },
-    });
-  }
-  // Thumbnail Slider Swiper End
-
 
   // All Sliders Function Start
   function allSliders() {
-    awardsAchievementsSwiper.init();
     teamsSwiper.init();
     innovationCardsSwiper.init();
     videoSliderSwiper.init();
@@ -535,93 +502,6 @@ $(function () {
   }
   allSliders();
   // All Sliders Function End
-
-  // Products tabs + slider Start
-  $(".container_products").each(function () {
-    const $container = $(this);
-    const $tabItems = $container.find(".tabs_list_item");
-    const $tabDataItems = $container.find(".tabs_data_item");
-    const $mobileDescriptionItems = $container.find(".tabs_list_description_item");
-    const productSwipers = new Map();
-
-    function initOrUpdateProductsSlider(sliderEl) {
-      if (!sliderEl) return;
-      const existingSwiper = productSwipers.get(sliderEl);
-      if (existingSwiper && !existingSwiper.destroyed) {
-        existingSwiper.update();
-        return;
-      }
-
-      const swiper = new Swiper(sliderEl, {
-        // prevEl: "#prevBtn",
-        // nextEl: "#nextBtn",
-        navigation: {
-          nextEl: "#nextBtn",
-          prevEl: "#prevBtn",
-        },
-        slidesPerView: 3.5,
-        loop: true,
-        spaceBetween: 30,
-        breakpoints: {
-          1024: {
-            slidesPerView: 3.5,
-          },
-          768: {
-            slidesPerView: 2.4,
-          },
-          0: {
-            slidesPerView: 1.4,
-          },
-        },
-      });
-
-      productSwipers.set(sliderEl, swiper);
-    }
-
-    function activateProductsTab(tabKey) {
-      if (!tabKey) return;
-
-      $tabItems.each(function () {
-        const isActive = $(this).data("tab") === tabKey;
-        $(this).toggleClass("is_active", isActive).attr("aria-selected", isActive ? "true" : "false");
-      });
-
-      let $activePanel = $();
-      $tabDataItems.each(function () {
-        const isActive = $(this).data("tab") === tabKey;
-        $(this).toggleClass("is_active", isActive).attr("aria-hidden", isActive ? "false" : "true");
-        if (isActive) $activePanel = $(this);
-      });
-
-      if ($mobileDescriptionItems.length) {
-        $mobileDescriptionItems.each(function () {
-          const isActive = $(this).data("tab") === tabKey;
-          $(this).toggleClass("is_active", isActive).attr("aria-hidden", isActive ? "false" : "true");
-        });
-      }
-
-      if ($activePanel.length) {
-        $activePanel.find(".products_slider").each(function () {
-          initOrUpdateProductsSlider(this);
-        });
-      }
-    }
-
-    $tabItems.on("click", function () {
-      const tabKey = $(this).data("tab");
-      activateProductsTab(tabKey);
-    });
-
-    const initialTab = $tabItems.filter(".is_active").first().data("tab") || $tabItems.first().data("tab");
-    activateProductsTab(initialTab);
-
-    $(window).on("resize", function () {
-      $container.find(".tabs_data_item.is_active .products_slider").each(function () {
-        initOrUpdateProductsSlider(this);
-      });
-    });
-  });
-  // Products tabs + slider End
 
   // Awards Page Tab clicks Functionality
   function activateTab($tab) {
@@ -718,27 +598,7 @@ $(document).on("keydown", function (e) {
 
 
 // Swipers Outside jQuery Start
-// Awards Achievements Swiper Start
-const awardsAchievementsSwiper = new Swiper('.awards_achievements_slider', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  direction: 'vertical',
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-      direction: 'vertical',
-    },
-    768: {
-      direction: 'horizontal',
-      slidesPerView: 2.4,
-    },
-    0: {
-      direction: 'horizontal',
-      slidesPerView: 1.4,
-    },
-  },
-});
-// Awards Achievements Swiper End
+
 
 // Mobile Slider for Teams Start
 const teamsSwiper = new Swiper('.swiper_teams', {

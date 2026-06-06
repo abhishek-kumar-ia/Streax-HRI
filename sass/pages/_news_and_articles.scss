@@ -10,15 +10,18 @@
         grid-template-columns: 3fr 1fr 1fr 1fr;
         gap: 2rem;
         margin-bottom: 2rem;
-        @include respond-to(break-desktop){
+        @include respond-to(break-desktop) {
           grid-template-columns: repeat(3, 1fr);
+        }
+        @include respond-to(mobile-horizontal) {
+          grid-template-columns: 1fr;
         }
         .block {
           &:first-child {
-            @include respond-to(break-desktop){
-  grid-column: 1 / -1; /* span all columns */
+            @include respond-to(break-desktop) {
+              grid-column: 1 / -1; /* span all columns */
             }
-}
+          }
           .search_element {
             position: relative;
             &::after {
@@ -36,15 +39,15 @@
               border-radius: 100px;
               border: 1px solid #c4c4c4;
               font-size: 1.8rem;
-                  @include respond-to(md-desktop) {
-      font-size: 1.6rem;
-    }
+              @include respond-to(md-desktop) {
+                font-size: 1.6rem;
+              }
               &::placeholder {
                 font-size: 1.8rem;
                 font-weight: 500;
-                    @include respond-to(md-desktop) {
-      font-size: 1.6rem;
-    }
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                }
               }
             }
           }
@@ -54,47 +57,60 @@
     .list_items {
       margin-bottom: 4rem;
       .item {
-        background-color: #F6F6F6;
+        background-color: #f6f6f6;
         border-radius: 2rem;
         padding: 3rem;
         margin-bottom: 2rem;
-            @include respond-to(md-desktop) {
-      padding: 2rem;
-    }
+        @include respond-to(md-desktop) {
+          padding: 2rem;
+        }
         .year {
           font-size: 1.8rem;
           margin-bottom: 3rem;
-              @include respond-to(md-desktop) {
-      font-size: 1.6rem;
-    }
+          @include respond-to(md-desktop) {
+            font-size: 1.6rem;
+          }
         }
         .item_descp {
           font-size: 2.4rem;
           margin-bottom: 2rem;
-              @include respond-to(md-desktop) {
-      font-size: 2rem;
-    }
+          @include respond-to(md-desktop) {
+            font-size: 2rem;
+          }
+          @include respond-to(mobile-horizontal) {
+            font-size: 1.8rem;
+          }
         }
         .last_block {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
+          @include respond-to(mobile-horizontal) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
           .headings {
             .sub_heading {
               font-size: 2.4rem;
               font-weight: 600;
               margin-bottom: 1rem;
-               @include respond-to(md-desktop) {
-      font-size: 2rem;
-    }
+              @include respond-to(md-desktop) {
+                font-size: 2rem;
+              }
+              @include respond-to(mobile-horizontal) {
+                font-size: 1.8rem;
+              }
             }
             .heading {
-                            font-size: 2.4rem;
+              font-size: 2.4rem;
               font-weight: 600;
               margin-bottom: 0rem;
-               @include respond-to(md-desktop) {
-      font-size: 2rem;
-    }
+              @include respond-to(md-desktop) {
+                font-size: 2rem;
+              }
+              @include respond-to(mobile-horizontal) {
+                font-size: 1.8rem;
+              }
             }
           }
         }

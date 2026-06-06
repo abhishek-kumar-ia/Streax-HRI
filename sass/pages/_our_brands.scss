@@ -1,0 +1,64 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.our_brands_section {
+  padding: 10rem 0;
+  @include respond-to(break-desktop) {
+    padding: 5rem 0;
+  }
+  .brand_card {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    margin-bottom: 10rem;
+    @include respond-to(break-desktop) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.reverse {
+      grid-template-columns: 1fr 3fr;
+      @include respond-to(break-desktop) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .img_block {
+        order: 1;
+      }
+      .text_block {
+        order: 2;
+      }
+    }
+    .text_block {
+      .logo_block {
+        @include respond-to(md-desktop) {
+          margin-bottom: 2rem;
+        }
+      }
+      .title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        @include respond-to(md-desktop) {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .descp {
+        font-size: 1.8rem;
+        font-weight: 400;
+        @include respond-to(md-desktop) {
+          font-size: 1.6rem;
+          margin-bottom: 2rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
