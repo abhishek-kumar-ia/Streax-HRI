@@ -3601,10 +3601,24 @@ footer .block_bottom .block_right p {
   margin-bottom: 0;
 }
 
+.news_and_articles .articles_container .search_items {
+  margin-bottom: 4rem;
+}
 .news_and_articles .articles_container .search_items .search_block {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1024px) {
+  .news_and_articles .articles_container .search_items .search_block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .news_and_articles .articles_container .search_items .search_block .block:first-child {
+    grid-column: 1/-1; /* span all columns */
+  }
 }
 .news_and_articles .articles_container .search_items .search_block .block .search_element {
   position: relative;
@@ -3614,15 +3628,92 @@ footer .block_bottom .block_right p {
   width: 20px;
   height: 20px;
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
 }
 .news_and_articles .articles_container .search_items .search_block .block .search_element input {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 3rem;
   border-radius: 100px;
   border: 1px solid #c4c4c4;
+  font-size: 1.8rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .search_items .search_block .block .search_element input {
+    font-size: 1.6rem;
+  }
+}
+.news_and_articles .articles_container .search_items .search_block .block .search_element input::placeholder {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .search_items .search_block .block .search_element input::placeholder {
+    font-size: 1.6rem;
+  }
+}
+.news_and_articles .articles_container .list_items {
+  margin-bottom: 4rem;
+}
+.news_and_articles .articles_container .list_items .item {
+  background-color: #F6F6F6;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .list_items .item {
+    padding: 2rem;
+  }
+}
+.news_and_articles .articles_container .list_items .item .year {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .list_items .item .year {
+    font-size: 1.6rem;
+  }
+}
+.news_and_articles .articles_container .list_items .item .item_descp {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .list_items .item .item_descp {
+    font-size: 2rem;
+  }
+}
+.news_and_articles .articles_container .list_items .item .last_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.news_and_articles .articles_container .list_items .item .last_block .headings .sub_heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .list_items .item .last_block .headings .sub_heading {
+    font-size: 2rem;
+  }
+}
+.news_and_articles .articles_container .list_items .item .last_block .headings .heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
+@media (max-width: 1536px) {
+  .news_and_articles .articles_container .list_items .item .last_block .headings .heading {
+    font-size: 2rem;
+  }
+}
+.news_and_articles .articles_container .load_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-select {
@@ -3636,15 +3727,25 @@ footer .block_bottom .block_right p {
   border-radius: 100px;
   background: #fff;
   cursor: pointer;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 1536px) {
+  .custom-select__trigger {
+    font-size: 1.6rem;
+  }
+}
+.custom-select__trigger > .arrow {
+  color: #005039;
 }
 .custom-select__options {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
   width: 100%;
+  font-size: 1.6rem;
   background: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 12px;
@@ -3653,6 +3754,11 @@ footer .block_bottom .block_right p {
   margin: 0;
   display: none;
   z-index: 10;
+}
+@media (max-width: 1536px) {
+  .custom-select__options {
+    font-size: 1.6rem;
+  }
 }
 .custom-select__options li {
   padding: 10px 16px;
