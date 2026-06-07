@@ -1396,6 +1396,7 @@ header .mobile_menu {
 }
 header .mobile_menu nav {
   height: 100%;
+  overflow-y: scroll;
 }
 header .mobile_menu ul {
   display: flex;
