@@ -123,7 +123,9 @@
     align-items: center;
     justify-content: center;
     transition: color 0.2s ease, background 0.2s ease;
-
+    &:focus-visible {
+      outline: none;
+    }
     &:hover {
         color: $primary;
         background: rgba($primary, 0.06);
