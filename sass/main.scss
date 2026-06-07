@@ -25,13 +25,14 @@
 @use './components/_video_hover.scss' as *;
 @use './components/_inner_spotlight.scss' as *;
 @use './components/_features.scss' as *;
-@use './components/_awards.scss' as *;
 @use './components/_leadership.scss' as *;
 @use './components/_misc.scss' as *;
 @use './components/_awards_popup_homepage.scss' as *;
 
 // Pages
+@use './pages/awards' as *;
 @use './pages/_news_and_articles.scss' as *;
 @use './pages/_our_brands.scss' as *;
 @use './pages/_sub_brands.scss' as *;
 @use './pages/about_us' as *;
+@use './pages/our_journey' as *;
