@@ -1,0 +1,73 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+// Our Factories Start
+.factories {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(4 , 1fr);
+  @include respond-to(md-desktop){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .block {
+    border-radius: 2rem;
+    border: 2px solid #EEE2C8;
+    background-color: #F6F0E7;
+    padding: 4rem;
+    @include respond-to(md-desktop){
+      padding: 3rem;
+    }
+    @include respond-to(mobile-horizontal) {
+      padding: 2rem;
+    }
+    .icon {
+      margin-bottom: 6rem;
+      @include respond-to(md-desktop){
+        margin-bottom: 4rem;
+      }
+      @include respond-to(mobile-horizontal) {
+        margin-bottom: 2rem;
+      }
+    }
+    .flag_block {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 6rem;
+            @include respond-to(md-desktop){
+        margin-bottom: 4rem;
+      }
+      @include respond-to(mobile-horizontal) {
+        margin-bottom: 2rem;
+      }
+      > p {
+        font-size: 2.2rem;
+        color: #000000;
+        font-weight: 600;
+      }
+    }
+    .region_block {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #00000050;
+      > p {
+        font-size: 1.6rem;
+      }
+    }
+    .trend_block {
+            display: flex;
+      align-items: center;
+      gap: .8rem;
+      > p {
+        font-size: 1.6rem;
+        color: #005039;
+      }
+    }
+  }
+}

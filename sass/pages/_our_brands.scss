@@ -8,30 +8,52 @@
   }
   .brand_card {
     display: grid;
+    border-radius: 2rem;
     grid-template-columns: 3fr 1fr;
-    gap: 6rem;
     align-items: center;
     margin-bottom: 10rem;
+    background-color: #f9f9f9;
+    @include respond-to(sm-desktop) {
+      grid-template-columns: 2fr 1fr;
+    }
     @include respond-to(break-desktop) {
       grid-template-columns: 1fr;
-      gap: 2rem;
       margin-bottom: 4rem;
     }
-    
+    .img_block {
+      height: 100%;
+      > img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+      }
+    }
+    .text_block {
+      padding: 4rem;
+      @include respond-to(break-desktop) {
+        padding: 2rem;
+      }
+    }
     &:last-child {
       margin-bottom: 0;
     }
     &.reverse {
       grid-template-columns: 1fr 3fr;
+      @include respond-to(sm-desktop) {
+        grid-template-columns: 1fr 2fr;
+      }
       @include respond-to(break-desktop) {
         grid-template-columns: 1fr;
-        gap: 3rem;
       }
       .img_block {
         order: 1;
       }
       .text_block {
-        order: 2;
+        padding: 4rem;
+        @include respond-to(break-desktop) {
+          order: 2;
+          padding: 2rem;
+        }
       }
     }
     .text_block {

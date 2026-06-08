@@ -3149,7 +3149,7 @@ footer .block_bottom .block_right p {
   cursor: pointer;
   font-size: 2.2rem;
   font-weight: 600;
-  color: #C9C9C9;
+  color: #c9c9c9;
   position: relative;
   padding: 0;
   font-family: "Open Sans";
@@ -3516,16 +3516,37 @@ footer .block_bottom .block_right p {
 }
 .our_brands_section .brand_card {
   display: grid;
+  border-radius: 2rem;
   grid-template-columns: 3fr 1fr;
-  gap: 6rem;
   align-items: center;
   margin-bottom: 10rem;
+  background-color: #f9f9f9;
+}
+@media (max-width: 1281px) {
+  .our_brands_section .brand_card {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 @media (max-width: 1024px) {
   .our_brands_section .brand_card {
     grid-template-columns: 1fr;
-    gap: 2rem;
     margin-bottom: 4rem;
+  }
+}
+.our_brands_section .brand_card .img_block {
+  height: 100%;
+}
+.our_brands_section .brand_card .img_block > img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.our_brands_section .brand_card .text_block {
+  padding: 4rem;
+}
+@media (max-width: 1024px) {
+  .our_brands_section .brand_card .text_block {
+    padding: 2rem;
   }
 }
 .our_brands_section .brand_card:last-child {
@@ -3534,17 +3555,27 @@ footer .block_bottom .block_right p {
 .our_brands_section .brand_card.reverse {
   grid-template-columns: 1fr 3fr;
 }
+@media (max-width: 1281px) {
+  .our_brands_section .brand_card.reverse {
+    grid-template-columns: 1fr 2fr;
+  }
+}
 @media (max-width: 1024px) {
   .our_brands_section .brand_card.reverse {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 }
 .our_brands_section .brand_card.reverse .img_block {
   order: 1;
 }
 .our_brands_section .brand_card.reverse .text_block {
-  order: 2;
+  padding: 4rem;
+}
+@media (max-width: 1024px) {
+  .our_brands_section .brand_card.reverse .text_block {
+    order: 2;
+    padding: 2rem;
+  }
 }
 @media (max-width: 1536px) {
   .our_brands_section .brand_card .text_block .logo_block {
@@ -3649,6 +3680,11 @@ footer .block_bottom .block_right p {
 
 .science_care .section_title {
   width: 60%;
+}
+@media (max-width: 480px) {
+  .science_care .section_title {
+    width: 100%;
+  }
 }
 .science_care .science-care-certifications {
   display: flex;
@@ -3763,6 +3799,12 @@ footer .block_bottom .block_right p {
   line-height: 44px;
   text-align: center;
   color: #000;
+}
+@media (max-width: 480px) {
+  .author_quote_section .quote-inner-wrapper blockquote {
+    font-size: 2rem;
+    line-height: 1.75;
+  }
 }
 .author_quote_section .quote-inner-wrapper .author {
   font-size: 1.8rem;
@@ -4031,4 +4073,89 @@ footer .block_bottom .block_right p {
     width: 20px;
     left: 20px;
   }
+}
+.factories {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1536px) {
+  .factories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .factories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.factories .block {
+  border-radius: 2rem;
+  border: 2px solid #EEE2C8;
+  background-color: #F6F0E7;
+  padding: 4rem;
+}
+@media (max-width: 1536px) {
+  .factories .block {
+    padding: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .factories .block {
+    padding: 2rem;
+  }
+}
+.factories .block .icon {
+  margin-bottom: 6rem;
+}
+@media (max-width: 1536px) {
+  .factories .block .icon {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .factories .block .icon {
+    margin-bottom: 2rem;
+  }
+}
+.factories .block .flag_block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 6rem;
+}
+@media (max-width: 1536px) {
+  .factories .block .flag_block {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .factories .block .flag_block {
+    margin-bottom: 2rem;
+  }
+}
+.factories .block .flag_block > p {
+  font-size: 2.2rem;
+  color: #000000;
+  font-weight: 600;
+}
+.factories .block .region_block {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
+}
+.factories .block .region_block > p {
+  font-size: 1.6rem;
+}
+.factories .block .trend_block {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.factories .block .trend_block > p {
+  font-size: 1.6rem;
+  color: #005039;
 }/*# sourceMappingURL=main.css.map */

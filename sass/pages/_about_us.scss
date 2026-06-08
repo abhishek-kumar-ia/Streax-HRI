@@ -36,6 +36,9 @@
 .science_care {
   .section_title {
     width: 60%;
+    @include respond-to(mobile){
+      width: 100%;
+    }
   }
 
   .science-care-certifications {
@@ -177,6 +180,10 @@
       line-height: 44px;
       text-align: center;
       color: $black;
+      @include respond-to(mobile) {
+        font-size: 2rem;
+        line-height: 1.75;
+      }
     }
     .author {
       font-size: 1.8rem;

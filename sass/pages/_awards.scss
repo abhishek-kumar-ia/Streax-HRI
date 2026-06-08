@@ -1,7 +1,6 @@
 @use "../base/_vars.scss" as *;
 @use "../base/_mixins.scss" as *;
 
-
 .awards_container {
   .tab-nav-wrap {
     display: flex;
@@ -13,10 +12,10 @@
     }
     .filter-wrap {
       @include respond-to(mobile-horizontal) {
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 2rem;
       }
       > .custom-select {
         @include respond-to(mobile-horizontal) {
@@ -40,21 +39,20 @@
       cursor: pointer;
       font-size: 2.2rem;
       font-weight: 600;
-      color: #C9C9C9;
+      color: #c9c9c9;
       position: relative;
       padding: 0;
-      font-family: 'Open Sans';
+      font-family: "Open Sans";
       &.active,
       &[aria-selected="true"] {
         color: #005039;
-
       }
     }
   }
-  
+
   .tab-panel {
     display: none;
-  
+
     &.active {
       display: block;
     }
@@ -73,7 +71,7 @@
       cursor: pointer;
     }
   }
-  
+
   .award-card {
     img {
       width: 100%;
@@ -81,124 +79,123 @@
       border-radius: 16px;
       margin-bottom: 2rem;
     }
-  
+
     p {
-        font-weight: 600;
+      font-weight: 600;
       font-size: 2.2rem;
     }
   }
 }
-  
-
-
 
 // awards profile popup (Our awards cards)
 .awards_profile_modal_wrap {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
 
-    &.is_open {
-        display: block;
-    }
+  &.is_open {
+    display: block;
+  }
 }
 
 .awards_profile_backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .awards_profile_modal {
-    position: relative;
-    max-width: 75%;
-    max-height: min(90vh, 900px);
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    background: $white;
-    border-radius: 20px;
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
-    overflow: hidden;
-    overflow-y: auto;
+  position: relative;
+  max-width: 75%;
+  max-height: min(90vh, 900px);
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $white;
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .awards_profile_close {
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    z-index: 2;
-    width: 4rem;
-    height: 4rem;
-    border: none;
-    border-radius: 50%;
-    background: transparent;
-    color: $gray;
-    font-size: 3rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease, background 0.2s ease;
-    &:focus-visible {
-      outline: none;
-    }
-    &:hover {
-        color: $primary;
-        background: rgba($primary, 0.06);
-    }
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: $gray;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+  &:focus-visible {
+    outline: none;
+  }
+  &:hover {
+    color: $primary;
+    background: rgba($primary, 0.06);
+  }
 }
 
 .awards_profile_inner {
-    display: grid;
-    grid-template-columns: minmax(220px, 340px) 1fr;
-    gap: 8rem;
-    padding: 10rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  gap: 8rem;
+  padding: 10rem;
+  align-items: start;
 
-    @include respond-to(mobile-large) {
-        grid-template-columns: 1fr;
-        gap: 2.4rem;
-        padding: 3rem 2.4rem 3rem 2.4rem;
-        padding-top: 5rem;
-    }
+  @include respond-to(mobile-large) {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    padding: 3rem 2.4rem 3rem 2.4rem;
+    padding-top: 5rem;
+  }
 }
 
 .awards_profile_photo .awards_profile_img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 3 / 4;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
 }
 
 .awards_profile_name {
-    color: $primary;
-    font-size: 4.4rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0 0 3rem 0;
-    @include respond-to(md-desktop) {
-        font-size: 3.6rem;
-    }
-    @include respond-to(mobile-large) {
-        font-size: 3.2rem;
-    }
-    @include respond-to(mobile) {
-        font-size: 2.4rem;
-    }
+  color: $primary;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 3rem 0;
+  @include respond-to(md-desktop) {
+    font-size: 3.6rem;
+  }
+  @include respond-to(mobile-large) {
+    font-size: 3.2rem;
+  }
+  @include respond-to(mobile) {
+    font-size: 2.4rem;
+  }
 }
 
 .awards_profile_role {
-    margin: 0 0 2rem;
+  margin: 0 0 2rem;
 }
 
 .awards_profile_bio {
-       p {
-        margin-bottom: 4rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
+  p {
+    margin-bottom: 4rem;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 }
