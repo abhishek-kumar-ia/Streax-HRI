@@ -3,14 +3,33 @@
 
 
 .awards_container {
-
+  .tab-nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    align-items: center;
+    @include respond-to(mobile-horizontal) {
+      flex-direction: column;
+    }
+    .filter-wrap {
+      @include respond-to(mobile-horizontal) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-top: 2rem;
+      }
+      > .custom-select {
+        @include respond-to(mobile-horizontal) {
+          width: fit-content;
+        }
+      }
+    }
+  }
   .tab-nav {
     display: flex;
-    gap: 12rem;
-    margin-bottom: 9rem;
+    gap: 4rem;
     @include respond-to(md-desktop) {
-      gap: 6rem;
-      margin-bottom: 4rem;
+      gap: 3rem;
     }
     @include respond-to(break-desktop) {
       overflow-x: scroll;
@@ -19,8 +38,8 @@
       background: none;
       border: 0;
       cursor: pointer;
-      font-size: 4.4rem;
-      font-weight: 700;
+      font-size: 2.2rem;
+      font-weight: 600;
       color: #C9C9C9;
       position: relative;
       padding: 0;

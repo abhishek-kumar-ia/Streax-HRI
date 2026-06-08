@@ -205,6 +205,7 @@
     <section class="section_padding pos-rel">
       <div class="container awards_container">
           <!-- Tab List -->
+           <div class="tab-nav-wrap">
           <div class="tab-nav" role="tablist" aria-label="Awards Timeline">
             <button
               id="tab-2026"
@@ -249,6 +250,22 @@
             >
               2023
             </button>
+          </div>
+          <div class="filter-wrap">
+                          <div class="custom-select">
+                <button class="custom-select__trigger" type="button">
+                  <span>Sort By</span>
+                  <span class="arrow">▼</span>
+                </button>
+
+                <ul class="custom-select__options">
+                  <li data-value="Newest">Newest</li>
+                  <li data-value="Oldest">Oldest</li>
+                </ul>
+
+                <input type="hidden" name="year" value="all" />
+              </div>
+          </div>
           </div>
 
           <!-- Panel 2026 -->

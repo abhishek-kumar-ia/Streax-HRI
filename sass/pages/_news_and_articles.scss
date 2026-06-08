@@ -139,6 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
     @include respond-to(md-desktop) {
       font-size: 1.6rem;
     }
