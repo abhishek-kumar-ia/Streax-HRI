@@ -1,0 +1,172 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.form_wrapper { 
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: 8rem;
+    @include respond-to(md-desktop) {
+        gap: 4rem;
+    }
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr;
+    }
+    @include respond-to(mobile-horizontal) {
+        gap: 4rem;
+    }
+    .form_block {
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            @include respond-to(md-desktop) { 
+                gap: 3rem;
+            }
+            @include respond-to(mobile-horizontal) {
+                grid-template-columns: 1fr;
+            }
+            .form_group {
+                display: flex;
+                flex-direction: column;
+                &.grid_max {
+                    grid-column: span 2;
+                    @include respond-to(mobile-horizontal) {
+                        grid-column: span 1;
+                    }
+                }
+                label {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: #5C5C5C;
+                    margin-bottom: 1.2rem;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                    }
+                }
+                input {
+                    padding: 2rem;
+                    font-size: 1.8rem;
+                    border-radius: 1rem;
+                    border: 1px solid #00000033;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                        padding: 1.8rem;
+                    }
+                    @include respond-to(mobile-horizontal) {
+                        padding: 1.6rem;
+                    }
+                    &::placeholder {
+                        color: #BCBCBC;
+                        font-size: 1.8rem;
+                        @include respond-to(md-desktop) {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                }
+                select {
+                    padding: 2rem;
+                    font-size: 1.8rem;
+                    border-radius: 1rem;
+                    border: 1px solid #00000033;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                        padding: 1.8rem;
+                    }
+                    @include respond-to(mobile-horizontal) {
+                        padding: 1.6rem;
+                    }
+                    &::placeholder {
+                        color: #BCBCBC;
+                        font-size: 1.8rem;
+                        @include respond-to(md-desktop) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                textarea {
+                    padding: 2rem;
+                    font-size: 1.8rem;
+                    border-radius: 1rem;
+                    border: 1px solid #00000033;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                        padding: 1.8rem;
+                    }
+                    @include respond-to(mobile-horizontal) {
+                        padding: 1.6rem;
+                    }
+                    &::placeholder {
+                        color: #BCBCBC;
+                        font-size: 1.8rem;
+                        @include respond-to(md-desktop) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                .privacy_policy {
+                    font-family: 1.8rem;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                    }
+                    > a {
+                        color: #B29142;
+                    }
+                }
+            }
+        }
+    }
+    .detail_block {
+        border-radius: 1rem;
+        padding: 4rem;
+        background: linear-gradient(90deg, #082C1A 0%, #25573B 100%);
+        @include respond-to(mobile-horizontal) {
+            padding: 2.4rem;
+        }
+        .heading{
+            font-size: 2.2rem;
+            font-weight: 600;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid #ffffff40;
+            color: #fff;
+            margin-bottom: 4rem;
+            @include respond-to(md-desktop) {
+                font-size: 2rem;
+                margin-bottom: 3rem;
+                padding-bottom: 3rem;
+            }
+            @include respond-to(mobile-horizontal) {
+                margin-bottom: 2.4rem;
+                padding-bottom: 2.4rem;
+            }
+        }
+        .detail {
+            margin-bottom: 4rem;    
+            @include respond-to(mobile-horizontal) {
+                margin-bottom: 2.4rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .heading_detail{
+                font-size: 1.8rem;
+                color: #B29142;
+                font-weight: 400;
+                margin-bottom: 1.2rem;
+                @include respond-to(md-desktop) {
+                    font-size: 1.6rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            .descp_detail {
+                p {
+                    font-size: 1.8;
+                    color: #fff;
+                    @include respond-to(md-desktop) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
