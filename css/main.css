@@ -1708,6 +1708,9 @@ footer .block_bottom .block_right p {
 .brand_card .brand_details {
   padding: 2rem;
 }
+.brand_card .brand_details .logo_img {
+  border-radius: 0rem;
+}
 .brand_card .brand_details > h3 {
   font-size: 2.2rem;
   font-weight: 600;

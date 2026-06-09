@@ -11,6 +11,9 @@
     }
     .brand_details {
         padding: 2rem;
+        .logo_img {
+            border-radius: 0rem;
+        }
         >h3 {
         font-size: 2.2rem;
         font-weight: 600;
