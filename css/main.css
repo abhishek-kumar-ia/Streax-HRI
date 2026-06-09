@@ -4437,29 +4437,42 @@ footer .block_bottom .block_right p {
 }
 .form_wrapper .form_block .form .form_group select {
   padding: 2rem;
+  padding-right: 4.5rem;
   font-size: 1.8rem;
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23BCBCBC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2rem center;
+  background-size: 1.2rem;
+  cursor: pointer;
 }
 @media (max-width: 1536px) {
   .form_wrapper .form_block .form .form_group select {
     font-size: 1.6rem;
     padding: 1.8rem;
+    padding-right: 4rem;
+    background-position: right 1.8rem center;
   }
 }
 @media (max-width: 767px) {
   .form_wrapper .form_block .form .form_group select {
     padding: 1.6rem;
+    padding-right: 3.8rem;
+    background-position: right 1.6rem center;
   }
 }
-.form_wrapper .form_block .form .form_group select::placeholder {
+.form_wrapper .form_block .form .form_group select:invalid {
   color: #BCBCBC;
-  font-size: 1.8rem;
 }
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group select::placeholder {
-    font-size: 1.6rem;
-  }
+.form_wrapper .form_block .form .form_group select option {
+  color: #000;
+}
+.form_wrapper .form_block .form .form_group select option[disabled] {
+  display: none;
 }
 .form_wrapper .form_block .form .form_group textarea {
   padding: 2rem;
@@ -4485,6 +4498,17 @@ footer .block_bottom .block_right p {
 @media (max-width: 1536px) {
   .form_wrapper .form_block .form .form_group textarea::placeholder {
     font-size: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group .error_message {
+  font-size: 1.4rem;
+  color: #FF0000;
+  margin-top: 0.5rem;
+  display: none;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group .error_message {
+    font-size: 1.2rem;
   }
 }
 .form_wrapper .form_block .form .form_group .privacy_policy {
@@ -4560,4 +4584,114 @@ footer .block_bottom .block_right p {
   .form_wrapper .detail_block .detail .descp_detail p {
     font-size: 1.6rem;
   }
+}
+
+.customTableWrapper {
+  overflow-x: auto;
+}
+
+.customTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+}
+.customTable thead th {
+  background: #005c42;
+  color: #fff;
+  text-align: left;
+  padding: 2rem;
+  font-weight: 600;
+  border: 1px solid #d9d3ca;
+  font-size: 1.8rem;
+}
+@media (max-width: 767px) {
+  .customTable thead th {
+    font-size: 1.6rem;
+  }
+}
+.customTable thead th:first-child {
+  border-top-left-radius: 12px;
+  border-top: 0px;
+  border-left: 0px;
+}
+.customTable thead th:nth-child(2) {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.customTable thead th:last-child {
+  border-top-right-radius: 12px;
+  border-top: 0px;
+  border-right: 0px;
+}
+.customTable tbody tr {
+  background: #F6F0E7;
+}
+.customTable tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ffffff;
+}
+.customTable tbody td {
+  padding: 2rem;
+  border: 1px solid #ffffff;
+  vertical-align: top;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: #000000;
+}
+@media (max-width: 767px) {
+  .customTable tbody td {
+    font-size: 1.4rem;
+    padding: 1.4rem;
+  }
+}
+.customTable tbody td .downloads {
+  display: flex;
+  gap: 2rem;
+}
+.customTable tbody td .downloads a {
+  color: #10864F;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.customTable tbody td .lists ul li {
+  font-size: 1.6rem;
+  color: #000000;
+  list-style: disc;
+}
+@media (max-width: 767px) {
+  .customTable tbody td .lists ul li {
+    font-size: 1.4rem;
+  }
+}
+.customTable tbody td .lists ul li::marker {
+  color: #c98c2a;
+}
+.customTable tbody td .lists ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.customTable .srCol {
+  width: 50px;
+  text-align: center;
+}
+.customTable tbody td:first-child {
+  text-align: center;
+  width: 50px;
+}
+.customTable a {
+  color: #333;
+  text-decoration: underline;
+}
+.customTable a:hover {
+  color: #005c42;
+}
+.customTable ul {
+  margin: 0;
+  padding-left: 16px;
+}
+.customTable ul li::marker {
+  color: #c98c2a;
 }/*# sourceMappingURL=main.css.map */
