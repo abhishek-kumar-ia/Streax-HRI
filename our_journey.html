@@ -15,6 +15,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
   </head>
 
   <body>
@@ -295,9 +299,13 @@
     <!-- Inner Spotlight End -->
     <section class="section_padding">
       <div class="pos-rel timeline">
+        <div class="timeline-progress" aria-hidden="true">
+          <div class="timeline-progress__track"></div>
+          <div class="timeline-progress__fill"></div>
+        </div>
         <!-- 2 – Expanding Our Reach (image left) -->
         <div class="timelineBlock left">
-          <div class="content">
+          <div class="content" data-aos="fade-up" data-aos-duration="800">
             <h2 class="timelineBlock-title">Expanding Our Reach</h2>
             <ul class="timelineBlock-body">
               <li>
@@ -314,7 +322,7 @@
             </ul>
           </div>
           <div class="node"><div class="node-dot"></div></div>
-          <div class="visual">
+          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
             <img
               src="./assets/journey-1.png"
               alt=""
@@ -326,7 +334,7 @@
         </div>
 
         <div class="timelineBlock right">
-          <div class="content">
+          <div class="content" data-aos="fade-up" data-aos-duration="800">
             <h2 class="timelineBlock-title">Expanding Our Reach</h2>
             <ul class="timelineBlock-body">
               <li>
@@ -343,7 +351,7 @@
             </ul>
           </div>
           <div class="node"><div class="node-dot"></div></div>
-          <div class="visual">
+          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
             <img
               src="./assets/journey-1.png"
               alt=""
@@ -355,7 +363,7 @@
         </div>
 
         <div class="timelineBlock left">
-          <div class="content">
+          <div class="content" data-aos="fade-up" data-aos-duration="800">
             <h2 class="timelineBlock-title">Expanding Our Reach</h2>
             <ul class="timelineBlock-body">
               <li>
@@ -376,7 +384,7 @@
             </ul>
           </div>
           <div class="node"><div class="node-dot"></div></div>
-          <div class="visual">
+          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
             <img
               src="./assets/journey-1.png"
               alt=""
@@ -490,4 +498,6 @@
   <script src="./js/main.js"></script>
   <script src="./js/homepage.js"></script>
   <script src="./js/misc.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="./js/our_journey.js"></script>
 </html>

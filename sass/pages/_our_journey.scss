@@ -8,18 +8,52 @@
     max-width: 90%;
   }
 }
-.timeline::before {
-  content: "";
+
+.timeline-progress {
   position: absolute;
   left: 50%;
   top: 10%;
   bottom: 10%;
-  width: 0;
-  border-left: 1px dashed #005039;
+  width: 3px;
   transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
   @include respond-to(mobile-large) {
     top: 5%;
     bottom: 5%;
+  }
+
+  &__track {
+    position: absolute;
+    inset: 0;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba($primary, 0.2) 0,
+      rgba($primary, 0.2) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 0;
+    border-radius: 3px;
+    background: linear-gradient(
+      180deg,
+      $primary-light 0%,
+      $primary 45%,
+      $secondary 100%
+    );
+    box-shadow: 0 0 10px rgba($primary, 0.35);
+    will-change: height;
   }
 }
 
@@ -33,9 +67,19 @@
     margin-bottom: 8rem;
 }
 }
-.timelineBlock.visible {
-  opacity: 1;
-  transform: none;
+.timelineBlock.is-active {
+  .node-dot {
+    transform: scale(1.25);
+    background: $secondary;
+    box-shadow:
+      0 0 0 4px $white,
+      0 0 0 7px $secondary,
+      0 0 14px rgba($secondary, 0.45);
+    transition:
+      transform 0.4s ease,
+      background 0.4s ease,
+      box-shadow 0.4s ease;
+  }
 }
 
 .timelineBlock.right .content {
@@ -85,10 +129,14 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #005039;
-  border: 4px solid #fff;
-  box-shadow: 0 0 0 4px #B29142;
+  background: $primary;
+  border: 4px solid $white;
+  box-shadow: 0 0 0 4px rgba($secondary, 0.35);
   flex-shrink: 0;
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .node::before,
@@ -188,8 +236,9 @@
 
 /* ─── Responsive ────────────────────────────────────── */
 @media (max-width: 992px) {
-  .timeline::before {
+  .timeline-progress {
     left: 10px;
+    transform: none;
   }
   .timelineBlock {
     grid-template-columns: 56px 1fr;
@@ -206,7 +255,7 @@
     grid-column: 1;
     grid-row: 1;
     justify-content: flex-start;
-    padding-left: 0px;
+    padding-left: 3px;
   }
   .timelineBlock.right .visual,
   .timelineBlock.left .visual {

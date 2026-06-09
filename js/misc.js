@@ -1,4 +1,5 @@
 $(function () {
+    // custom select start
 $(".custom-select__trigger").on("click", function () {
     $(this).parent().toggleClass("open");
 });
@@ -20,4 +21,5 @@ $(document).on("click", function (e) {
         $(".custom-select").removeClass("open");
     }
 });
+// custom select end
 });
