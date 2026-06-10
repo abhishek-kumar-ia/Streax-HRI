@@ -3877,7 +3877,7 @@ footer .block_bottom .block_right p {
 
 .timelineBlock.is-active .node-dot {
   transform: scale(1.25);
-  background: #B29142;
+  background: #005039;
   box-shadow: 0 0 0 4px #fff, 0 0 0 7px #B29142, 0 0 14px rgba(178, 145, 66, 0.45);
   transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }

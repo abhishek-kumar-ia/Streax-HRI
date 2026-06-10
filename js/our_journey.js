@@ -44,4 +44,12 @@ $(function () {
   });
 
   updateTimelineProgress();
+
+  document.querySelectorAll("[data-aos-offset]").forEach((el) => {
+    if (window.innerWidth < 993) {
+      el.removeAttribute("data-aos-offset");
+    }
+  });
+  
+  AOS.refresh();
 });
