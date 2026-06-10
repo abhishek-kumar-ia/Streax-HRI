@@ -3012,7 +3012,7 @@ footer .block_bottom .block_right p {
 
 .awardsHome_profile_modal {
   position: relative;
-  max-width: 75%;
+  max-width: 90%;
   max-height: min(90vh, 900px);
   margin: 0 auto;
   top: 50%;
@@ -3213,7 +3213,7 @@ footer .block_bottom .block_right p {
 
 .awards_profile_modal {
   position: relative;
-  max-width: 75%;
+  max-width: 90%;
   max-height: min(90vh, 900px);
   margin: 0 auto;
   top: 50%;
