@@ -4694,4 +4694,32 @@ footer .block_bottom .block_right p {
 }
 .customTable ul li::marker {
   color: #c98c2a;
+}
+
+.min_height_page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.min_height_page .container > .h2 {
+  font-size: 6.2rem !important;
+}
+@media (max-width: 992px) {
+  .min_height_page .container > .h2 {
+    font-size: 3.2rem !important;
+  }
+}
+.min_height_page .container > p {
+  font-size: 2.4rem;
+}
+@media (max-width: 992px) {
+  .min_height_page .container > p {
+    font-size: 1.8rem;
+  }
+}
+.min_height_page .container > .btn_block {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

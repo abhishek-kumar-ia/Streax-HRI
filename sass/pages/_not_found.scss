@@ -1,0 +1,29 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.min_height_page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .container {
+        
+    > .h2 {
+        font-size: 6.2rem !important;
+        @include respond-to(mobile-large) {
+            font-size: 3.2rem !important;
+        }
+    }
+    > p { 
+        font-size: 2.4rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.8rem;
+        }
+    }
+    > .btn_block {
+        display: flex;
+        justify-content: center;
+    }
+    }
+}
