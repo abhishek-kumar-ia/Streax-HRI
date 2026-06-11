@@ -33,6 +33,11 @@
       @include respond-to(break-desktop) {
         padding: 2rem;
       }
+      .logo_block {
+        img {
+          border-radius: 0;
+        }
+      }
     }
     &:last-child {
       margin-bottom: 0;

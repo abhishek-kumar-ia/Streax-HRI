@@ -3552,6 +3552,9 @@ footer .block_bottom .block_right p {
     padding: 2rem;
   }
 }
+.our_brands_section .brand_card .text_block .logo_block img {
+  border-radius: 0;
+}
 .our_brands_section .brand_card:last-child {
   margin-bottom: 0;
 }
@@ -3828,8 +3831,8 @@ footer .block_bottom .block_right p {
 .timeline-progress {
   position: absolute;
   left: 50%;
-  top: 10%;
-  bottom: 10%;
+  top: 0%;
+  bottom: 0%;
   width: 3px;
   transform: translateX(-50%);
   z-index: 1;
