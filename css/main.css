@@ -3012,7 +3012,7 @@ footer .block_bottom .block_right p {
 
 .awardsHome_profile_modal {
   position: relative;
-  max-width: 75%;
+  max-width: 90%;
   max-height: min(90vh, 900px);
   margin: 0 auto;
   top: 50%;
@@ -3213,7 +3213,7 @@ footer .block_bottom .block_right p {
 
 .awards_profile_modal {
   position: relative;
-  max-width: 75%;
+  max-width: 90%;
   max-height: min(90vh, 900px);
   margin: 0 auto;
   top: 50%;
@@ -3552,6 +3552,9 @@ footer .block_bottom .block_right p {
     padding: 2rem;
   }
 }
+.our_brands_section .brand_card .text_block .logo_block img {
+  border-radius: 0;
+}
 .our_brands_section .brand_card:last-child {
   margin-bottom: 0;
 }
@@ -3828,8 +3831,8 @@ footer .block_bottom .block_right p {
 .timeline-progress {
   position: absolute;
   left: 50%;
-  top: 10%;
-  bottom: 10%;
+  top: 0%;
+  bottom: 0%;
   width: 3px;
   transform: translateX(-50%);
   z-index: 1;
@@ -3877,7 +3880,7 @@ footer .block_bottom .block_right p {
 
 .timelineBlock.is-active .node-dot {
   transform: scale(1.25);
-  background: #B29142;
+  background: #005039;
   box-shadow: 0 0 0 4px #fff, 0 0 0 7px #B29142, 0 0 14px rgba(178, 145, 66, 0.45);
   transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
@@ -4694,4 +4697,32 @@ footer .block_bottom .block_right p {
 }
 .customTable ul li::marker {
   color: #c98c2a;
+}
+
+.min_height_page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.min_height_page .container > .h2 {
+  font-size: 6.2rem !important;
+}
+@media (max-width: 992px) {
+  .min_height_page .container > .h2 {
+    font-size: 3.2rem !important;
+  }
+}
+.min_height_page .container > p {
+  font-size: 2.4rem;
+}
+@media (max-width: 992px) {
+  .min_height_page .container > p {
+    font-size: 1.8rem;
+  }
+}
+.min_height_page .container > .btn_block {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
