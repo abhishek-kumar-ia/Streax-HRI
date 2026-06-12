@@ -30,12 +30,22 @@
       gap: 4rem;
     }
   }
+
   &.gap {
     gap: 6rem;
   }
-    &.gap30 {
+
+  &.gap30 {
     gap: 3rem;
   }
+
+  &.gap40 {
+    gap: 4rem;
+    @include respond-to(mobile-large) {
+      gap: 2rem;
+    }
+  }
+
   &.g2 {
     grid-template-columns: repeat(2, 1fr);
 
