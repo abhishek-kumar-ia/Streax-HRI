@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streax HRI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- Header Start -->
+    <header>
+      <div class="container container_header">
+        <div class="block_left">
+          <div class="logo">
+            <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
+          </div>
+        </div>
+        <div class="block_center">
+          <nav class="navigation">
+            <ul>
+              <!-- Uncomment this to add desktop dropdown menu start -->
+              <li>
+                <a href="#" class="has-child">Our Brands</a>
+                <div class="sub-menu dropdown-menu">
+                  <ul>
+                    <li><a href="#" title="" target="" class=" ">Vasmol</a></li>
+                    <li>
+                      <a href="#" title="" target="" class=" ">Streax Retail</a>
+                    </li>
+                    <li>
+                      <a href="#" title="" target="" class=" ">Florozone</a>
+                    </li>
+                    <li>
+                      <a href="#" title="" target="" class=" "
+                        >Streax Professional</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="has-child">About Us</a>
+                <div class="sub-menu dropdown-menu">
+                  <ul>
+                    <li>
+                      <a href="#" title="" target="" class=" ">Our Journey</a>
+                    </li>
+                    <li>
+                      <a href="#" title="" target="" class=" "
+                        >Global Presence</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" title="" target="" class=" ">Innovations</a>
+                    </li>
+                    <li><a href="#" title="" target="" class=" ">Awards</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Uncomment this to add desktop dropdown menu end -->
+              <li><a href="#">Leadership</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Our Investor</a></li>
+              <li>
+                <a href="#" class="has-child">HRI Foundation</a>
+                <div class="sub-menu dropdown-menu">
+                  <ul>
+                    <li>
+                      <a href="#" title="" target="" class=" ">CSR Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="has-child">News & Media</a>
+                <div class="sub-menu dropdown-menu">
+                  <ul>
+                    <li>
+                      <a href="#" title="" target="" class=" "
+                        >Media Coverage</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="#" title="" target="" class=" "
+                        >Press Releases</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="block_right">
+          <div class="search_icon cursor-pointer pos-rel" id="search_btn">
+            <img src="./assets/icons/search.svg" alt="Search Icon" />
+          </div>
+          <!-- <div class="accessiblity_icon pos-rel cursor-pointer" id="accessiblity_btn">
+              <img src="./assets/icons/accessiblity.svg" alt="Accessibility Icon" />
+              <div class="accessiblity_popup">
+                  <h3>Accessibility</h3>
+                  <div class="fonts_params">
+                      <button type="button" class="font_btn" aria-pressed="false" aria-label="Smaller text">A</button>
+                      <button type="button" class="font_btn" aria-pressed="true" aria-label="Default text size">A</button>
+                      <button type="button" class="font_btn" aria-pressed="false" aria-label="Larger text">A</button>
+                  </div>
+
+              </div>
+          </div> -->
+          <div class="phone_icon">
+            <img src="./assets/icons/phone.svg" alt="Menu Icon" />
+          </div>
+        </div>
+        <div class="hamburger_icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile_menu">
+        <nav>
+          <ul>
+            <!-- Uncomment this to add mobile dropdown menu start -->
+            <li class="has-child">
+              <a href="#" class="mobile_dropdown_toggle">About Us</a>
+              <ul class="mobile_dropdown_menu">
+                <li><a href="#">About Overview</a></li>
+                <li><a href="#">Our Journey</a></li>
+                <li><a href="#">Global Presence</a></li>
+              </ul>
+            </li>
+            <!-- Uncomment this to add mobile dropdown menu end -->
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Our Brands</a></li>
+            <li><a href="#">HRI Foundation</a></li>
+            <li><a href="#">Press Release</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Inner Spotlight Start -->
+    <section class="inner_spotlight pos-rel">
+      <picture class="spotlight">
+        <source
+          media="(min-width:992px)"
+          srcset="./assets/HRI Foundation.jpg"
+          type="image/png"
+        />
+        <source
+          media="(max-width:991px)"
+          srcset="./assets/spotlight_mobile.png"
+          type="image/png"
+        />
+        <img
+          src="./assets/HRI Foundation.jpg"
+          alt="Leadership Banner"
+          class="img-fluid w-100"
+        />
+      </picture>
+      <div class="container breadcrumb_container">
+        <ul class="breadcrumb_list">
+          <li><a href="#">Home</a></li>
+          <li><span>></span></li>
+          <li><a href="#">HRI Foundation</a></li>
+        </ul>
+      </div>
+      <div class="container spotlight_content_container">
+        <h1 class="h2 bold text-white mb-1">HRI Foundation</h1>
+        <p class="mb-4 text-white">
+          Empowering Communities Through Meaningful Care
+        </p>
+      </div>
+    </section>
+    <!-- Inner Spotlight End -->
+
+    <!-- hero section start -->
+    <section class="section_padding bg-section-primary">
+      <div class="container g gap80 g2 ai-c">
+        <div class="block left">
+          <div class="hover_block overflow-hidden br-20">
+            <img
+              src="./assets/hero-hri-Foundation.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="block right">
+          <h2 class="h2 text-primary bold mb-2">About HRI Foundation</h2>
+          <p class="pb-1">
+            At HRI, corporate social responsibility is an integral part of our
+            commitment to creating a positive and lasting impact on society. We
+            believe that giving back to the community is both a responsibility
+            and a privilege. Guided by this philosophy, HRI undertakes
+            initiatives across talent development, education, healthcare, skill
+            enhancement, and civic engagement. Through these efforts, we strive
+            to empower individuals, strengthen communities, and contribute to
+            sustainable progress. Each of our CSR initiatives is driven by a
+            shared vision of building a better, more inclusive tomorrow for
+            future generations.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- Tab Section Start -->
+    <section class="section_padding pos-rel impact_initiatives">
+      <div class="container section_title">
+        <h2 class="h2 bold text-primary">Our Impact Initiatives</h2>
+      </div>
+
+      <div class="container awards_container">
+        <!-- Tab List -->
+        <div class="tab-nav-wrap">
+          <div class="tab-nav" role="tablist" aria-label="Initiatives Timeline">
+            <button
+              id="tab-all"
+              class="tab-btn active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-all"
+              data-tab-target="#panel-all"
+            >
+              All
+            </button>
+
+            <button
+              id="tab-education"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-education"
+              data-tab-target="#panel-education"
+            >
+              Education
+            </button>
+
+            <button
+              id="tab-healthcare"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-healthcare"
+              data-tab-target="#panel-healthcare"
+            >
+              Healthcare
+            </button>
+
+            <button
+              id="tab-infrastructure"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-infrastructure"
+              data-tab-target="#panel-infrastructure"
+            >
+              Infrastructure
+            </button>
+
+            <button
+              id="tab-skilldevelopment"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-skilldevelopment"
+              data-tab-target="#panel-skilldevelopment"
+            >
+              Skill Development
+            </button>
+
+            <button
+              id="tab-women"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-women"
+              data-tab-target="#panel-women"
+            >
+              Women
+            </button>
+
+            <button
+              id="tab-sustainability"
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-sustainability"
+              data-tab-target="#panel-sustainability"
+            >
+              Sustainability
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel All -->
+        <div
+          id="panel-all"
+          class="tab-panel active"
+          role="tabpanel"
+          aria-labelledby="tab-all"
+          hidden
+        >
+          <div class="impact-grid">
+            <article class="impact-card large">
+              <img src="./assets/Our-Impact-Initiatives1.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+
+            <article class="impact-card large">
+              <img src="./assets/Our-Impact-Initiatives2.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+
+            <article class="impact-card">
+              <img src="./assets/Our-Impact-Initiatives3.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+
+            <article class="impact-card">
+              <img src="./assets/Our-Impact-Initiatives4.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+
+            <article class="impact-card">
+              <img src="./assets/Our-Impact-Initiatives5.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Panel Education -->
+        <div
+          id="panel-education"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-education"
+        >
+          <div class="impact-grid">
+            <article class="impact-card large">
+              <img src="./assets/Our-Impact-Initiatives1.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+
+            <article class="impact-card large">
+              <img src="./assets/Our-Impact-Initiatives2.jpg" alt="" />
+              <div class="overlay"></div>
+
+              <div class="content">
+                <span class="category">Education</span>
+
+                <h3>Community Hall & Dining Facility</h3>
+
+                <p class="location">Ranshet Ashramshala, Dahanu</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Panel Healthcare -->
+        <div
+          id="panel-healthcare"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-healthcare"
+          hidden
+        >
+          <p>healthcare</p>
+        </div>
+
+        <!-- Panel Infrastructure -->
+        <div
+          id="panel-infrastructure"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-infrastructure"
+          hidden
+        >
+          <p>Infrastructure</p>
+        </div>
+
+        <!-- Panel Skill Development -->
+        <div
+          id="panel-skilldevelopment"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-skilldevelopment"
+          hidden
+        >
+          <p>Skill Development</p>
+        </div>
+
+        <!-- Panel Women -->
+        <div
+          id="panel-women"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-women"
+          hidden
+        >
+          <p>Women</p>
+        </div>
+
+        <!-- Sustainability -->
+        <div
+          id="panel-sustainability"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-sustainability"
+          hidden
+        >
+          <p>Sustainability</p>
+        </div>
+      </div>
+    </section>
+    <!-- Tab Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="container">
+        <div class="block_top">
+          <div class="block_left">
+            <div class="logo mb-4">
+              <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
+            </div>
+            <p class="text-gray-light mb-4">
+              Streax, launched in 2004, is a style-driven hair care brand that
+              transformed hair colouring in India from covering greys to
+              expressing individuality through colour.
+            </p>
+            <div class="social-icons">
+              <a href="#">
+                <img
+                  src="./assets/icons/fb-gradient.svg"
+                  width="40"
+                  height="40"
+                  alt="Facebook Logo"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/icons/insta-gradient.svg"
+                  width="40"
+                  height="40"
+                  alt="Instagram Logo"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/icons/yt-gradient.svg"
+                  width="40"
+                  height="40"
+                  alt="YouTube Logo"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="block_right">
+            <div class="ft_links">
+              <div class="left_ft_links">
+                <ul>
+                  <li class="title"><a href="#">About Us</a></li>
+                  <li><a href="#">Who We Are​</a></li>
+                  <li><a href="#">Our Journey​</a></li>
+                  <li><a href="#">Leadership​</a></li>
+                  <li><a href="#">Global Presence​</a></li>
+                  <li><a href="#">Innovations</a></li>
+                  <li><a href="#">Awards​</a></li>
+                </ul>
+              </div>
+              <div class="center_ft_links">
+                <ul>
+                  <li class="title"><a href="#">Our Brands</a></li>
+                  <li><a href="#">Who We Are​</a></li>
+                  <li><a href="#">Our Journey​</a></li>
+                  <li><a href="#">Leadership​</a></li>
+                  <li><a href="#">Global Presence​</a></li>
+                </ul>
+              </div>
+              <div class="right_ft_links">
+                <ul>
+                  <li class="title"><a href="#">HRI Foundation</a></li>
+                  <li class="title"><a href="#">Press Release</a></li>
+                  <li class="title"><a href="#">Careers</a></li>
+                </ul>
+                <p class="follow_text">
+                  Follow us on
+                  <img
+                    src="./assets/icons/linkedin.svg"
+                    width="45"
+                    height="45"
+                    alt="Linkedin Logo"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block_bottom">
+          <div class="block_left">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="block_right">
+            <p>© HYGIENIC RESEARCH INSTITUTE 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</html>
