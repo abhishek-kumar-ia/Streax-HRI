@@ -1,0 +1,136 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.bg-Cream-White {
+  background: #fdfaf1;
+}
+.contentBlock.contentBlock-with-border-top {
+  border-top: 4px solid #005039;
+  background: #fff;
+  display: flex !important;
+  padding: 6rem !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  align-self: stretch;
+  margin-bottom: 12rem;
+
+  width: 100%;
+  @include respond-to(sm-desktop) {
+    padding: 3rem !important;
+  }
+  p {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.impactSection .impactContainer .impactContent .contentBlock .content {
+  .ecoomarce-list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px !important;
+    gap: 1rem;
+    margin-top: 3rem;
+    @include respond-to(sm-desktop) {
+      flex-wrap: wrap;
+    }
+    li {
+      display: flex;
+      padding: 10px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      background: #f6f0e7;
+      list-style-type: none;
+      color: #000;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 133.333% */
+      margin-bottom: 3rem;
+      white-space: nowrap;
+      @include respond-to(sm-desktop) {
+        width: calc(33.333% - 1rem);
+      }
+    }
+  }
+}
+
+.contact-wrapper-info {
+  width: 100%;
+  margin: 0 auto;
+
+  .info-card {
+    border-radius: 10px;
+    border: 2px solid #eee2c8;
+    background: #f6f0e7;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+
+    .label {
+      color: #b29142;
+
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .value {
+      color: #000;
+
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 133.333% */
+      &.phone {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      a {
+        color: #000;
+
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
+
+    &.full-width {
+      margin-bottom: 30px;
+    }
+  }
+
+  .contact-grid {
+    display: flex;
+    gap: 30px;
+
+    @include respond-to(sm-desktop) {
+      flex-direction: column;
+    }
+    .info-card {
+      flex: 1;
+      min-height: 130px;
+    }
+  }
+}
