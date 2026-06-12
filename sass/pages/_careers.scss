@@ -1,12 +1,262 @@
 @use "../base/_vars.scss" as *;
 @use "../base/_mixins.scss" as *;
 
-// Care & Growth 
+// Care & Growth
 .care_and_growth_block {
-    .block {
-        .img_block {
-            position: absolute;
-            
+  .block {
+    position: relative;
+
+    .overlay_block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      text-align: left;
+      border-radius: 2rem;
+
+      @include respond-to(mobile-horizontal) {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .text_block {
+        position: absolute;
+        bottom: 8rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+
+        @include respond-to(md-desktop) {
+          padding-right: 3rem;
+          padding-left: 3rem;
+          bottom: 3rem;
         }
+
+        > h3 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 2rem;
+
+          @include respond-to(md-desktop) {
+            font-size: 2.4rem;
+          }
+
+          @include respond-to(mobile-horizontal) {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        > p {
+          font-size: 2.2rem;
+
+          @include respond-to(md-desktop) {
+            font-size: 1.8rem;
+          }
+
+          @include respond-to(mobile-horizontal) {
+            font-size: 1.6rem;
+          }
+        }
+      }
     }
+  }
+}
+
+// Testimonial Slider Section
+.testimonial_section {
+  .testimonial_slider {
+    overflow: hidden;
+    .card {
+      padding: 6rem;
+      border-radius: 2rem;
+      @include respond-to(md-desktop) {
+        padding: 2.4rem;
+      }
+      .img_block {
+        justify-content: space-between;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+        @include respond-to(md-desktop) {
+          margin-bottom: 2rem;
+        }
+      }
+      .text {
+        font-size: 2.2rem;
+        color: #000;
+        margin-bottom: 4rem;
+        @include respond-to(md-desktop) {
+          margin-bottom: 3rem;
+          font-size: 1.8rem;
+        }
+      }
+      .testimonial_by {
+        .name {
+          font-size: 2.2rem;
+          color: $primary;
+          font-weight: 600;
+          margin-bottom: 2rem;
+          @include respond-to(md-desktop) {
+            font-size: 1.8rem;
+          }
+        }
+        .position {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+          @include respond-to(md-desktop) {
+            font-size: 1.6rem;
+          }
+        }
+        .duration {
+          font-size: 1.8rem;
+          @include respond-to(md-desktop) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+   
+  }
+  .testimonial_slider_utils {
+    gap: 3rem;
+    @include respond-to(mobile-large){
+        justify-content: space-between;
+    }
+  }
+  .swiper_pagination_testimonial_2 {
+    .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+        background-color: $secondary;
+      }
+    }
+  }
+  .buttons_2 {
+    .swiper-button-prev {
+      &.swiper-button-disabled {
+        
+      color: $secondary;
+        border-color: $secondary;
+        background: transparent;
+        opacity: 1;
+      }
+    }
+    .swiper-button-next {
+      
+      &.swiper-button-disabled {
+        color: $secondary;
+        border-color: $secondary;
+        background: transparent;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// Life at HRI masonry grid section
+.masonry_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .left {
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      
+      border-radius: 2rem;
+      object-fit: cover;
+    }
+  }
+  .right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2rem;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+      @include respond-to(mobile-horizontal) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+      border-radius: 2rem;
+      }
+    }
+    .bottom {
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+      border-radius: 2rem;
+      }
+    }
+  }
+}
+
+
+// Advantages Grid
+.hri_advantage_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  @include respond-to(sm-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .block {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: $white;
+    @include respond-to(md-desktop) {
+      grid-template-columns: 100px 1fr;
+    }
+    @include respond-to(mobile-horizontal) {
+      grid-template-columns: 80px 1fr;
+    }
+    .img_block {
+      img {
+        @include respond-to(md-desktop) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+    .text_block {
+      p {
+        font-size: 2rem;
+        @include respond-to(md-desktop) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
 }
