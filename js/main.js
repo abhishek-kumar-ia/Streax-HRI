@@ -591,7 +591,66 @@ $(document).on("keydown", function (e) {
 });
 // Awards Popup End
 
+  //   testimonial Swiper
+  const testimonialSwiper = new Swiper('.testimonial_slider_1', {
+    // loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    pagination: {
+      el: '.swiper_pagination_testimonial_1',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-testimonial_1',
+      prevEl: '.swiper-button-prev-testimonial_1  ',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
+  });
 
+  // HRI Swiper
+    //   testimonial Swiper
+    const humansSwiper = new Swiper('.testimonial_slider_2', {
+      // loop: true,
+      slidesPerView: 3,
+      spaceBetween: 40,
+      pagination: {
+        el: '.swiper_pagination_testimonial_2',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-testimonial_2',
+        prevEl: '.swiper-button-prev-testimonial_2',
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        },
+      },
+      // autoplay: {
+      //     delay: 4000,
+      //     disableOnInteraction: false,
+      // },
+    });
 
 });
 // jQuery End

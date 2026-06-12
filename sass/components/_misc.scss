@@ -36,42 +36,6 @@
     }
 }
 
-// Life at HRI section
-.box-on-img {
-    position: relative;
-
-    >img {
-        border-radius: 2rem;
-        
-        @include respond-to(mobile-large) {
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-            display: block;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            object-position: left;
-        }
-    }
-
-    .block {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 40%;
-        top: 50%;
-        transform: translateY(-50%);
-
-        @include respond-to(mobile-large) {
-            position: relative;
-            width: fit-content;
-            left: 0;
-            transform: none;
-            border-top-right-radius: 0px;
-            border-top-left-radius: 0px;
-        }
-    }
-}
-
 
 // Job blocks
 .job_blocks {
