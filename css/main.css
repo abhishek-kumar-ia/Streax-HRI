@@ -1123,6 +1123,11 @@ header .container_header {
     max-width: 90%;
   }
 }
+@media (max-width: 1281px) {
+  header .container_header {
+    gap: 2rem;
+  }
+}
 header .container_header .block_center {
   flex-grow: 1;
 }
@@ -1153,10 +1158,16 @@ header .container_header .block_center .navigation ul li a {
 @media (max-width: 1281px) {
   header .container_header .block_center .navigation ul li a {
     padding-right: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 header .container_header .block_center .navigation ul li a.has-child {
   position: relative;
+}
+@media (max-width: 1536px) {
+  header .container_header .block_center .navigation ul li a.has-child {
+    padding-right: 1.5rem;
+  }
 }
 header .container_header .block_center .navigation ul li a.has-child::after {
   content: "";

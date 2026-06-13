@@ -21,6 +21,9 @@ header {
       gap: 4rem;
       max-width: 90%;
     }
+    @include respond-to(sm-desktop) {
+      gap: 2rem;
+    }
 
     .block_center {
       flex-grow: 1;
@@ -49,11 +52,14 @@ header {
               }
               @include respond-to(sm-desktop) {
                 padding-right: 1.5rem;
+                font-size: 1.4rem;
               }
 
               &.has-child {
                 position: relative;
-
+                @include respond-to(md-desktop) {
+                  padding-right: 1.5rem;
+                }
                 &::after {
                   content: "";
                   position: absolute;
