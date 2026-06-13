@@ -200,6 +200,8 @@
   }
   &.arrow_btn {
       padding: 0;
+      cursor: pointer;
+      border: none;
       .arrow_parent {
         background: $secondary;
         .arrow {
