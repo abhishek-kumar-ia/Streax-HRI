@@ -5161,6 +5161,164 @@ footer .block_bottom .block_right p {
   }
 }
 
+.leadership_testimonials_section .leadership_testimonial_slider {
+  overflow: hidden;
+}
+.leadership_testimonials_section .leadership_testimonial_slider .swiper-wrapper .swiper-slide .leadership_card_img {
+  display: none;
+}
+@media (max-width: 767px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .swiper-wrapper .swiper-slide .leadership_card_img {
+    display: block;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 0rem;
+  }
+  .leadership_testimonials_section .leadership_testimonial_slider .swiper-wrapper .swiper-slide .leadership_card_img > img {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 0rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .swiper-wrapper .swiper-slide.swiper-slide-active .leadership_card .leadership_card_img {
+  display: block;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.leadership_testimonials_section .leadership_testimonial_slider .swiper-wrapper .swiper-slide.swiper-slide-active .leadership_card .leadership_card_img > img {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card {
+  display: flex;
+  border-radius: 2rem;
+  overflow: hidden;
+  min-height: 38rem;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card {
+    min-height: 32rem;
+  }
+}
+@media (max-width: 767px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_img {
+  flex: 0 0 48%;
+}
+@media (max-width: 767px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_img {
+    flex: none;
+    height: 28rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content {
+  flex: 1;
+  background: linear-gradient(180deg, #005039 0%, #002017 100%);
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content {
+    padding: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content {
+    padding: 4rem 2.4rem 2.4rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .quote_icon {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  width: 7rem;
+  height: 3rem;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .quote_icon {
+    top: 2rem;
+    right: 2rem;
+    width: 5.2rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .quote {
+  font-size: 2.2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .quote {
+    font-size: 1.8rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .quote {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .leadership_by .name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .leadership_by .name {
+    font-size: 1.8rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .leadership_by .designation {
+  font-size: 1.6rem;
+}
+@media (max-width: 1536px) {
+  .leadership_testimonials_section .leadership_testimonial_slider .leadership_card .leadership_card_content .leadership_by .designation {
+    font-size: 1.4rem;
+  }
+}
+.leadership_testimonials_section .leadership_testimonial_utils {
+  gap: 3rem;
+}
+@media (max-width: 992px) {
+  .leadership_testimonials_section .leadership_testimonial_utils {
+    justify-content: space-between;
+  }
+}
+.leadership_testimonials_section .swiper_pagination_leadership .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #B29142;
+}
+.leadership_testimonials_section .leadership_buttons .swiper-button-prev.swiper-button-disabled {
+  color: #B29142;
+  border-color: #B29142;
+  background: transparent;
+  opacity: 1;
+}
+.leadership_testimonials_section .leadership_buttons .swiper-button-next.swiper-button-disabled {
+  color: #B29142;
+  border-color: #B29142;
+  background: transparent;
+  opacity: 1;
+}
+
 .gptw {
   position: relative;
 }

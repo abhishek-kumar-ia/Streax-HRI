@@ -652,6 +652,35 @@ $(document).on("keydown", function (e) {
       // },
     });
 
+  // Leadership Testimonials Swiper
+  const leadershipSwiper = new Swiper('.leadership_testimonial_slider', {
+    slidesPerView: 1.15,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper_pagination_leadership',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-leadership',
+      prevEl: '.swiper-button-prev-leadership',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 1.1,
+        spaceBetween: 24,
+      },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+
 });
 // jQuery End
 
