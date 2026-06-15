@@ -1213,6 +1213,7 @@ header .container_header .block_center .navigation ul li .dropdown-menu > ul > l
   width: 75%;
   padding-bottom: 4rem;
   margin-bottom: 1rem;
+  border-radius: 0;
 }
 header .container_header .block_center .navigation ul li .dropdown-menu > ul > li.first-child > .overview > span {
   margin-left: 1rem;
@@ -5720,4 +5721,44 @@ footer .block_bottom .block_right p {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+#edit-basic {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#edit-basic .js-form-item {
+  margin-bottom: 20px;
+}
+
+#edit-basic .js-form-item #edit-keys {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+}
+#edit-basic .js-form-item #edit-keys::placeholder {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+#edit-basic #edit-submit {
+  background-color: #005039;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 30px;
+}
+
+.search-help-link {
+  font-size: 1.6rem;
 }/*# sourceMappingURL=main.css.map */

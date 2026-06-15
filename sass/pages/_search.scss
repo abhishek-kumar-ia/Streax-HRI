@@ -1,0 +1,38 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+#edit-basic {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-family: "Open Sans", sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#edit-basic .js-form-item {
+    margin-bottom: 20px;
+}
+#edit-basic .js-form-item #edit-keys {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
+    &::placeholder {
+        font-size: 1.6rem;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+#edit-basic  #edit-submit {
+    background-color: #005039;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    padding: 10px 30px;
+}
+.search-help-link {
+    font-size: 1.6rem;
+}

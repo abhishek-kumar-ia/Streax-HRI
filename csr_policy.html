@@ -655,14 +655,20 @@
     });
 
     navItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        const section = document.getElementById(item.dataset.target);
+  item.addEventListener("click", () => {
+    const section = document.getElementById(item.dataset.target);
 
-        section.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      });
+    const offset = 100; // space from top
+    const top =
+      section.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
     });
+  });
+});
   </script>
 </html>
