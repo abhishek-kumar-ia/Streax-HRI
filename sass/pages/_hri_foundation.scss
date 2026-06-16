@@ -33,7 +33,9 @@
             overflow: hidden;
             border-radius: 16px;
             grid-column: span 2;
-
+            @include respond-to(sm-desktop) {
+                grid-column: span 3;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -45,6 +47,12 @@
             &:hover {
                 img {
                     transform: scale(1.08);
+                }
+                .description {
+                    max-height: 120px; // adjust based on content length
+                    opacity: 0.85;
+                    transform: translateY(0);
+                    margin-top: 2rem;
                 }
             }
 
@@ -111,16 +119,36 @@
             .location {
                 color: $white;
                 opacity: 0.85;
+                align-items: center;
+                gap: 6px;
                 display: flex;
+                > img {
+                    width: auto;
+                    height: auto;
+                }
 
-                &::before {
-                    content: url("../../assets/icons/location.svg");
-                    margin-right: 6px;
+            }
+            .description {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transform: translateY(15px);
+                transition: all 0.4s ease;
+            
+                margin-top: 0;
+                color: $white;
+                font-size: 1.6rem;
+                line-height: 1.3;
+                font-weight: 400;
+                @include respond-to(mobile-horizontal){
+                    font-size: 1.4rem;
                 }
             }
-
             &.large {
                 grid-column: span 3;
+                @include respond-to(mobile-horizontal){
+                    aspect-ratio:  6 / 9;
+                }
             }
         }
     }

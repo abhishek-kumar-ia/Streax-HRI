@@ -22,4 +22,31 @@ $(document).on("click", function (e) {
     }
 });
 // custom select end
+
+// Header Sticky Functionality Start
+if ($(window).width() < 992) return;
+
+    let lastScrollTop = 0;
+    const $header = $('header');
+
+    $(window).on('scroll', function () {
+        let currentScroll = $(this).scrollTop();
+
+        // Keep visible at top
+        if (currentScroll <= 0) {
+            $header.removeClass('header-hidden');
+            return;
+        }
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            $header.addClass('header-hidden');
+        } else {
+            // Scrolling up
+            $header.removeClass('header-hidden');
+        }
+
+        lastScrollTop = currentScroll;
+    });
+// Header Sticky Functionality End
 });

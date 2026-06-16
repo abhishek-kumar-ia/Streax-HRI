@@ -6,6 +6,18 @@ header {
   // padding: 1rem 0;
   border-bottom: 2px solid $secondary;
   position: relative;
+  transition: transform 0.3s ease;
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &.header-hidden {
+    transform: translateY(-100%);
+  }
 
   @include respond-to(mobile-large) {
     padding: 2rem 0;
@@ -477,3 +489,9 @@ header {
 }
 
 // Accessibility Button End
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 80px; // Header height
+  }
+}
