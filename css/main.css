@@ -3258,6 +3258,7 @@ footer .block_bottom .block_right p {
   padding: 2rem 3rem;
   border-radius: 100px;
   border: 1px solid #c4c4c4;
+  color: #000;
   font-size: 1.8rem;
 }
 @media (max-width: 1536px) {
@@ -5776,12 +5777,43 @@ footer .block_bottom .block_right p {
   }
 }
 
+#search-form {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 12rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1921px) {
+  #search-form {
+    max-width: 1524px;
+  }
+}
+@media (max-width: 1536px) {
+  #search-form {
+    padding-top: 10rem;
+  }
+}
+@media (max-width: 1281px) {
+  #search-form {
+    padding-top: 8rem;
+  }
+}
+@media (max-width: 992px) {
+  #search-form {
+    padding-top: 8rem;
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  #search-form {
+    padding-top: 6rem;
+  }
+}
+
 #edit-basic {
   margin: 0 auto;
   font-size: 1.8rem;
   font-family: "Open Sans", sans-serif;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 #edit-basic .js-form-item {
@@ -5813,5 +5845,73 @@ footer .block_bottom .block_right p {
 }
 
 .search-help-link {
+  margin-top: 1rem;
   font-size: 1.6rem;
+}
+
+.results-block {
+  padding-bottom: 12rem;
+}
+@media (min-width: 1921px) {
+  .results-block {
+    max-width: 1524px;
+  }
+}
+@media (max-width: 1536px) {
+  .results-block {
+    padding-bottom: 10rem;
+  }
+}
+@media (max-width: 1281px) {
+  .results-block {
+    padding-bottom: 8rem;
+  }
+}
+@media (max-width: 992px) {
+  .results-block {
+    padding-bottom: 8rem;
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .results-block {
+    padding-bottom: 6rem;
+  }
+}
+.results-block h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .results-block h2 {
+    font-size: 1.8rem;
+  }
+}
+.results-block ol li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.results-block ol li h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+.results-block ol li h3 > a {
+  color: #005039;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .results-block ol li h3 {
+    font-size: 1.6rem;
+  }
+}
+.results-block ol li p {
+  font-size: 1.6rem;
+}
+@media (max-width: 992px) {
+  .results-block ol li p {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=main.css.map */

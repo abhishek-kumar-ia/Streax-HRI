@@ -1,16 +1,39 @@
 @use "../base/_vars.scss" as *;
 @use "../base/_mixins.scss" as *;
 
+#search-form {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+    @include respond-to(xxl-desktop-up) {
+        max-width: 1524px;
+    }
+    @include respond-to(md-desktop) {
+        padding-top: 10rem;
+      }
+      @include respond-to(sm-desktop) {
+        padding-top: 8rem;
+      }
+      @include respond-to(mobile-large) {
+        padding-top: 8rem;
+        max-width: 90%;
+      }
+      @include respond-to(mobile) {
+        padding-top: 6rem;
+      }
+}
+
 #edit-basic {
     margin: 0 auto;
     font-size: 1.8rem;
     font-family: "Open Sans", sans-serif;
-    padding-right: 15px;
-    padding-left: 15px;
 }
+
 #edit-basic .js-form-item {
     margin-bottom: 20px;
 }
+
 #edit-basic .js-form-item #edit-keys {
     width: 100%;
     padding: 10px;
@@ -18,13 +41,15 @@
     border-radius: 5px;
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
-  margin-top: 2rem;
+    margin-top: 2rem;
+
     &::placeholder {
         font-size: 1.6rem;
         font-family: "Open Sans", sans-serif;
     }
 }
-#edit-basic  #edit-submit {
+
+#edit-basic #edit-submit {
     background-color: #005039;
     color: #fff;
     border: none;
@@ -33,6 +58,62 @@
     font-family: "Open Sans", sans-serif;
     padding: 10px 30px;
 }
+
 .search-help-link {
+    margin-top: 1rem;
     font-size: 1.6rem;
+}
+
+.results-block {
+    padding-bottom:     12rem;
+    @include respond-to(xxl-desktop-up) {
+        max-width: 1524px;
+    }
+    @include respond-to(md-desktop) {
+        padding-bottom: 10rem;
+      }
+      @include respond-to(sm-desktop) {
+        padding-bottom: 8rem;
+      }
+      @include respond-to(mobile-large) {
+        padding-bottom: 8rem;
+        max-width: 90%;
+      }
+      @include respond-to(mobile) {
+        padding-bottom: 6rem;
+      }
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.8rem;
+        }
+    }
+    ol {
+        li {
+            border-bottom: 1px solid #00000050;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+                > a {
+                    color: $primary;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+                @include respond-to(mobile-large) {
+                    font-size: 1.6rem;
+                }
+            }
+            p {
+                font-size: 1.6rem;
+                @include respond-to(mobile-large) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
 }
