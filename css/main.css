@@ -1159,23 +1159,23 @@ header .container_header .block_center .navigation ul li {
 header .container_header .block_center .navigation ul li a {
   color: #fff;
   font-size: 1.6rem;
-  padding: 3.6rem 2rem;
+  padding: 3.6rem 0rem 3.6rem 1rem;
   display: inline-block;
   position: relative;
 }
 @media (max-width: 1536px) {
   header .container_header .block_center .navigation ul li a {
-    padding: 3.6rem 1rem;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 1281px) {
   header .container_header .block_center .navigation ul li a {
-    padding-right: 1.5rem;
-    font-size: 1.4rem;
+    padding-right: 0rem;
   }
 }
 header .container_header .block_center .navigation ul li a.has-child {
   position: relative;
+  padding-right: 1.5rem;
 }
 @media (max-width: 1536px) {
   header .container_header .block_center .navigation ul li a.has-child {
@@ -4256,6 +4256,7 @@ footer .block_bottom .block_right p {
 @media (max-width: 1024px) {
   .impactSection .impactContainer {
     grid-template-columns: 1fr;
+    gap: 60px;
   }
 }
 .impactSection .impactContainer .impactSidebar {
@@ -4281,12 +4282,24 @@ footer .block_bottom .block_right p {
   flex-direction: column;
   gap: 3rem;
 }
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactSidebar .timelineNav {
+    gap: 0rem;
+  }
+}
 .impactSection .impactContainer .impactSidebar .timelineNav .navItem {
   display: flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactSidebar .timelineNav .navItem {
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid rgba(137, 137, 137, 0.3137254902);
+    margin-bottom: 1.6rem;
+  }
 }
 .impactSection .impactContainer .impactSidebar .timelineNav .navItem.active .number {
   background: #006341;
@@ -4313,6 +4326,11 @@ footer .block_bottom .block_right p {
   font-size: 2.2rem;
   color: #898989;
   font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactSidebar .timelineNav .navItem .text {
+    font-size: 1.6rem;
+  }
 }
 .impactSection .impactContainer .impactContent {
   flex: 1;
@@ -4369,11 +4387,12 @@ footer .block_bottom .block_right p {
   }
 }
 .impactSection .impactContainer .impactContent .contentBlock .content .innerGreenList {
-  display: flex;
-  align-items: center;
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 30px 1fr;
 }
 .impactSection .impactContainer .impactContent .contentBlock .content .innerGreenList > span {
-  margin-right: 1rem;
+  margin-top: 4px;
   background: #006341;
   color: #fff;
   width: 24px;
@@ -4385,10 +4404,21 @@ footer .block_bottom .block_right p {
   font-size: 1.2rem;
   font-weight: 600;
 }
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactContent .contentBlock .content .innerGreenList > span {
+    margin-top: 0px;
+  }
+}
 .impactSection .impactContainer .impactContent .contentBlock .content .innerGreenList {
   font-size: 2.2rem;
   color: #005039;
   font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactContent .contentBlock .content .innerGreenList {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 }
 .impactSection .impactContainer .impactContent .contentBlock .content > ul {
   list-style-type: disc;
@@ -4400,6 +4430,12 @@ footer .block_bottom .block_right p {
   font-size: 1.8rem;
   line-height: 1.4;
   color: #000;
+}
+@media (max-width: 1024px) {
+  .impactSection .impactContainer .impactContent .contentBlock .content > ul > li {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .form_wrapper {
@@ -5626,12 +5662,23 @@ footer .block_bottom .block_right p {
   font-weight: 400;
   line-height: 24px;
 }
+@media (max-width: 1024px) {
+  .contact-wrapper-info .info-card .label {
+    font-size: 1.6rem;
+    line-height: 20px;
+  }
+}
 .contact-wrapper-info .info-card .value {
   color: #000;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 133.333% */
+}
+@media (max-width: 1024px) {
+  .contact-wrapper-info .info-card .value {
+    font-size: 1.6rem;
+  }
 }
 .contact-wrapper-info .info-card .value.phone {
   display: flex;

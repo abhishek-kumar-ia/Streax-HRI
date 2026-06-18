@@ -387,6 +387,15 @@
                 <p class="description">Organised a transformative three-day educational tour, exposing young girls to new experiences, workplaces, cultural landmarks, and opportunities beyond their communities. </p>
               </div>
             </article>
+            
+          </div>
+          <div class="f ai-c jc-c mt-4">
+            <a href="#" class="btn">
+              <span class="btn_text">Show More</span>
+              <div class="arrow_parent">
+                <span class="arrow"></span>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -586,4 +595,39 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".impact-grid .impact-card");
+      const showMoreBtn = document.querySelector(".btn");
+    
+      let visibleCount = 5;
+      const loadCount = 2;
+    
+      // Hide cards after first 5
+      cards.forEach((card, index) => {
+        if (index >= visibleCount) {
+          card.style.display = "none";
+        }
+      });
+    
+      showMoreBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+    
+        for (
+          let i = visibleCount;
+          i < visibleCount + loadCount && i < cards.length;
+          i++
+        ) {
+          cards[i].style.display = "block";
+        }
+    
+        visibleCount += loadCount;
+    
+        // Hide button when all cards are visible
+        if (visibleCount >= cards.length) {
+          showMoreBtn.parentElement.style.display = "none";
+        }
+      });
+    });
+    </script> -->
 </html>
