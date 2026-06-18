@@ -5878,6 +5878,16 @@ footer .block_bottom .block_right p {
     padding-bottom: 6rem;
   }
 }
+.results-block em {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .results-block em {
+    font-size: 1.8rem;
+  }
+}
 .results-block h2 {
   font-size: 2.2rem;
   margin-bottom: 2rem;

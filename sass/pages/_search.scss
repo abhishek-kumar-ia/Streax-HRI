@@ -82,6 +82,14 @@
       @include respond-to(mobile) {
         padding-bottom: 6rem;
       }
+    em {
+        font-size: 2.2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.8rem;
+        }
+    }
     h2 {
         font-size: 2.2rem;
         margin-bottom: 2rem;
