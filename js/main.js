@@ -16,6 +16,10 @@ $(function () {
   $("#search_btn").on("click", function (e) {
         e.stopPropagation();
         $(".search_menu").toggleClass("is_open");
+        // Hide menu if its open
+        $(".mobile_menu").slideUp(250);
+        // Hide hamburger menu if its open
+        $(".hamburger_icon").removeClass("is_open");
     });
 
     $(document).on("click", function () {

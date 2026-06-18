@@ -192,6 +192,11 @@ header {
             @include respond-to(mobile-large) {
               max-width: 90%;
             }
+            .popular_search {
+              .listings {
+                margin-top: 0;
+              }
+            }
             .search_box {
               position: relative;
               margin-bottom: 4rem;

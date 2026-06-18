@@ -1292,6 +1292,9 @@ header .container_header .block_right .search_icon .search_menu .search_containe
     max-width: 90%;
   }
 }
+header .container_header .block_right .search_icon .search_menu .search_container .popular_search .listings {
+  margin-top: 0;
+}
 header .container_header .block_right .search_icon .search_menu .search_container .search_box {
   position: relative;
   margin-bottom: 4rem;
