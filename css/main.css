@@ -4613,6 +4613,23 @@ footer .block_bottom .block_right p {
 .form_wrapper .form_block .form .form_group .privacy_policy > a {
   color: #B29142;
 }
+.form_wrapper .form_block .thank_you_message {
+  display: none;
+}
+.form_wrapper .form_block .thank_you_message.active {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(201, 201, 201, 0.3137254902);
+  border-radius: 2rem;
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .thank_you_message.active {
+    padding: 4rem 2rem;
+  }
+}
 .form_wrapper .detail_block {
   border-radius: 1rem;
   padding: 4rem;
