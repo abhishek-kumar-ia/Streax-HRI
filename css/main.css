@@ -5900,79 +5900,79 @@ footer .block_bottom .block_right p {
   font-size: 1.6rem;
 }
 
-.results-block {
+.result-block {
   padding-bottom: 12rem;
 }
 @media (min-width: 1921px) {
-  .results-block {
+  .result-block {
     max-width: 1524px;
   }
 }
 @media (max-width: 1536px) {
-  .results-block {
+  .result-block {
     padding-bottom: 10rem;
   }
 }
 @media (max-width: 1281px) {
-  .results-block {
+  .result-block {
     padding-bottom: 8rem;
   }
 }
 @media (max-width: 992px) {
-  .results-block {
+  .result-block {
     padding-bottom: 8rem;
     max-width: 90%;
   }
 }
 @media (max-width: 480px) {
-  .results-block {
+  .result-block {
     padding-bottom: 6rem;
   }
 }
-.results-block em {
+.result-block em {
   font-size: 2.2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 @media (max-width: 992px) {
-  .results-block em {
+  .result-block em {
     font-size: 1.8rem;
   }
 }
-.results-block h2 {
+.result-block h2 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 @media (max-width: 992px) {
-  .results-block h2 {
+  .result-block h2 {
     font-size: 1.8rem;
   }
 }
-.results-block ol li {
+.result-block ol li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
-.results-block ol li h3 {
+.result-block ol li h3 {
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
-.results-block ol li h3 > a {
+.result-block ol li h3 > a {
   color: #005039;
   text-decoration: none;
   font-weight: 600;
 }
 @media (max-width: 992px) {
-  .results-block ol li h3 {
+  .result-block ol li h3 {
     font-size: 1.6rem;
   }
 }
-.results-block ol li p {
+.result-block ol li p {
   font-size: 1.6rem;
 }
 @media (max-width: 992px) {
-  .results-block ol li p {
+  .result-block ol li p {
     font-size: 1.4rem;
   }
 }/*# sourceMappingURL=main.css.map */
