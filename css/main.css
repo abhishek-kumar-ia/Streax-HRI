@@ -2596,22 +2596,33 @@ footer .block_bottom .block_right p {
 }
 
 .features_section {
-  background-image: url("../assets/Hair_cut_bg.png");
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-}
-@media (max-width: 1281px) {
-  .features_section {
-    background-position: center;
-    background-size: cover;
-  }
+  position: relative;
 }
 @media (max-width: 992px) {
   .features_section {
-    background-position: right bottom;
-    padding-bottom: 200px;
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+.features_section .idea_bg {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 5%;
+  max-width: 45vw;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .features_section .idea_bg {
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    order: 2;
   }
 }
 .features_section .block_left {
@@ -2665,6 +2676,74 @@ footer .block_bottom .block_right p {
   .features_block .feature_item > h4 {
     font-size: 4rem;
   }
+}
+
+.features_list {
+  margin-top: 4rem;
+}
+.features_list > ul li {
+  position: relative;
+  font-size: 2.2rem;
+  color: #4C4C4C;
+  padding-left: 1.6rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 992px) {
+  .features_list > ul li {
+    font-size: 1.8rem;
+  }
+}
+.features_list > ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #4C4C4C;
+}
+
+.branding_section .branding_container {
+  display: grid;
+  gap: 8rem;
+  grid-template-columns: 1fr 3fr;
+}
+@media (max-width: 992px) {
+  .branding_section .branding_container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+@media (max-width: 992px) {
+  .branding_section .branding_container .left {
+    order: 2;
+  }
+}
+.branding_section .branding_container .left h2 {
+  line-height: 1.1;
+}
+@media (max-width: 992px) {
+  .branding_section .branding_container .left h2 > img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+.branding_section .branding_container .right {
+  height: 100%;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .branding_section .branding_container .right {
+    order: 1;
+  }
+}
+.branding_section .branding_container .right > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
 }
 
 .legacy_grid {
