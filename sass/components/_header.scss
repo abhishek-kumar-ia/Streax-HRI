@@ -47,8 +47,10 @@ header {
 
         ul {
           display: flex;
-          gap: 1rem;
-
+          gap: 2rem;
+          @include respond-to(sm-desktop) {
+            gap: 1rem;
+          }
           li {
             position: relative;
 
@@ -78,7 +80,7 @@ header {
                   content: "";
                   position: absolute;
                   right: 0;
-                  top: 50%;
+                  top: 48%;
                   width: 7px;
                   height: 7px;
                   border-top: 2px solid $secondary;
@@ -141,7 +143,7 @@ header {
 
             &:hover {
               > a.has-child::after {
-                transform: translateY(-50%) rotate(45deg);
+                transform: translateY(0%) rotate(45deg);
 
               }
 

@@ -18,6 +18,16 @@
             width: 100%;
             padding-right: 5%;
         }
+        img {
+            @include respond-to(mobile-horizontal) {
+                margin-bottom: 2rem;
+            }
+        }
+        h2 {
+            @include respond-to(mobile-horizontal) {
+                margin-bottom: 2rem;
+            }
+        }
     }
     .block_right {
         width: 70%;

@@ -34,6 +34,12 @@
             }
         }
     }
+    .vision_icon {
+        @include respond-to(mobile-horizontal) {
+            width: 90px;
+            height: 90px;
+        }
+    }
 }
 
 

@@ -23,6 +23,10 @@
       align-items: center;
       flex-direction: column;
       padding: 2rem;
+      
+      @include respond-to(mobile-horizontal) {
+        padding: 3rem;
+      }
       .tag {
         background-color: #f6f0e7;
         padding: 1rem 2rem;
@@ -78,6 +82,11 @@
         }
       }
     }
+    .center {
+      @include respond-to(mobile-horizontal) {
+        padding: 3rem 0rem;
+      }
+    }
     .right {
       padding: 4rem;
       background-color: $primary;
@@ -86,6 +95,9 @@
 
       @include respond-to(md-desktop) {
         padding: 2rem;
+      }
+      @include respond-to(mobile-horizontal) {
+        padding: 3rem;
       }
       .block {
         @include respond-to(sm-desktop) {

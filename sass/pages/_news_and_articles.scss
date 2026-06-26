@@ -32,6 +32,7 @@
               right: 30px;
               top: 50%;
               transform: translateY(-50%);
+              filter: invert(0);
             }
             input {
               width: 100%;
@@ -46,13 +47,24 @@
               &::placeholder {
                 font-size: 1.8rem;
                 font-weight: 500;
+                color: #000;
                 @include respond-to(md-desktop) {
                   font-size: 1.6rem;
                 }
               }
             }
           }
+          .custom-select {
+            .custom-select__trigger {
+              border: 1px solid #C4C4C4;
+              color: $primary;
+              .arrow {
+                color: $primary;
+              }
+            }
+          }
         }
+
       }
     }
     .list_items {
@@ -131,7 +143,7 @@
 
   &__trigger {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 3rem;
     border: 1px solid #d9d9d9;
     border-radius: 100px;
     background: #fff;
@@ -143,6 +155,9 @@
     gap: 10px;
     @include respond-to(md-desktop) {
       font-size: 1.6rem;
+    }
+    @include respond-to(mobile-horizontal) {
+      padding: 1rem 2rem;
     }
     > .arrow {
       color: $primary;

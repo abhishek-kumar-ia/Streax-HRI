@@ -60,9 +60,11 @@
 
     .science-care-gallery {
       display: flex;
-      gap: 1.2rem;
+      gap: 2rem;
       height: 100%;
-
+      @include respond-to(mobile-horizontal) {
+        gap: 1rem;
+      }
       .gallery-main {
         flex: 1;
 
@@ -78,8 +80,10 @@
         display: flex;
         flex: 0 0 50%;
         flex-direction: column;
-        gap: 1.2px;
-
+        gap: 2rem;
+        @include respond-to(mobile-horizontal) {
+          gap: 1rem;
+        }
         .gallery-side-item {
           flex: 1;
 

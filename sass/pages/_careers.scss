@@ -22,7 +22,7 @@
 
       .text_block {
         position: absolute;
-        bottom: 8rem;
+        bottom: 5rem;
         padding-right: 5rem;
         padding-left: 5rem;
 
@@ -33,28 +33,24 @@
         }
 
         > h3 {
-          font-size: 3rem;
+          font-size: 2.2rem;
           font-weight: 700;
-          margin-bottom: 2rem;
+          margin-bottom: 1.6rem;
 
           @include respond-to(md-desktop) {
-            font-size: 2.4rem;
+            font-size: 2rem;
           }
 
           @include respond-to(mobile-horizontal) {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
           }
         }
 
         > p {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
 
           @include respond-to(md-desktop) {
-            font-size: 1.8rem;
-          }
-
-          @include respond-to(mobile-horizontal) {
             font-size: 1.6rem;
           }
         }
