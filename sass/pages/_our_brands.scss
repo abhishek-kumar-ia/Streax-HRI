@@ -20,6 +20,15 @@
       grid-template-columns: 1fr;
       margin-bottom: 4rem;
     }
+    &.our_product_card {
+      grid-template-columns: 1fr 1fr;
+      @include respond-to(sm-desktop) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include respond-to(break-desktop) {
+        grid-template-columns: 1fr;
+      }
+    }
     .img_block {
       height: 100%;
       > img {
@@ -49,6 +58,15 @@
       }
       @include respond-to(break-desktop) {
         grid-template-columns: 1fr;
+      }
+      &.our_product_card {
+        grid-template-columns: 1fr 1fr;
+        @include respond-to(sm-desktop) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @include respond-to(break-desktop) {
+          grid-template-columns: 1fr;
+        }
       }
       .img_block {
         order: 1;

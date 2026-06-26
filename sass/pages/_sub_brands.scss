@@ -22,19 +22,26 @@
                 border-top-right-radius: 2rem; 
             }
         }
-        p {
+        .text_block {
             padding: 2rem;
-            font-size: 2.2rem;
-            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
             background-color: #fff;
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
-            @include respond-to(md-desktop) {
-                font-size: 1.8rem;
-            }
-            @include respond-to(mobile-horizontal) {
-                font-size: 1.6rem;
+            p {
+                font-size: 2.2rem;
+                font-weight: 600;
+                @include respond-to(md-desktop) {
+                    font-size: 1.8rem;
+                }
+                @include respond-to(mobile-horizontal) {
+                    font-size: 1.6rem;
+                }
             }
         }
+        
     }
 }
