@@ -187,6 +187,12 @@ header {
               padding-bottom: 2rem;
               height: 330px;
             }
+            &.without_popular_search {
+              height: 150px;
+              @include respond-to(mobile) {
+                height: 100px;
+              }
+            }
           }
           .search_container {
             max-width: 920px;

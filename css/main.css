@@ -1289,6 +1289,14 @@ header .container_header .block_right .search_icon .search_menu.is_open {
     height: 330px;
   }
 }
+header .container_header .block_right .search_icon .search_menu.is_open.without_popular_search {
+  height: 150px;
+}
+@media (max-width: 480px) {
+  header .container_header .block_right .search_icon .search_menu.is_open.without_popular_search {
+    height: 100px;
+  }
+}
 header .container_header .block_right .search_icon .search_menu .search_container {
   max-width: 920px;
   margin: 0 auto;
