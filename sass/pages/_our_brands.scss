@@ -22,6 +22,15 @@
     }
     &.our_product_card {
       grid-template-columns: 1fr 1fr;
+      &.without_image {
+        grid-template-columns: 1fr;
+        @include respond-to(sm-desktop) {
+          grid-template-columns: 1fr;
+        }
+        @include respond-to(break-desktop) {
+          grid-template-columns: 1fr;
+        }
+      }
       @include respond-to(sm-desktop) {
         grid-template-columns: 1fr 1fr;
       }

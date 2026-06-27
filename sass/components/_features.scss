@@ -47,6 +47,9 @@
       //     }
     .block_left {
         width: 60%;
+        &.without_image {
+          width: 100%;
+        }
         @include respond-to(mobile-large) {
             width: 100%;
         }
