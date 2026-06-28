@@ -2632,7 +2632,9 @@ footer .block_bottom .block_right p {
 @media (max-width: 992px) {
   .inner_spotlight .spotlight_content_container {
     left: 5%;
-    bottom: 6rem;
+    bottom: auto;
+    padding-top: 4rem;
+    max-width: 100%;
   }
 }
 
@@ -2654,6 +2656,7 @@ footer .block_bottom .block_right p {
 @media (max-width: 992px) {
   .features_section .features_container {
     grid-template-columns: 1fr;
+    padding-top: 4rem;
   }
 }
 @media (max-width: 480px) {
@@ -2722,7 +2725,6 @@ footer .block_bottom .block_right p {
   display: flex;
   gap: 8rem;
   margin-top: 8rem;
-  padding-bottom: 2rem;
 }
 @media (max-width: 1536px) {
   .features_block {
@@ -2739,7 +2741,6 @@ footer .block_bottom .block_right p {
     flex-direction: column;
     gap: 1rem;
     margin-top: 4rem;
-    padding-bottom: 0rem;
   }
 }
 .features_block .feature_item {
@@ -4030,8 +4031,8 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 992px) {
   .timeline-progress {
-    top: 5%;
-    bottom: 5%;
+    top: 0%;
+    bottom: 0%;
   }
 }
 .timeline-progress__track {
@@ -4848,6 +4849,7 @@ footer .block_bottom .block_right p {
   font-size: 1.8rem;
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 @media (max-width: 1536px) {
   .form_wrapper .form_block .form .form_group textarea {
@@ -5015,6 +5017,16 @@ footer .block_bottom .block_right p {
 }
 .customTable tbody tr:not(:last-child) {
   border-bottom: 1px solid #ffffff;
+}
+.customTable tbody tr:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.customTable tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.customTable tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
 }
 .customTable tbody td {
   padding: 2rem;

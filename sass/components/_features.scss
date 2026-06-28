@@ -33,6 +33,7 @@
         
         @include respond-to(mobile-large) {
           grid-template-columns: 1fr;
+          padding-top: 4rem;
         }
         @include respond-to(mobile) {
           gap: 1rem;
@@ -83,7 +84,6 @@
   display: flex;
   gap: 8rem;
   margin-top: 8rem;
-  padding-bottom: 2rem;
   @include respond-to(md-desktop) {
     gap: 2rem;
   }
@@ -94,7 +94,6 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: 4rem;
-    padding-bottom: 0rem;
   }
   .feature_item {
     display: flex;

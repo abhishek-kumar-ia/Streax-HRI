@@ -19,8 +19,8 @@
   z-index: 1;
   pointer-events: none;
   @include respond-to(mobile-large) {
-    top: 5%;
-    bottom: 5%;
+    top: 0%;
+    bottom: 0%;
   }
 
   &__track {

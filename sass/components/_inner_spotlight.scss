@@ -81,7 +81,9 @@
     }
     @include respond-to(mobile-large) {
       left: 5%;
-      bottom: 6rem;
+      bottom: auto;
+      padding-top: 4rem;
+      max-width: 100%;
     }
   }
 }

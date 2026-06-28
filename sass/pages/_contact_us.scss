@@ -128,7 +128,7 @@
                     font-size: 1.8rem;
                     border-radius: 1rem;
                     border: 1px solid #00000033;
-
+                    width: 100%;
                     @include respond-to(md-desktop) {
                         font-size: 1.6rem;
                         padding: 1.6rem;
@@ -308,6 +308,18 @@
 
             &:not(:last-child) {
                 border-bottom: 1px solid #ffffff;
+            }
+            &:last-child {
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                td {
+                    &:first-child {
+                        border-bottom-left-radius: 12px;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: 12px;
+                    }
+                }
             }
         }
 
