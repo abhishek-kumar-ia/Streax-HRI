@@ -53,6 +53,22 @@
             padding-bottom: 6rem;
           }
         }
+        &.without_image {
+          grid-template-columns: 1fr;
+          padding-bottom: 12rem;
+          @include respond-to(md-desktop) {
+            padding-bottom: 10rem;
+          }
+          @include respond-to(sm-desktop) {
+            padding-bottom: 8rem;
+          }
+          @include respond-to(mobile-large) {
+            padding-bottom: 8rem;
+          }
+          @include respond-to(mobile) {
+            padding-bottom: 6rem;
+          }
+        }
         .block_right {
           height: 100%;
           display: flex;

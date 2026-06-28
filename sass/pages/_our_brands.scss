@@ -22,6 +22,20 @@
     }
     &.our_product_card {
       grid-template-columns: 1fr 1fr;
+      &.without-image {
+        grid-template-columns: 1fr;
+        @include respond-to(sm-desktop) {
+          grid-template-columns: 1fr;
+        }
+        @include respond-to(break-desktop) {
+          grid-template-columns: 1fr;
+        }
+        .text_block {
+          .descp {
+            margin-bottom: 0;
+          }
+        }
+      }
       &.without_image {
         grid-template-columns: 1fr;
         @include respond-to(sm-desktop) {
@@ -29,6 +43,11 @@
         }
         @include respond-to(break-desktop) {
           grid-template-columns: 1fr;
+        }
+        .text_block {
+          .descp {
+            margin-bottom: 0;
+          }
         }
       }
       @include respond-to(sm-desktop) {
