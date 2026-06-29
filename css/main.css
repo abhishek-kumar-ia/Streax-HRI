@@ -3431,7 +3431,7 @@ footer .block_bottom .block_right p {
 }
 .news_and_articles .articles_container .search_items .search_block {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
 }
