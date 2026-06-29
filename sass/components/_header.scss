@@ -87,6 +87,10 @@ header {
                   border-left: 2px solid $secondary;
                   transform: translateY(-50%) rotate(-135deg);
                   transition: transform 0.3s ease;
+                  @include respond-to(md-desktop) {
+                    width: 5px;
+                    height: 5px;
+                  }
 
                 }
               }
