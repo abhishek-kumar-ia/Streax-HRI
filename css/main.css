@@ -2641,7 +2641,7 @@ footer .block_bottom .block_right p {
   position: absolute;
   bottom: 12rem;
   left: 10%;
-  max-width: 50%;
+  max-width: 45%;
 }
 @media (min-width: 1921px) {
   .inner_spotlight .spotlight_content_container {

@@ -79,7 +79,7 @@
     position: absolute;
     bottom: 12rem;
     left: 10%;
-    max-width: 50%;
+    max-width: 45%;
     @include respond-to(xxl-desktop-up) {
         left: calc((100vw - 1524px) / 2);
     }
