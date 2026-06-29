@@ -57,6 +57,7 @@
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
     padding: 10px 30px;
+    cursor: pointer;
 }
 
 .search-help-link {
@@ -124,4 +125,8 @@
             }
         }
     }
+}
+
+button , .button {
+    cursor: pointer;
 }

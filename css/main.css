@@ -3231,6 +3231,59 @@ footer .block_bottom .block_right p {
   margin-bottom: 0;
 }
 
+.article_block img {
+  max-width: 100%;
+  height: auto;
+}
+.article_block h2 {
+  font-size: 2.6rem;
+}
+@media (max-width: 992px) {
+  .article_block h2 {
+    font-size: 2.2rem;
+  }
+}
+.article_block h3 {
+  font-size: 2.4rem;
+}
+@media (max-width: 992px) {
+  .article_block h3 {
+    font-size: 2rem;
+  }
+}
+.article_block h4 {
+  font-size: 2.2rem;
+}
+@media (max-width: 992px) {
+  .article_block h4 {
+    font-size: 2rem;
+  }
+}
+.article_block h5 {
+  font-size: 2rem;
+}
+@media (max-width: 992px) {
+  .article_block h5 {
+    font-size: 1.8rem;
+  }
+}
+.article_block h6 {
+  font-size: 1.8rem;
+}
+@media (max-width: 992px) {
+  .article_block h6 {
+    font-size: 1.6rem;
+  }
+}
+.article_block p {
+  font-size: 1.8rem;
+}
+@media (max-width: 992px) {
+  .article_block p {
+    font-size: 1.6rem;
+  }
+}
+
 .awards_container .tab-nav-wrap {
   display: flex;
   justify-content: space-between;
@@ -6226,6 +6279,7 @@ footer .block_bottom .block_right p {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .search-help-link {
@@ -6308,4 +6362,8 @@ footer .block_bottom .block_right p {
   .result-block ol li p {
     font-size: 1.4rem;
   }
+}
+
+button, .button {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
