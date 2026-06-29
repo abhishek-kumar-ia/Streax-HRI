@@ -49,6 +49,10 @@
         // @include respond-to(mobile-large) {
         //     width: 45%;
         // }
+        height: 120px;
+        @include respond-to(mobile-large) {
+            height: 100px;
+        }
         &:last-child {
             @include respond-to(mobile-large) {
                 // width: 100%;

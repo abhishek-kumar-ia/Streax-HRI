@@ -1805,6 +1805,12 @@ footer .block_bottom .block_right p {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 120px;
+}
+@media (max-width: 992px) {
+  .other_brands > a {
+    height: 100px;
+  }
 }
 @media (max-width: 992px) {
   .other_brands > a:last-child {
