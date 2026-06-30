@@ -588,3 +588,49 @@
     }
   }
 }
+
+// Fun at Work Start
+.fun_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  @include respond-to(sm-desktop) {
+    gap: 2rem;
+  }
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: 1fr;
+  }
+  .left_block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    @include respond-to(sm-desktop) {
+      gap: 2rem;
+    }
+    .bottom {
+      display: grid;
+      gap: 4rem;
+      grid-template-columns: 1fr 1fr;  
+      @include respond-to(sm-desktop) {
+        gap: 2rem;
+      }
+    }
+  }
+  .right_block {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    @include respond-to(sm-desktop) {
+      gap: 2rem;
+    }
+    .left {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      @include respond-to(sm-desktop) {
+        gap: 2rem;
+      }
+    }
+  }
+}
+// Fund at Work End
