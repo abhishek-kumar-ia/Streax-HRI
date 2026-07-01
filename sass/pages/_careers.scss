@@ -77,6 +77,27 @@
         @include respond-to(md-desktop) {
           margin-bottom: 2rem;
         }
+        .profile_img {
+          @include respond-to(md-desktop) {
+            max-width: 90px;
+            height: auto;
+          }
+
+        }
+        .quote_icon {
+          @include respond-to(md-desktop) {
+          max-width: 50px;
+          height: auto;
+          }
+        }
+      }
+      .title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @include respond-to(md-desktop) {
+          font-size: 1.8rem;
+        }
       }
       .text {
         font-size: 2.2rem;
@@ -104,12 +125,6 @@
             font-size: 1.6rem;
           }
         }
-        .duration {
-          font-size: 1.8rem;
-          @include respond-to(md-desktop) {
-            font-size: 1.6rem;
-          }
-        }
       }
     }
    
@@ -120,10 +135,37 @@
         justify-content: space-between;
     }
   }
+  .swiper_pagination_testimonial_1 {
+    .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+        background-color: $secondary;
+      }
+    }
+  }
   .swiper_pagination_testimonial_2 {
     .swiper-pagination-bullet {
       &.swiper-pagination-bullet-active {
         background-color: $secondary;
+      }
+    }
+  }
+  .buttons_1 {
+    .swiper-button-prev {
+      &.swiper-button-disabled {
+        
+      color: $secondary;
+        border-color: $secondary;
+        background: transparent;
+        opacity: 1;
+      }
+    }
+    .swiper-button-next {
+      
+      &.swiper-button-disabled {
+        color: $secondary;
+        border-color: $secondary;
+        background: transparent;
+        opacity: 1;
       }
     }
   }
@@ -461,6 +503,14 @@
 }
 
 // Current Openings
+.current_openings {
+  @include respond-to(mobile-horizontal) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
 .search_items {
   margin-bottom: 4rem;
   .search_block {
@@ -634,3 +684,86 @@
   }
 }
 // Fund at Work End
+
+// Part of our story start
+.parts_block {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 10rem;
+  @include respond-to(mobile-horizontal) {
+    gap: 4rem;
+    grid-template-columns: 1fr;
+  }
+  .left_block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .top_block {
+      padding-left: 2rem;
+      border-left: 2px solid #B29142;
+      @include respond-to(mobile-horizontal) {
+        margin-bottom: 2rem;
+      }
+      .title {
+        font-size: 3rem;
+        @include respond-to(md-desktop) {
+          font-size: 2.6rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 2rem;
+        }
+      }
+      .description {
+        font-size: 3rem;
+        @include respond-to(md-desktop) {
+          font-size: 2.6rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .bottom_block {
+      padding-left: 2rem;
+      border-left: 2px solid #B29142;
+      .title {
+        font-size: 3rem;
+        @include respond-to(md-desktop) {
+          font-size: 2.6rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 2rem;
+        }
+      }
+      .description {
+        font-size: 3rem;
+        @include respond-to(md-desktop) {
+          font-size: 2.6rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .right_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+    @include respond-to(mobile-horizontal) {
+      gap: 2rem;
+    }
+    .description {
+      font-size: 2rem;
+      @include respond-to(md-desktop) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// Part of our story end
+
+
