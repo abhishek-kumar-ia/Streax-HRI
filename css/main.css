@@ -3849,7 +3849,6 @@ footer .block_bottom .block_right p {
 }
 .our_brands_section .brand_card .text_block .descp {
   font-size: 1.8rem;
-  font-weight: 400;
 }
 @media (max-width: 1536px) {
   .our_brands_section .brand_card .text_block .descp {
@@ -6562,4 +6561,46 @@ footer .block_bottom .block_right p {
 
 button, .button {
   cursor: pointer;
+}
+
+.downloads_grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1281px) {
+  .downloads_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .downloads_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .downloads_grid {
+    grid-template-columns: 1fr;
+  }
+}
+.downloads_grid .block {
+  border-radius: 2rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(201, 201, 201, 0.3137254902);
+}
+.downloads_grid .block .heading_block {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+.downloads_grid .block .heading_block h4 {
+  color: #005039;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.downloads_grid .block .heading_block .btn {
+  height: fit-content;
 }/*# sourceMappingURL=main.css.map */

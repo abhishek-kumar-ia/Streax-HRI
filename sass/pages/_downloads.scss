@@ -1,0 +1,42 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.downloads_grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    @include respond-to(sm-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond-to(mobile-large) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include respond-to(mobile){
+        grid-template-columns: 1fr;
+    }
+    .block {
+        border-radius: 2rem;
+        background-color: #ffffff;
+        border: 1px solid #c9c9c950;
+        // .img_block {
+        //     margin-bottom: 2rem;
+        // }
+        .heading_block {
+            display: grid;
+            grid-template-columns: 1fr 40px;
+            // margin-bottom: 1rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            padding: 2rem;
+            gap: 1rem;
+            h4 {
+                color: $primary;
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+            .btn {
+                height: fit-content;
+            }
+        }
+    }
+}

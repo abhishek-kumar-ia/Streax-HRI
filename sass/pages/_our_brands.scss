@@ -123,7 +123,6 @@
       }
       .descp {
         font-size: 1.8rem;
-        font-weight: 400;
         @include respond-to(md-desktop) {
           font-size: 1.6rem;
           margin-bottom: 2rem;
