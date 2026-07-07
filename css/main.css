@@ -2688,14 +2688,10 @@ footer .block_bottom .block_right p {
 }
 .inner_spotlight .spotlight_content_container {
   position: absolute;
-  top: 12rem;
+  top: 50%;
+  transform: translateY(-50%);
   left: 10%;
   max-width: 45%;
-}
-@media (max-width: 1281px) {
-  .inner_spotlight .spotlight_content_container {
-    top: 8rem;
-  }
 }
 @media (min-width: 1921px) {
   .inner_spotlight .spotlight_content_container {
@@ -2707,6 +2703,8 @@ footer .block_bottom .block_right p {
     left: 5%;
     bottom: auto;
     max-width: 90%;
+    top: 8rem;
+    transform: none;
   }
 }
 

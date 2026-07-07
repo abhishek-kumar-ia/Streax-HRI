@@ -87,12 +87,10 @@
   .spotlight_content_container {
     position: absolute;
     // bottom: 12rem;
-    top: 12rem;
+    top: 50%;
+    transform: translateY(-50%);
     left: 10%;
     max-width: 45%;
-    @include respond-to(sm-desktop) {
-      top: 8rem;
-    }
     @include respond-to(xxl-desktop-up) {
         left: calc((100vw - 1524px) / 2);
     }
@@ -101,6 +99,8 @@
       bottom: auto;
       // padding-top: 4rem;
       max-width: 90%;
+      top: 8rem;
+      transform: none;
     }
   }
 }
