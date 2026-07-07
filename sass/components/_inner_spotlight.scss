@@ -2,7 +2,8 @@
 @use "../base/_mixins.scss" as *;
 
 .inner_spotlight {
-  min-height: 480px;
+  // min-height: 480px;
+  height: 100%;
   position: relative;
 
   &::before {
@@ -23,14 +24,17 @@
   @include respond-to(mobile-large) {
     min-height: 660px;
   }
+  @include respond-to(mobile) {
+    min-height: auto;
+  }
 
   .spotlight {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    // position: absolute;
+    // z-index: -1;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
     > img {
       height: 100%;
       object-fit: cover;
@@ -43,10 +47,15 @@
   }
 
   .breadcrumb_container {
-    padding-top: 3rem;
-    position: relative;
+    // padding-top: 3rem;
+    left: 10%;
+    position: absolute;
+    top: 3rem;
     z-index: 1;
+    @include respond-to(mobile-large) {
+      left: 5%;
 
+    }
     .breadcrumb_list {
       list-style: none;
       display: flex;
@@ -77,17 +86,21 @@
 
   .spotlight_content_container {
     position: absolute;
-    bottom: 12rem;
+    // bottom: 12rem;
+    top: 12rem;
     left: 10%;
     max-width: 45%;
+    @include respond-to(sm-desktop) {
+      top: 8rem;
+    }
     @include respond-to(xxl-desktop-up) {
         left: calc((100vw - 1524px) / 2);
     }
     @include respond-to(mobile-large) {
       left: 5%;
       bottom: auto;
-      padding-top: 4rem;
-      max-width: 100%;
+      // padding-top: 4rem;
+      max-width: 90%;
     }
   }
 }

@@ -70,6 +70,11 @@
             padding-bottom: 6rem;
           }
         }
+        .block_left {
+          @include respond-to(sm-desktop) {
+            padding: 2rem 0;
+          }
+        }
         .block_right {
           height: 100%;
           display: flex;
