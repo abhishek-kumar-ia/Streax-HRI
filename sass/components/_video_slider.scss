@@ -25,6 +25,9 @@
                 height: auto;
                 border: none;
                 cursor: pointer;
+                @include respond-to(sm-desktop) {
+                    top: 30%;
+                }
                 @include respond-to(mobile-large) {
                     top: 30%;
                 }
@@ -50,6 +53,9 @@
             background-color: #00000075;
             @include respond-to(xxl-desktop-up) {
                 max-width: 80%;
+            }
+            @include respond-to(sm-desktop) {
+                bottom: 3rem;
             }
 
             @include respond-to(mobile-large) {
