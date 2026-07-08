@@ -66,7 +66,7 @@
 }
 
 .result-block {
-    padding-bottom:     12rem;
+    padding-bottom:     4rem;
     @include respond-to(xxl-desktop-up) {
         max-width: 1524px;
     }
@@ -129,4 +129,68 @@
 
 button , .button {
     cursor: pointer;
+}
+
+.pager {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+    .pager__items {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.6rem;
+        font-family: "Open Sans", sans-serif;
+        align-items: center;
+        @include respond-to(mobile-large) {
+            font-size: 1.4rem;
+        }
+        .pager__item {
+            &.pager__item--next {
+                > a {
+                    background: #B29142;
+                    border-radius: 20px;
+                    padding: 12px 16px;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+            }
+            &.pager__item--last {
+                > a {
+                    background: #B29142;
+                    border-radius: 20px;
+                    padding: 12px 16px;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            &.pager__item--first {
+                > a {
+                    background: #B29142;
+                    border-radius: 20px;
+                    padding: 12px 16px;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            &.pager__item--previous {
+                > a {
+                    background: #B29142;
+                    border-radius: 20px;
+                    padding: 12px 16px;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            &.is-active {
+                > a {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }

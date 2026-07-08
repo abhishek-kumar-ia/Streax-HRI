@@ -88,6 +88,7 @@
             @include respond-to(mobile-large) {
                 width: auto;
                 // height: 40px;
+                height: auto;
             }
         }
     }
