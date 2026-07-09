@@ -1,173 +1,174 @@
-@use '../base/_mixins.scss' as *;
-@use '../base/_vars.scss' as *;
-
+@use "../base/_mixins.scss" as *;
+@use "../base/_vars.scss" as *;
 
 .brand_card {
-    background-color: $white;
-    border-radius: 2rem;
+  background-color: $white;
+  border-radius: 2rem;
 
-    img {
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
-    }
+  img {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
 
-    .brand_details {
-        padding: 2rem;
+  .brand_details {
+    padding: 2rem;
 
-        .img_block {
-            min-height: 80px;
-            @include respond-to(mobile-large) {
-                min-height: 60px;
-            }
-            .logo_img {
-                border-radius: 0rem;
+    .img_block {
+      min-height: 80px;
+      @include respond-to(mobile-large) {
+        min-height: 60px;
+      }
+      @include respond-to(mobile-horizontal) {
+        min-height: 80px;
+      }
+      .logo_img {
+        border-radius: 0rem;
 
-                @include respond-to(md-desktop) {
-                    max-width: 180px;
-                    height: auto;
-                }
-
-                @include respond-to(sm-desktop) {
-                    max-width: 150px;
-                    height: auto;
-                }
-            }
+        @include respond-to(md-desktop) {
+          max-width: 180px;
+          height: auto;
         }
 
-        >h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            min-height: 60px;
-
-            @include respond-to(md-desktop) {
-                font-size: 1.6rem;
-            }
-            @include respond-to(mobile-large) {
-                font-size: 1.8rem;
-                min-height: 80px;
-            }
+        @include respond-to(sm-desktop) {
+          max-width: 150px;
+          height: auto;
         }
+      }
     }
 
+    > h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      min-height: 60px;
+
+      @include respond-to(md-desktop) {
+        font-size: 1.6rem;
+      }
+      @include respond-to(mobile-large) {
+        font-size: 1.8rem;
+        min-height: 80px;
+      }
+    }
+  }
 }
 
 // Outer Brands
 .other_brands {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: center;
+  // flex-wrap: wrap;
+  margin-bottom: 8rem;
+
+  @include respond-to(sm-desktop) {
+    justify-content: space-between;
+  }
+
+  @include respond-to(mobile-large) {
     justify-content: center;
-    // flex-wrap: wrap;
-    margin-bottom: 8rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  > a {
+    padding: 3rem;
+    border: 2px solid #005039;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include respond-to(mobile-large) {
+    //     width: 45%;
+    // }
+    // @include respond-to(sm-desktop) {
+    //     width: 250px;
+    // }
+    height: 120px;
 
     @include respond-to(sm-desktop) {
-        justify-content: space-between;
+      justify-content: space-between;
+    }
+
+    @include respond-to(sm-desktop) {
+      width: calc((100% / 3) - 4rem);
+      justify-content: center;
     }
 
     @include respond-to(mobile-large) {
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
+      // height: 100px;
+      width: calc((100% / 2) - 2rem);
     }
 
-    >a {
-        padding: 3rem;
-        border: 2px solid #005039;
-        width: 320px;
+    @include respond-to(mobile-horizontal) {
+      width: 100%;
+    }
+
+    &:last-child {
+      @include respond-to(mobile-large) {
+        // width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        // @include respond-to(mobile-large) {
-        //     width: 45%;
-        // }
-        // @include respond-to(sm-desktop) {
-        //     width: 250px;
-        // }
-        height: 120px;
-
-        @include respond-to(sm-desktop) {
-            justify-content: space-between;
-        }
-
-        @include respond-to(sm-desktop) {
-            width: calc((100% / 3) - 4rem);
-            justify-content: center;
-        }
-
-        @include respond-to(mobile-large) {
-            // height: 100px;
-            width: calc((100% / 2) - 2rem);
-        }
-
-        @include respond-to(mobile-horizontal) {
-            width: 100%;
-        }
-
-        &:last-child {
-            @include respond-to(mobile-large) {
-                // width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-        }
-
-        >img {
-            max-width: 300px;
-            border-radius: 0px;
-
-            @include respond-to(sm-desktop) {
-                max-width: 200px;
-            }
-
-            @include respond-to(mobile-large) {
-                width: auto;
-                // height: 40px;
-                height: auto;
-            }
-        }
+      }
     }
+
+    > img {
+      max-width: 300px;
+      border-radius: 0px;
+
+      @include respond-to(sm-desktop) {
+        max-width: 200px;
+      }
+
+      @include respond-to(mobile-large) {
+        width: auto;
+        // height: 40px;
+        height: auto;
+      }
+    }
+  }
 }
 
 .social_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 1040px;
+
+  .social_links_block {
+    width: 100%;
+    padding: 4rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 1040px;
+    gap: 3rem;
 
-    .social_links_block {
-        width: 100%;
-        padding: 4rem;
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-
-        @include respond-to(mobile-large) {
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        >p {
-            font-size: 2.2rem;
-
-            @include respond-to(mobile-large) {
-                font-size: 1.8rem;
-                text-align: center;
-            }
-        }
-
-        .socials {
-            display: flex;
-            gap: 2rem;
-        }
+    @include respond-to(mobile-large) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
+
+    > p {
+      font-size: 2.2rem;
+
+      @include respond-to(mobile-large) {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 2rem;
+    }
+  }
 }
 
-// .brand_card:hover .logo_img { 
+// .brand_card:hover .logo_img {
 //     transform: translateX(5px);
 // }
-// .brand_card .logo_img { 
+// .brand_card .logo_img {
 //     transition: 1s linear;
 // }

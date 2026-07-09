@@ -17,7 +17,6 @@
   padding: 45px 30px 35px 30px;
   min-height: 160px;
 
-  
   .number_text {
     display: block;
     font-size: 8rem;
@@ -37,7 +36,7 @@
 .science_care {
   .section_title {
     width: 60%;
-    @include respond-to(mobile){
+    @include respond-to(mobile) {
       width: 100%;
     }
   }
@@ -107,6 +106,16 @@
 
     p {
       margin-bottom: 3rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+        line-height: 1.35;
+      }
     }
   }
 
