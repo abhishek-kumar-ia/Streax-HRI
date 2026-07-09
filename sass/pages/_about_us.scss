@@ -36,6 +36,7 @@
 .science_care {
   .section_title {
     width: 60%;
+
     @include respond-to(mobile) {
       width: 100%;
     }
@@ -61,9 +62,11 @@
       display: flex;
       gap: 2rem;
       height: 100%;
+
       @include respond-to(mobile-horizontal) {
         gap: 1rem;
       }
+
       .gallery-main {
         flex: 1;
 
@@ -80,9 +83,11 @@
         flex: 0 0 50%;
         flex-direction: column;
         gap: 2rem;
+
         @include respond-to(mobile-horizontal) {
           gap: 1rem;
         }
+
         .gallery-side-item {
           flex: 1;
 
@@ -107,10 +112,12 @@
     p {
       margin-bottom: 3rem;
     }
+
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
+
       li {
         margin-bottom: 3rem;
         font-size: 1.8rem;
@@ -194,18 +201,242 @@
       line-height: 44px;
       text-align: center;
       color: $black;
+
       @include respond-to(sm-desktop) {
         font-size: 2.4rem;
       }
+
       @include respond-to(mobile) {
         font-size: 2rem;
         line-height: 1.75;
       }
     }
+
     .author {
       font-size: 1.8rem;
       font-weight: 700;
       color: $black;
+    }
+  }
+}
+
+// Define block
+.define_block {
+  margin-bottom: 8rem;
+
+  @include respond-to(mobile-large) {
+    margin-bottom: 4rem;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .block {
+    position: relative;
+
+    .overlay_block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      text-align: left;
+      border-radius: 2rem;
+
+      @include respond-to(mobile-horizontal) {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .text_block {
+        position: absolute;
+        bottom: 5rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+
+        @include respond-to(md-desktop) {
+          padding-right: 3rem;
+          padding-left: 3rem;
+          bottom: 3rem;
+        }
+
+        >h3 {
+          font-size: 2.2rem;
+          font-weight: 700;
+          margin-bottom: 1.6rem;
+
+          @include respond-to(md-desktop) {
+            font-size: 2rem;
+          }
+
+          @include respond-to(mobile-horizontal) {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        >p {
+          font-size: 1.8rem;
+
+          @include respond-to(md-desktop) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Evolution grid
+.evolution_grid {
+  margin-bottom: 5rem;
+
+  @include respond-to(md-desktop) {
+    gap: 4rem !important;
+  }
+
+  .block {
+    position: relative;
+    display: flex;
+    gap: 4rem;
+
+    @include respond-to(md-desktop) {
+      gap: 2rem;
+    }
+
+    &:first-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+
+      @include respond-to(md-desktop) {
+        left: -20px;
+      }
+
+      @include respond-to(mobile-large) {
+        display: none;
+      }
+    }
+
+    .text_block {
+      p {
+        @include respond-to(md-desktop) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .img_block {
+    flex: 0 0 120px;
+
+    @include respond-to(md-desktop) {
+      flex: 0 0 80px;
+    }
+  }
+}
+
+.details_standards {
+  .h5 {
+    font-size: 2.2rem;
+  }
+
+  .standard_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8rem;
+    margin-bottom: 5rem;
+
+    @include respond-to(md-desktop) {
+      gap: 4rem;
+    }
+    @include respond-to(mobile-large) {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    @include respond-to(mobile-horizontal) {
+      grid-template-columns: 1fr !important;
+      gap: 2rem;
+    }
+    :nth-child(3) {
+      &::after {
+        display: none;
+      }
+    }
+    .block {
+      position: relative;
+
+      &:first-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 1px;
+        height: 100%;
+        background-color: #000;
+
+        @include respond-to(md-desktop) {
+          left: -20px;
+        }
+        @include respond-to(mobile-horizontal) {
+          display: none;
+        }
+      }
+
+      .highlight {
+        font-size: 4rem;
+        font-weight: 600;
+        color: $primary;
+        margin-bottom: 1rem;
+
+        @include respond-to(sm-desktop) {
+          font-size: 3rem;
+        }
+        @include respond-to(mobile-horizontal) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .description {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.4;
+
+        @include respond-to(sm-desktop) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .iso_standards {
+    .block {
+      padding: 2rem;
+      font-size: 1.8rem;
+      background-color: #F6F0E7;
+      border-left: 4px solid $secondary;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      @include respond-to(mobile-horizontal) {
+        font-size: 1.6rem;
+      }
     }
   }
 }
