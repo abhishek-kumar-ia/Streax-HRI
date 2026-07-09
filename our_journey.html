@@ -1,176 +1,142 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Streax HRI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-  </head>
 
-  <body>
-    <!-- Header Start -->
-    <header>
-      <div class="container container_header">
-        <div class="block_left">
-          <div class="logo">
-            <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
-          </div>
-        </div>
-        <div class="block_center">
-          <nav class="navigation">
-            <ul>
-              <!-- Uncomment this to add desktop dropdown menu start -->
-              <li>
-                <a href="#" class="has-child">Our Brands</a>
-                <div class="sub-menu dropdown-menu">
-                  <ul>
-                    <li class="first-child">
-                      <a href="#" class="overview"
-                        >Overview<span
-                          ><img
-                            src="./assets/icons/arrow-white-right.svg"
-                            alt="" /></span
-                      ></a>
-                    </li>
-                    <li><a href="#" title="" target="" class=" ">Vasmol</a></li>
-                    <li>
-                      <a href="#" title="" target="" class=" ">Streax Retail</a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" ">Florozone</a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" "
-                        >Streax Professional</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#" class="has-child">About Us</a>
-                <div class="sub-menu dropdown-menu">
-                  <ul>
-                    <li class="first-child">
-                      <a href="#" class="overview"
-                        >Overview<span
-                          ><img
-                            src="./assets/icons/arrow-white-right.svg"
-                            alt="" /></span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" ">Our Journey</a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" "
-                        >Global Presence</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" ">Innovations</a>
-                    </li>
-                    <li><a href="#" title="" target="" class=" ">Awards</a></li>
-                  </ul>
-                </div>
-              </li>
-              <!-- Uncomment this to add desktop dropdown menu end -->
-              <li><a href="#">Leadership</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Our Investor</a></li>
-              <li>
-                <a href="#" class="has-child">HRI Foundation</a>
-                <div class="sub-menu dropdown-menu">
-                  <ul>
-                    <li class="first-child">
-                      <a href="#" class="overview"
-                        >Overview<span
-                          ><img
-                            src="./assets/icons/arrow-white-right.svg"
-                            alt="" /></span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" ">CSR Policy</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#" class="has-child">News & Media</a>
-                <div class="sub-menu dropdown-menu">
-                  <ul>
-                    <li class="first-child">
-                      <a href="#" class="overview"
-                        >Overview<span
-                          ><img
-                            src="./assets/icons/arrow-white-right.svg"
-                            alt="" /></span
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#" title="" target="" class=" "
-                        >Media Coverage</a
-                      >
-                    </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streax HRI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
 
-                    <li>
-                      <a href="#" title="" target="" class=" "
-                        >Press Releases</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </nav>
+<body>
+  <!-- Header Start -->
+  <header>
+    <div class="container container_header">
+      <div class="block_left">
+        <div class="logo">
+          <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
         </div>
-        <div class="block_right">
-          <div class="search_icon cursor-pointer pos-rel" id="search_btn">
-            <img src="./assets/icons/search.svg" alt="Search Icon" />
-            <div class="search_menu">
-              <div class="search_container">
-                <div class="search_box">
-                  <input type="text" placeholder="What are you looking for?" />
-                </div>
-                <div class="popular_search">
-                  <div class="title">Popular searches</div>
-                  <ul class="listings">
-                    <li>
-                      Lorem Ipsum is simply dummy text.<span
-                        ><img src="./assets/icons/arrow-white-right.svg" alt=""
-                      /></span>
-                    </li>
-                    <li>
-                      Lorem Ipsum is simply dummy text.<span
-                        ><img src="./assets/icons/arrow-white-right.svg" alt=""
-                      /></span>
-                    </li>
-                    <li>
-                      Lorem Ipsum is simply dummy text.<span
-                        ><img src="./assets/icons/arrow-white-right.svg" alt=""
-                      /></span>
-                    </li>
-                  </ul>
-                </div>
+      </div>
+      <div class="block_center">
+        <nav class="navigation">
+          <ul>
+            <!-- Uncomment this to add desktop dropdown menu start -->
+            <li>
+              <a href="#" class="has-child">Our Brands</a>
+              <div class="sub-menu dropdown-menu">
+                <ul>
+                  <li class="first-child">
+                    <a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg"
+                          alt="" /></span></a>
+                  </li>
+                  <li><a href="#" title="" target="" class=" ">Vasmol</a></li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Streax Retail</a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Florozone</a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Streax Professional</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="has-child">About Us</a>
+              <div class="sub-menu dropdown-menu">
+                <ul>
+                  <li class="first-child">
+                    <a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg"
+                          alt="" /></span></a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Our Journey</a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Global Presence</a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Innovations</a>
+                  </li>
+                  <li><a href="#" title="" target="" class=" ">Awards</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Uncomment this to add desktop dropdown menu end -->
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Our Investor</a></li>
+            <li>
+              <a href="#" class="has-child">HRI Foundation</a>
+              <div class="sub-menu dropdown-menu">
+                <ul>
+                  <li class="first-child">
+                    <a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg"
+                          alt="" /></span></a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">CSR Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="has-child">News & Media</a>
+              <div class="sub-menu dropdown-menu">
+                <ul>
+                  <li class="first-child">
+                    <a href="#" class="overview">Overview<span><img src="./assets/icons/arrow-white-right.svg"
+                          alt="" /></span></a>
+                  </li>
+                  <li>
+                    <a href="#" title="" target="" class=" ">Media Coverage</a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="" target="" class=" ">Press Releases</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="block_right">
+        <div class="search_icon cursor-pointer pos-rel" id="search_btn">
+          <img src="./assets/icons/search.svg" alt="Search Icon" />
+          <div class="search_menu">
+            <div class="search_container">
+              <div class="search_box">
+                <input type="text" placeholder="What are you looking for?" />
+              </div>
+              <div class="popular_search">
+                <div class="title">Popular searches</div>
+                <ul class="listings">
+                  <li>
+                    Lorem Ipsum is simply dummy text.<span><img src="./assets/icons/arrow-white-right.svg"
+                        alt="" /></span>
+                  </li>
+                  <li>
+                    Lorem Ipsum is simply dummy text.<span><img src="./assets/icons/arrow-white-right.svg"
+                        alt="" /></span>
+                  </li>
+                  <li>
+                    Lorem Ipsum is simply dummy text.<span><img src="./assets/icons/arrow-white-right.svg"
+                        alt="" /></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <!-- <div class="accessiblity_icon pos-rel cursor-pointer" id="accessiblity_btn">
+        </div>
+        <!-- <div class="accessiblity_icon pos-rel cursor-pointer" id="accessiblity_btn">
               <img src="./assets/icons/accessiblity.svg" alt="Accessibility Icon" />
               <div class="accessiblity_popup">
                   <h3>Accessibility</h3>
@@ -182,412 +148,359 @@
 
               </div>
           </div> -->
-          <div class="phone_icon">
-            <img src="./assets/icons/phone.svg" alt="Menu Icon" />
-          </div>
-        </div>
-        <div class="hamburger_icon">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="phone_icon">
+          <img src="./assets/icons/phone.svg" alt="Menu Icon" />
         </div>
       </div>
-      <div class="mobile_menu">
-        <nav>
-          <ul>
-            <!-- Uncomment this to add mobile dropdown menu start -->
-            <li class="has-child">
-              <a href="javascript:void(0)" class="mobile_dropdown_toggle"
-                >Our Brands</a
-              >
-              <ul class="mobile_dropdown_menu">
-                <li><a href="#" title="" target="" class=" ">Overview</a></li>
-                <li><a href="#" title="" target="" class=" ">Vasmol</a></li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Streax Retail</a>
-                </li>
-                <li><a href="#" title="" target="" class=" ">Florozone</a></li>
-                <li>
-                  <a href="#" title="" target="" class=" "
-                    >Streax Professional</a
-                  >
-                </li>
-              </ul>
+      <div class="hamburger_icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile_menu">
+      <nav>
+        <ul>
+          <!-- Uncomment this to add mobile dropdown menu start -->
+          <li class="has-child">
+            <a href="javascript:void(0)" class="mobile_dropdown_toggle">Our Brands</a>
+            <ul class="mobile_dropdown_menu">
+              <li><a href="#" title="" target="" class=" ">Overview</a></li>
+              <li><a href="#" title="" target="" class=" ">Vasmol</a></li>
+              <li>
+                <a href="#" title="" target="" class=" ">Streax Retail</a>
+              </li>
+              <li><a href="#" title="" target="" class=" ">Florozone</a></li>
+              <li>
+                <a href="#" title="" target="" class=" ">Streax Professional</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Uncomment this to add mobile dropdown menu end -->
+          <li class="has-child">
+            <a href="javascript:void(0)" class="mobile_dropdown_toggle">About us</a>
+            <ul class="mobile_dropdown_menu">
+              <li><a href="#" title="" target="" class=" ">Overview</a></li>
+              <li>
+                <a href="#" title="" target="" class=" ">Our Journey</a>
+              </li>
+              <li>
+                <a href="#" title="" target="" class=" ">Global Presence</a>
+              </li>
+              <li>
+                <a href="#" title="" target="" class=" ">Innovations</a>
+              </li>
+              <li><a href="#" title="" target="" class=" ">Awards</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Our Investor</a></li>
+          <li class="has-child">
+            <a href="javascript:void(0)" class="mobile_dropdown_toggle">HRI Foundation</a>
+            <ul class="mobile_dropdown_menu">
+              <li><a href="#" title="" target="" class=" ">Overview</a></li>
+              <li><a href="#" title="" target="" class=" ">CSR Policy</a></li>
+            </ul>
+          </li>
+          <li class="has-child">
+            <a href="javascript:void(0)" class="mobile_dropdown_toggle">News & Media</a>
+            <ul class="mobile_dropdown_menu">
+              <li><a href="#" title="" target="" class=" ">Overview</a></li>
+              <li>
+                <a href="#" title="" target="" class=" ">Media Coverage</a>
+              </li>
+              <li>
+                <a href="#" title="" target="" class=" ">Press Release</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Header End -->
+  <!-- Inner Spotlight Start -->
+  <section class="inner_spotlight pos-rel">
+    <picture class="spotlight">
+      <source media="(min-width:992px)" srcset="./assets/leadership_banner.png" type="image/png" />
+      <source media="(max-width:991px)" srcset="./assets/spotlight_mobile.png" type="image/png" />
+      <img src="./assets/leadership_banner.png" alt="Leadership Banner" class="img-fluid w-100" />
+    </picture>
+    <div class="container breadcrumb_container">
+      <ul class="breadcrumb_list">
+        <li><a href="#">Home</a></li>
+        <li><span>></span></li>
+        <li><a href="#">Leadership</a></li>
+      </ul>
+    </div>
+    <div class="container spotlight_content_container">
+      <h1 class="h2 bold text-white mb-1">
+        Combining Strategy and Character Empowering People
+      </h1>
+    </div>
+  </section>
+  <!-- Inner Spotlight End -->
+  <section class="section_padding">
+    <div class="pos-rel timeline">
+      <div class="timeline-progress" aria-hidden="true">
+        <div class="timeline-progress__track"></div>
+        <div class="timeline-progress__fill"></div>
+      </div>
+      <!-- 2 – Expanding Our Reach (image left) -->
+      <div class="timelineBlock left">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Where It All Began</h2>
+          <ul class="timelineBlock-body">
+            <li>
+              In 1950, Dr S.S. Nishat founded the Hygienic Research Institute
+              (HRI), laying the foundation for what would become some of
+              India’s most trusted names in hair care
             </li>
-            <!-- Uncomment this to add mobile dropdown menu end -->
-            <li class="has-child">
-              <a href="javascript:void(0)" class="mobile_dropdown_toggle"
-                >About us</a
-              >
-              <ul class="mobile_dropdown_menu">
-                <li><a href="#" title="" target="" class=" ">Overview</a></li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Our Journey</a>
-                </li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Global Presence</a>
-                </li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Innovations</a>
-                </li>
-                <li><a href="#" title="" target="" class=" ">Awards</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Leadership</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Our Investor</a></li>
-            <li class="has-child">
-              <a href="javascript:void(0)" class="mobile_dropdown_toggle"
-                >HRI Foundation</a
-              >
-              <ul class="mobile_dropdown_menu">
-                <li><a href="#" title="" target="" class=" ">Overview</a></li>
-                <li><a href="#" title="" target="" class=" ">CSR Policy</a></li>
-              </ul>
-            </li>
-            <li class="has-child">
-              <a href="javascript:void(0)" class="mobile_dropdown_toggle"
-                >News & Media</a
-              >
-              <ul class="mobile_dropdown_menu">
-                <li><a href="#" title="" target="" class=" ">Overview</a></li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Media Coverage</a>
-                </li>
-                <li>
-                  <a href="#" title="" target="" class=" ">Press Release</a>
-                </li>
-              </ul>
+            <li>
+              Inspired by the vision of beauty rooted in both nature and
+              science, Mr Kailash Chhabra formulated Super Vasmol 33 Kesh
+              Kala, a pioneering product that defined a category and earned
+              its place in millions of Indian homes and hearts.
             </li>
           </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- Header End -->
-    <!-- Inner Spotlight Start -->
-    <section class="inner_spotlight pos-rel">
-      <picture class="spotlight">
-        <source
-          media="(min-width:992px)"
-          srcset="./assets/leadership_banner.png"
-          type="image/png"
-        />
-        <source
-          media="(max-width:991px)"
-          srcset="./assets/spotlight_mobile.png"
-          type="image/png"
-        />
-        <img
-          src="./assets/leadership_banner.png"
-          alt="Leadership Banner"
-          class="img-fluid w-100"
-        />
-      </picture>
-      <div class="container breadcrumb_container">
-        <ul class="breadcrumb_list">
-          <li><a href="#">Home</a></li>
-          <li><span>></span></li>
-          <li><a href="#">Leadership</a></li>
-        </ul>
-      </div>
-      <div class="container spotlight_content_container">
-        <h1 class="h2 bold text-white mb-1">
-          Combining Strategy and Character Empowering People
-        </h1>
-      </div>
-    </section>
-    <!-- Inner Spotlight End -->
-    <section class="section_padding">
-      <div class="pos-rel timeline">
-        <div class="timeline-progress" aria-hidden="true">
-          <div class="timeline-progress__track"></div>
-          <div class="timeline-progress__fill"></div>
         </div>
-        <!-- 2 – Expanding Our Reach (image left) -->
-        <div class="timelineBlock left">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Where It All Began</h2>
-            <ul class="timelineBlock-body">
-              <li>
-                In 1950, Dr S.S. Nishat founded the Hygienic Research Institute
-                (HRI), laying the foundation for what would become some of
-                India’s most trusted names in hair care
-              </li>
-              <li>
-                Inspired by the vision of beauty rooted in both nature and
-                science, Mr Kailash Chhabra formulated Super Vasmol 33 Kesh
-                Kala, a pioneering product that defined a category and earned
-                its place in millions of Indian homes and hearts.
-              </li>
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
+        <div class="node">
+          <div class="node-dot"></div>
         </div>
-
-        <div class="timelineBlock right">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Expanding Our Reach</h2>
-            <ul class="timelineBlock-body">
-              <li>With innovation at the heart of it all and the start of production at the MIDC manufacturing facility, HRI stepped into an exciting new phase of growth and possibility.</li>
-
-<li>Mrs. Ritika Chhabra laid the foundation for HRI's Research & Development (R&D) function, ensuring that science remained at the heart of every innovation and every product.</li>
-
-<li>As CEO, Mr. Manish Chhabra led a new chapter for HRI, opening doors to fresh opportunities and guiding the company towards its next phase of growth.</li>
-             
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        <div class="timelineBlock left">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Introducing Streax</h2>
-            <ul class="timelineBlock-body">
-              <li>Believing hair colour could be more than just covering greys, HRI reimagined it as a form of self-expression. This vision gave birth to Streax, a brand that spoke to the new generation of Indian consumers.</li>
-
-<li>HRI entered into a strategic collaboration for liquid hair colours, bringing advanced formulation knowledge and global standards of innovation to Indian consumers.</li>
-        >
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        <div class="timelineBlock right">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Building Momentum</h2>
-            <ul class="timelineBlock-body">
-              <li>HRI expanded its portfolio with a range of innovative hair colour and care solutions. The launch of Jasmine Hair Oil, Yogiraj Thanda Tel, and Powder Hair Colours reflected our deep understanding of diverse consumer needs.</li>
-
-<li>HRI launched the Streax Professional Division, bringing salon-grade expertise and premium hair care solutions to professionals across the country.</li>
-
-             
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        <div class="timelineBlock left">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Taking Centre Stage</h2>
-            <ul class="timelineBlock-body">
-              <li>HRI strengthened the Streax story with Sonakshi Sinha as brand ambassador for Streax, bringing confidence and individuality to the brand.</li>
-
-<li>Akshay Kumar joined as brand ambassador for Streax Insta, reflecting the brand’s energy, dynamism, and mass appeal.</li>
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        <div class="timelineBlock right">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Making Our Mark</h2>
-            <ul class="timelineBlock-body">
-              <li>With the launch of Streax Insta Shampoo Hair Colour, HRI made natural-looking black hair faster and easier than ever. It cemented Streax Insta as a trusted, go-to solution for quick, salon-like results at home.</li>
-
-             
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        <div class="timelineBlock left">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">Scaling New Horizons</h2>
-            <ul class="timelineBlock-body">
-              <li>HRI appointed Kajol as Brand Ambassador for Vasmol, bringing warmth, authenticity, and star power to one of India’s most loved haircare brands.</li>
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
-        
-        <div class="timelineBlock right">
-          <div class="content" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="timelineBlock-title">The Journey Continues</h2>
-            <ul class="timelineBlock-body">
-              <li>The launch of Vasmol Advanced Crème marks a new milestone, bringing the trusted Vasmol legacy into a premium era with deep nourishment and long-lasting, flawless colour.</li>
-              <li>Continuing to push boundaries in hair colour and care, HRI remains committed to delivering solutions that are effective, accessible, and ahead of their time.</li>
-             
-            </ul>
-          </div>
-          <div class="node"><div class="node-dot"></div></div>
-          <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
-            <img
-              src="./assets/journey-1.png"
-              alt=""
-              width="570"
-              height="570"
-              class="img-fluid"
-            />
-          </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
         </div>
       </div>
-    </section>
-    <!-- Footer Section Start -->
-    <footer>
-      <div class="container">
-        <div class="block_top">
-          <div class="block_left">
-            <div class="logo mb-4">
-              <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
+
+      <div class="timelineBlock right">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Expanding Our Reach</h2>
+          <ul class="timelineBlock-body">
+            <li>With innovation at the heart of it all and the start of production at the MIDC manufacturing facility,
+              HRI stepped into an exciting new phase of growth and possibility.</li>
+
+            <li>Mrs. Ritika Chhabra laid the foundation for HRI's Research & Development (R&D) function, ensuring that
+              science remained at the heart of every innovation and every product.</li>
+
+            <li>As CEO, Mr. Manish Chhabra led a new chapter for HRI, opening doors to fresh opportunities and guiding
+              the company towards its next phase of growth.</li>
+
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="timelineBlock left">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Introducing Streax</h2>
+          <ul class="timelineBlock-body">
+            <li>Believing hair colour could be more than just covering greys, HRI reimagined it as a form of
+              self-expression. This vision gave birth to Streax, a brand that spoke to the new generation of Indian
+              consumers.</li>
+
+            <li>HRI entered into a strategic collaboration for liquid hair colours, bringing advanced formulation
+              knowledge and global standards of innovation to Indian consumers.</li>
+            >
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="timelineBlock right">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Building Momentum</h2>
+          <ul class="timelineBlock-body">
+            <li>HRI expanded its portfolio with a range of innovative hair colour and care solutions. The launch of
+              Jasmine Hair Oil, Yogiraj Thanda Tel, and Powder Hair Colours reflected our deep understanding of diverse
+              consumer needs.</li>
+
+            <li>HRI launched the Streax Professional Division, bringing salon-grade expertise and premium hair care
+              solutions to professionals across the country.</li>
+
+
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="timelineBlock left">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Taking Centre Stage</h2>
+          <ul class="timelineBlock-body">
+            <li>HRI strengthened the Streax story with Sonakshi Sinha as brand ambassador for Streax, bringing
+              confidence and individuality to the brand.</li>
+
+            <li>Akshay Kumar joined as brand ambassador for Streax Insta, reflecting the brand’s energy, dynamism, and
+              mass appeal.</li>
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="timelineBlock right">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Making Our Mark</h2>
+          <ul class="timelineBlock-body">
+            <li>With the launch of Streax Insta Shampoo Hair Colour, HRI made natural-looking black hair faster and
+              easier than ever. It cemented Streax Insta as a trusted, go-to solution for quick, salon-like results at
+              home.</li>
+
+
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="timelineBlock left">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">Scaling New Horizons</h2>
+          <ul class="timelineBlock-body">
+            <li>HRI appointed Kajol as Brand Ambassador for Vasmol, bringing warmth, authenticity, and star power to one
+              of India’s most loved haircare brands.</li>
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+
+      <div class="timelineBlock right">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="timelineBlock-title">The Journey Continues</h2>
+          <ul class="timelineBlock-body">
+            <li>The launch of Vasmol Advanced Crème marks a new milestone, bringing the trusted Vasmol legacy into a
+              premium era with deep nourishment and long-lasting, flawless colour.</li>
+            <li>Continuing to push boundaries in hair colour and care, HRI remains committed to delivering solutions
+              that are effective, accessible, and ahead of their time.</li>
+
+          </ul>
+        </div>
+        <div class="node">
+          <div class="node-dot"></div>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="800" data-aos-offset="700">
+          <img src="./assets/journey-1.png" alt="" width="570" height="570" class="img-fluid" />
+        </div>
+      </div>
+
+    </div>
+    <div class="container text-center mt-2 text-center bottom-text">
+      <h3>Every milestone tells one story: it’s still Day 1 in the evolution of Beauty</h3>
+    </div>
+  </section>
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="container">
+      <div class="block_top">
+        <div class="block_left">
+          <div class="logo mb-4">
+            <img src="./assets/icons/logo.svg" alt="Streax HRI Logo" />
+          </div>
+          <p class="text-gray-light mb-4">
+            Streax, launched in 2004, is a style-driven hair care brand that
+            transformed hair colouring in India from covering greys to
+            expressing individuality through colour.
+          </p>
+          <div class="social-icons">
+            <a href="#">
+              <img src="./assets/icons/fb-gradient.svg" width="40" height="40" alt="Facebook Logo" />
+            </a>
+            <a href="#">
+              <img src="./assets/icons/insta-gradient.svg" width="40" height="40" alt="Instagram Logo" />
+            </a>
+            <a href="#">
+              <img src="./assets/icons/yt-gradient.svg" width="40" height="40" alt="YouTube Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="block_right">
+          <div class="ft_links">
+            <div class="left_ft_links">
+              <ul>
+                <li class="title"><a href="#">About Us</a></li>
+                <li><a href="#">Who We Are​</a></li>
+                <li><a href="#">Our Journey​</a></li>
+                <li><a href="#">Leadership​</a></li>
+                <li><a href="#">Global Presence​</a></li>
+                <li><a href="#">Innovations</a></li>
+                <li><a href="#">Awards​</a></li>
+              </ul>
             </div>
-            <p class="text-gray-light mb-4">
-              Streax, launched in 2004, is a style-driven hair care brand that
-              transformed hair colouring in India from covering greys to
-              expressing individuality through colour.
-            </p>
-            <div class="social-icons">
-              <a href="#">
-                <img
-                  src="./assets/icons/fb-gradient.svg"
-                  width="40"
-                  height="40"
-                  alt="Facebook Logo"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/icons/insta-gradient.svg"
-                  width="40"
-                  height="40"
-                  alt="Instagram Logo"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/icons/yt-gradient.svg"
-                  width="40"
-                  height="40"
-                  alt="YouTube Logo"
-                />
-              </a>
+            <div class="center_ft_links">
+              <ul>
+                <li class="title"><a href="#">Our Brands</a></li>
+                <li><a href="#">Who We Are​</a></li>
+                <li><a href="#">Our Journey​</a></li>
+                <li><a href="#">Leadership​</a></li>
+                <li><a href="#">Global Presence​</a></li>
+              </ul>
             </div>
-          </div>
-          <div class="block_right">
-            <div class="ft_links">
-              <div class="left_ft_links">
-                <ul>
-                  <li class="title"><a href="#">About Us</a></li>
-                  <li><a href="#">Who We Are​</a></li>
-                  <li><a href="#">Our Journey​</a></li>
-                  <li><a href="#">Leadership​</a></li>
-                  <li><a href="#">Global Presence​</a></li>
-                  <li><a href="#">Innovations</a></li>
-                  <li><a href="#">Awards​</a></li>
-                </ul>
-              </div>
-              <div class="center_ft_links">
-                <ul>
-                  <li class="title"><a href="#">Our Brands</a></li>
-                  <li><a href="#">Who We Are​</a></li>
-                  <li><a href="#">Our Journey​</a></li>
-                  <li><a href="#">Leadership​</a></li>
-                  <li><a href="#">Global Presence​</a></li>
-                </ul>
-              </div>
-              <div class="right_ft_links">
-                <ul>
-                  <li class="title"><a href="#">HRI Foundation</a></li>
-                  <li class="title"><a href="#">Press Release</a></li>
-                  <li class="title"><a href="#">Careers</a></li>
-                </ul>
-                <p class="follow_text">
-                  Follow us on
-                  <img
-                    src="./assets/icons/linkedin.svg"
-                    width="45"
-                    height="45"
-                    alt="Linkedin Logo"
-                  />
-                </p>
-              </div>
+            <div class="right_ft_links">
+              <ul>
+                <li class="title"><a href="#">HRI Foundation</a></li>
+                <li class="title"><a href="#">Press Release</a></li>
+                <li class="title"><a href="#">Careers</a></li>
+              </ul>
+              <p class="follow_text">
+                Follow us on
+                <img src="./assets/icons/linkedin.svg" width="45" height="45" alt="Linkedin Logo" />
+              </p>
             </div>
           </div>
         </div>
-        <div class="block_bottom">
-          <div class="block_left">
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </div>
-          <div class="block_right">
-            <p>© HYGIENIC RESEARCH INSTITUTE 2026</p>
-          </div>
+      </div>
+      <div class="block_bottom">
+        <div class="block_left">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="block_right">
+          <p>© HYGIENIC RESEARCH INSTITUTE 2026</p>
         </div>
       </div>
-    </footer>
-    <!-- Footer Section End -->
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./js/homepage.js"></script>
-  <script src="./js/misc.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="./js/our_journey.js"></script>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/homepage.js"></script>
+<script src="./js/misc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="./js/our_journey.js"></script>
+
 </html>

@@ -2,97 +2,102 @@
 @use "../base/_mixins.scss" as *;
 
 .video_slider {
-    .swiper-slide {
-        position: relative;
-        .video_block {
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-            .play_button {
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80px;
-                background: transparent;
-                height: auto;
-                border: none;
-                cursor: pointer;
-                @include respond-to(sm-desktop) {
-                    top: 30%;
-                }
-                @include respond-to(mobile-large) {
-                    top: 30%;
-                }
-                @include respond-to(mobile) {
-                    top: 20%;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            video {
-                width: 100%;
-                height: 100vh;
-                object-fit: cover;
-                display: block;
-            }
+  .swiper-slide {
+    position: relative;
+    .video_block {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .play_button {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        background: transparent;
+        height: auto;
+        border: none;
+        cursor: pointer;
+        @include respond-to(sm-desktop) {
+          top: 30%;
         }
-        .video_slider_container {
-            position: absolute;
-            bottom: 8rem;
-            left: 10%;
-            background-color: #00000075;
-            @include respond-to(xxl-desktop-up) {
-                max-width: 80%;
-            }
-            @include respond-to(sm-desktop) {
-                bottom: 3rem;
-            }
-
-            @include respond-to(mobile-large) {
-                left: 0%;
-                bottom: 0;
-                padding: 3rem 2rem 10rem;
-                border-bottom-left-radius: 0rem;
-                border-bottom-right-radius: 0rem;
-                max-width: 100%;
-            }
-            .video_slider_content {
-                max-width: 75%;
-                padding: 3rem;
-                @include respond-to(mobile-large) {
-                    max-width: 100%;
-                    padding-right: 0;
-                    padding-left: 0;
-                }
-            }
+        @include respond-to(mobile-large) {
+          top: 30%;
         }
-
+        @include respond-to(mobile) {
+          top: 20%;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+      }
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+      }
     }
+    .video_slider_container {
+      position: absolute;
+      bottom: 8rem;
+      left: 10%;
+      background-color: #00000075;
+      @include respond-to(xxl-desktop-up) {
+        max-width: 80%;
+      }
+      @include respond-to(sm-desktop) {
+        bottom: 3rem;
+      }
+
+      @include respond-to(mobile-large) {
+        left: 0%;
+        bottom: 0;
+        padding: 3rem 2rem 10rem;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+        max-width: 100%;
+      }
+      .video_slider_content {
+        max-width: 75%;
+        padding: 3rem;
+        @include respond-to(mobile-large) {
+          max-width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
 }
 .video_slider_utils {
-    position: absolute;
-    bottom: 110px;
-    right: 12%;
+  position: absolute;
+  bottom: 110px;
+  right: 12%;
+  @include respond-to(mobile-large) {
+    bottom: 2rem;
+    right: 5%;
+    width: 100%;
+  }
+  .utils {
+    align-items: center;
+    gap: 2rem;
     @include respond-to(mobile-large) {
-        bottom: 2rem;
-        right: 5%;  
-        width: 100%;
+      justify-content: space-between;
     }
-    .utils {
-        align-items: center;
-        gap: 2rem;
-        @include respond-to(mobile-large) {
-           justify-content: space-between;
-        }
-    }
+  }
 }
