@@ -107,6 +107,9 @@
           margin-bottom: 3rem;
           font-size: 1.8rem;
         }
+        @include respond-to(sm-desktop) {
+          font-size: 1.6rem;
+        }
       }
       .testimonial_by {
         .name {
@@ -197,6 +200,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  @include respond-to(sm-desktop) {
+    gap: 2rem;
+  }
   @include respond-to(mobile-horizontal) {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -215,6 +221,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
+    @include respond-to(sm-desktop) {
+      gap: 2rem;
+    }
     > img {
       display: block;
       width: 100%;
@@ -226,6 +235,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 4rem;
+      @include respond-to(sm-desktop) {
+        gap: 2rem;
+      }
       @include respond-to(mobile-horizontal) {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -240,6 +252,9 @@
       }
     }
     .bottom {
+      @include respond-to(sm-desktop) {
+        gap: 2rem;
+      }
       > img {
         display: block;
         width: 100%;
@@ -710,6 +725,9 @@
         @include respond-to(md-desktop) {
           font-size: 2.6rem;
         }
+        @include respond-to(sm-desktop) {
+          font-size: 2rem;
+        }
         @include respond-to(mobile-horizontal) {
           font-size: 2rem;
         }
@@ -718,6 +736,9 @@
         font-size: 3rem;
         @include respond-to(md-desktop) {
           font-size: 2.6rem;
+        }
+        @include respond-to(sm-desktop) {
+          font-size: 2rem;
         }
         @include respond-to(mobile-horizontal) {
           font-size: 2rem;
@@ -732,6 +753,9 @@
         @include respond-to(md-desktop) {
           font-size: 2.6rem;
         }
+        @include respond-to(sm-desktop) {
+          font-size: 2rem;
+        }
         @include respond-to(mobile-horizontal) {
           font-size: 2rem;
         }
@@ -740,6 +764,9 @@
         font-size: 3rem;
         @include respond-to(md-desktop) {
           font-size: 2.6rem;
+        }
+        @include respond-to(sm-desktop) {
+          font-size: 2rem;
         }
         @include respond-to(mobile-horizontal) {
           font-size: 2rem;
@@ -752,6 +779,9 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 4rem;
+    @include respond-to(sm-desktop) {
+      gap: 2rem;
+    }
     @include respond-to(mobile-horizontal) {
       gap: 2rem;
     }
@@ -759,6 +789,9 @@
       font-size: 2rem;
       @include respond-to(md-desktop) {
         font-size: 1.8rem;
+      }
+      @include respond-to(sm-desktop) {
+        font-size: 1.6rem;
       }
     }
   }

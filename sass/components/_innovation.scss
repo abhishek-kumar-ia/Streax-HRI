@@ -34,3 +34,8 @@
     }
 }
 
+.container_innovation {
+    @include respond-to(sm-desktop) {
+        gap: 4rem;
+    }
+}
