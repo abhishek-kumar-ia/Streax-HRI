@@ -3278,7 +3278,7 @@ footer .block_bottom .block_right p {
   background-color: #f6f6f6;
   border: 1px solid #d3d3d3;
   padding: 3rem;
-  potition: relative;
+  position: relative;
 }
 .job_blocks .block .role {
   margin-bottom: 1rem;
@@ -3312,7 +3312,7 @@ footer .block_bottom .block_right p {
   }
 }
 .job_blocks .block .dotted_list {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .job_blocks .block .btn {
   margin-top: 10rem;
