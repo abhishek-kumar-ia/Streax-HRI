@@ -503,6 +503,7 @@ $(function () {
     innovationCardsSwiper.init();
     videoSliderSwiper.init();
     linkedinPostsSwiper.init();
+    sliderBrandCardSwiper.init();
   }
   allSliders();
   // All Sliders Function End
@@ -758,4 +759,16 @@ const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
 });
 // Linkedin Posts Swiper End
 
+
+// Brand Card With Slider Start
+const sliderBrandCardSwiper = new Swiper('.sliders_brands_card', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.slider_brands_card_next',
+    prevEl: '.slider_brands_card_prev',
+  },
+});
+// Brand Card With Slider End
 // Swipers Outside jQuery End

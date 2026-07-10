@@ -371,7 +371,9 @@
     }
     :nth-child(3) {
       &::after {
+        @include respond-to(mobile-large) {
         display: none;
+        }
       }
     }
     .block {
