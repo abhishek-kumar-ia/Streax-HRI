@@ -41,5 +41,23 @@
                 box-sizing: content-box;
             }
         }
+        .buttons_linkedin {
+            .swiper-button-prev {
+                &.swiper-button-disabled {
+                    color: $secondary;
+                    border-color: $secondary;
+                    background: transparent;
+                    opacity: 1;
+                }
+            }
+            .swiper-button-next {
+                &.swiper-button-disabled {
+                    color: $secondary;
+                    border-color: $secondary;
+                    background: transparent;
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

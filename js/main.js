@@ -698,6 +698,10 @@ const teamsSwiper = new Swiper('.swiper_teams', {
   loop: true,
   slidesPerView: 1.4,
   spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button-next-teams',
+    prevEl: '.swiper-button-prev-teams',
+  },
   breakpoints: {
     768: {
       slidesPerView: 2.4,
@@ -742,9 +746,13 @@ const videoSliderSwiper = new Swiper('.video_slider', {
 
 // Linkedin Posts Swiper Start
 const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
-  loop: true,
+  // loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next-linkedin',
+    prevEl: '.swiper-button-prev-linkedin',
+  },
   breakpoints: {
     1100: {
       slidesPerView: 3,

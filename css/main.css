@@ -2021,6 +2021,18 @@ footer .block_bottom .block_right p {
     box-sizing: content-box;
   }
 }
+.container_linkedin_posts .block_right .buttons_linkedin .swiper-button-prev.swiper-button-disabled {
+  color: #B29142;
+  border-color: #B29142;
+  background: transparent;
+  opacity: 1;
+}
+.container_linkedin_posts .block_right .buttons_linkedin .swiper-button-next.swiper-button-disabled {
+  color: #B29142;
+  border-color: #B29142;
+  background: transparent;
+  opacity: 1;
+}
 
 @media (max-width: 992px) {
   .container_innovation {
