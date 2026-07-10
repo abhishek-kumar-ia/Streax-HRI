@@ -6072,6 +6072,12 @@ footer .block_bottom .block_right p {
   justify-content: center;
 }
 
+@media (max-width: 992px) {
+  .care_and_growth_block img {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
 .care_and_growth_block .block {
   position: relative;
 }
@@ -6125,6 +6131,11 @@ footer .block_bottom .block_right p {
 @media (max-width: 1536px) {
   .care_and_growth_block .block .overlay_block .text_block > p {
     font-size: 1.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .care_and_growth_block .block .overlay_block .text_block > p {
+    font-size: 1.2rem;
   }
 }
 
