@@ -49,3 +49,70 @@
 
     }
 }
+
+.downloads_list {
+    .downloadable_item {
+        margin-bottom: 2rem;
+        background-color: #F6F6F6;
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: 100px auto 200px;
+        align-items: flex-end;
+        gap: 4rem;
+        @include respond-to(mobile-large) {
+            gap: 3rem;
+            padding: 3rem;
+        }
+        @include respond-to(mobile-horizontal) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            justify-content: flex-start;
+        }
+        .img_block {
+            width: 100px;
+            flex-basis: 0 0 100px;
+        }
+        .text_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+            justify-content: space-between;
+            @include respond-to(md-desktop) {
+                height: 70px;
+            }
+            @include respond-to(mobile-horizontal) {
+                height: auto;
+                gap: 1rem;
+            }
+            .date_item {
+                font-size: 1.8rem;
+                font-weight: 400;
+                @include respond-to(mobile-horizontal) {
+                    font-size: 1.6rem;
+                }
+            }
+            .pdf_name {
+                font-size: 2.4rem;
+                font-weight: 600;
+                @include respond-to(mobile-horizontal) {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .link_block {
+            display: flex;
+            justify-content: flex-end;
+            a {
+                color: #10864F;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+            }
+        }
+    }
+}

@@ -1115,8 +1115,13 @@
     <!-- Gptw Section Start -->
     <section class="gptw">
       <div class="img-block">
-      <img src="./assets/gptw-bg.png" alt="" class="img-fluid img-banner d-desktop-block">
-      <img src="./assets/gptw-bg.png" alt="" class="img-fluid img-banner d-mobile-block">
+        <picture>
+          <source srcset="./assets/gptw-bg.png" media="(min-width: 992px)">
+          <source srcset="./assets/gptw-bg.png" media="(max-width: 992px)">
+          <img src="./assets/gptw-bg.png" alt="" class="img-fluid img-banner">
+        </picture>
+      <!-- <img src="./assets/gptw-bg.png" alt="" class="img-fluid img-banner d-desktop-block">
+      <img src="./assets/gptw-bg.png" alt="" class="img-fluid img-banner d-mobile-block"> -->
       <img src="./assets/gptw.png" alt="" class="img-fluid img-gptw">
       </div>
       <div class="text-block">
