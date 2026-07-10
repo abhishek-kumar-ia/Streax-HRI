@@ -2484,47 +2484,32 @@ footer .block_bottom .block_right p {
 .video_hover_container {
   display: flex;
   gap: 4rem;
-  align-items: flex-start;
 }
 @media (max-width: 992px) {
   .video_hover_container {
     flex-direction: column;
-    gap: 3rem;
   }
 }
 .video_hover_container .block_left {
   width: calc(35% - 2rem);
-  margin-right: 1rem;
 }
 @media (max-width: 992px) {
   .video_hover_container .block_left {
     width: 100%;
-    margin-right: 0;
     margin-bottom: 4rem;
   }
 }
 .video_hover_container .block_right {
   width: calc(65% - 2rem);
-  margin-left: 1rem;
-}
-@media (max-width: 992px) {
-  .video_hover_container .block_right {
-    width: 100%;
-    margin-left: 0;
-  }
 }
 .video_hover_container .card_items .top_row {
   display: flex;
   gap: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   justify-content: flex-end;
 }
-@media (max-width: 992px) {
-  .video_hover_container .card_items .top_row {
-    margin-bottom: 2rem;
-  }
-}
-.video_hover_container .card_items .top_row {
+.video_hover_container .card_items .bottom_row {
+  display: flex;
   gap: 4rem;
 }
 
@@ -2533,7 +2518,7 @@ footer .block_bottom .block_right p {
   width: 340px;
   height: 340px;
   position: relative;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #D3D3D3;
   overflow: hidden;
   transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 320ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -2660,7 +2645,7 @@ footer .block_bottom .block_right p {
 }
 .card_item .card_content > p {
   font-size: 2rem;
-  color: #4c4c4c;
+  color: #4C4C4C;
   font-weight: 600;
   transition: all 220ms ease;
   position: relative;
@@ -4800,7 +4785,6 @@ footer .block_bottom .block_right p {
 }
 .visual > img {
   border-radius: 2rem;
-  border: 2px solid #005039;
 }
 
 /* ─── Responsive ────────────────────────────────────── */
@@ -5362,8 +5346,155 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 1536px) {
   .form_wrapper .form_block .form .form_group input::placeholder {
+    gap: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .form .form_group input::placeholder {
+    grid-template-columns: 1fr;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group {
+  display: flex;
+  flex-direction: column;
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group.grid_max {
+  grid-column: span 2;
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group.grid_max {
+    grid-column: span 1;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #5c5c5c;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group label {
     font-size: 1.6rem;
   }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group input {
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group input {
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group input {
+    padding: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group input::placeholder {
+  color: #bcbcbc;
+  font-size: 1.8rem;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group input::placeholder {
+    font-size: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group select {
+  padding: 1.6rem;
+  height: 100%;
+  padding-right: 4.5rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23BCBCBC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2rem center;
+  background-size: 1.2rem;
+  cursor: pointer;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group select {
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    padding-right: 4rem;
+    background-position: right 1.8rem center;
+  }
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group select {
+    padding: 1.6rem;
+    padding-right: 3.8rem;
+    background-position: right 1.6rem center;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group select:invalid {
+  color: #bcbcbc;
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group select option {
+  color: #000;
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group select option[disabled] {
+  display: none;
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
+    padding: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group textarea::placeholder {
+  color: #bcbcbc;
+  font-size: 1.8rem;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea::placeholder {
+    font-size: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group .btn {
+  border: none;
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group .error_message,
+.form_wrapper .form_block .form .form_group input::placeholder .form_group .form-item--error-messag {
+  font-size: 1.4rem;
+  color: #ff0000;
+  margin-top: 0.5rem;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group .error_message,
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group .form-item--error-messag {
+    font-size: 1.2rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy {
+  font-family: 1.8rem;
+}
+@media (max-width: 1536px) {
+  .form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy {
+    font-size: 1.6rem;
+  }
+}
+.form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy > a {
+  color: #b29142;
 }
 .form_wrapper .form_block .form .form_group select {
   padding: 1.6rem;
@@ -5740,7 +5871,7 @@ footer .block_bottom .block_right p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 3rem;
 }
 @media (max-width: 1536px) {
@@ -5765,7 +5896,7 @@ footer .block_bottom .block_right p {
 
 .downloads_list .downloadable_item {
   margin-bottom: 2rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 4rem;
   display: grid;
   grid-template-columns: 100px auto 200px;
@@ -5831,7 +5962,7 @@ footer .block_bottom .block_right p {
   justify-content: flex-end;
 }
 .downloads_list .downloadable_item .link_block a {
-  color: #10864f;
+  color: #10864F;
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
