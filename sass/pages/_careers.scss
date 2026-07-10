@@ -63,9 +63,13 @@
 .testimonial_section {
   .testimonial_slider {
     overflow: hidden;
+    .swiper-slide {
+      height: auto;
+    }
     .card {
       padding: 6rem;
       border-radius: 2rem;
+      height: 100%;
       @include respond-to(md-desktop) {
         padding: 2.4rem;
       }
@@ -82,12 +86,11 @@
             max-width: 90px;
             height: auto;
           }
-
         }
         .quote_icon {
           @include respond-to(md-desktop) {
-          max-width: 50px;
-          height: auto;
+            max-width: 50px;
+            height: auto;
           }
         }
       }
@@ -130,12 +133,11 @@
         }
       }
     }
-   
   }
   .testimonial_slider_utils {
     gap: 3rem;
-    @include respond-to(mobile-large){
-        justify-content: space-between;
+    @include respond-to(mobile-large) {
+      justify-content: space-between;
     }
   }
   .swiper_pagination_testimonial_1 {
@@ -155,15 +157,13 @@
   .buttons_1 {
     .swiper-button-prev {
       &.swiper-button-disabled {
-        
-      color: $secondary;
+        color: $secondary;
         border-color: $secondary;
         background: transparent;
         opacity: 1;
       }
     }
     .swiper-button-next {
-      
       &.swiper-button-disabled {
         color: $secondary;
         border-color: $secondary;
@@ -175,15 +175,13 @@
   .buttons_2 {
     .swiper-button-prev {
       &.swiper-button-disabled {
-        
-      color: $secondary;
+        color: $secondary;
         border-color: $secondary;
         background: transparent;
         opacity: 1;
       }
     }
     .swiper-button-next {
-      
       &.swiper-button-disabled {
         color: $secondary;
         border-color: $secondary;
@@ -193,7 +191,6 @@
     }
   }
 }
-
 
 // Life at HRI masonry grid section
 .masonry_grid {
@@ -212,7 +209,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      
+
       border-radius: 2rem;
       object-fit: cover;
     }
@@ -247,8 +244,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
-      border-radius: 2rem;
+
+        border-radius: 2rem;
       }
     }
     .bottom {
@@ -260,13 +257,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
-      border-radius: 2rem;
+
+        border-radius: 2rem;
       }
     }
   }
 }
-
 
 // Advantages Grid
 .hri_advantage_grid {
@@ -319,7 +315,7 @@
   .leadership_testimonial_slider {
     overflow: hidden;
     .swiper-wrapper {
-      .swiper-slide{
+      .swiper-slide {
         .leadership_card_img {
           display: none;
           @include respond-to(mobile-horizontal) {
@@ -474,8 +470,8 @@
   .leadership_buttons {
     .swiper-button-prev {
       &.swiper-button-disabled {
-        color: #B29142;
-        border-color: #B29142;
+        color: #b29142;
+        border-color: #b29142;
         background: transparent;
         opacity: 1;
       }
@@ -483,8 +479,8 @@
 
     .swiper-button-next {
       &.swiper-button-disabled {
-        color: #B29142;
-        border-color: #B29142;
+        color: #b29142;
+        border-color: #b29142;
         background: transparent;
         opacity: 1;
       }
@@ -675,7 +671,7 @@
     .bottom {
       display: grid;
       gap: 4rem;
-      grid-template-columns: 1fr 1fr;  
+      grid-template-columns: 1fr 1fr;
       @include respond-to(sm-desktop) {
         gap: 2rem;
       }
@@ -697,6 +693,12 @@
       }
     }
   }
+  img {
+    object-fit: cover;
+    overflow: clip;
+    height: 100%;
+    width: 100%;
+  }
 }
 // Fund at Work End
 
@@ -716,7 +718,7 @@
     justify-content: space-between;
     .top_block {
       padding-left: 2rem;
-      border-left: 2px solid #B29142;
+      border-left: 2px solid #b29142;
       @include respond-to(mobile-horizontal) {
         margin-bottom: 2rem;
       }
@@ -747,7 +749,7 @@
     }
     .bottom_block {
       padding-left: 2rem;
-      border-left: 2px solid #B29142;
+      border-left: 2px solid #b29142;
       .title {
         font-size: 3rem;
         @include respond-to(md-desktop) {
@@ -798,5 +800,3 @@
 }
 
 // Part of our story end
-
-

@@ -3269,9 +3269,10 @@ footer .block_bottom .block_right p {
 }
 .job_blocks .block {
   border-radius: 2rem;
-  background-color: #F6F6F6;
-  border: 1px solid #D3D3D3;
+  background-color: #f6f6f6;
+  border: 1px solid #d3d3d3;
   padding: 3rem;
+  potition: relative;
 }
 .job_blocks .block .role {
   margin-bottom: 1rem;
@@ -3304,12 +3305,17 @@ footer .block_bottom .block_right p {
     font-size: 1.4rem;
   }
 }
+.job_blocks .block .dotted_list {
+  margin-bottom: 3rem;
+}
 .job_blocks .block .btn {
   margin-top: 10rem;
+  position: absolute;
+  bottom: 2rem;
 }
 @media (max-width: 992px) {
   .job_blocks .block .btn {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -6107,9 +6113,13 @@ footer .block_bottom .block_right p {
 .testimonial_section .testimonial_slider {
   overflow: hidden;
 }
+.testimonial_section .testimonial_slider .swiper-slide {
+  height: auto;
+}
 .testimonial_section .testimonial_slider .card {
   padding: 6rem;
   border-radius: 2rem;
+  height: 100%;
 }
 @media (max-width: 1536px) {
   .testimonial_section .testimonial_slider .card {
@@ -6497,14 +6507,14 @@ footer .block_bottom .block_right p {
   background-color: #B29142;
 }
 .leadership_testimonials_section .leadership_buttons .swiper-button-prev.swiper-button-disabled {
-  color: #B29142;
-  border-color: #B29142;
+  color: #b29142;
+  border-color: #b29142;
   background: transparent;
   opacity: 1;
 }
 .leadership_testimonials_section .leadership_buttons .swiper-button-next.swiper-button-disabled {
-  color: #B29142;
-  border-color: #B29142;
+  color: #b29142;
+  border-color: #b29142;
   background: transparent;
   opacity: 1;
 }
@@ -6736,6 +6746,12 @@ footer .block_bottom .block_right p {
     gap: 2rem;
   }
 }
+.fun_grid img {
+  object-fit: cover;
+  overflow: clip;
+  height: 100%;
+  width: 100%;
+}
 
 .parts_block {
   display: grid;
@@ -6756,7 +6772,7 @@ footer .block_bottom .block_right p {
 }
 .parts_block .left_block .top_block {
   padding-left: 2rem;
-  border-left: 2px solid #B29142;
+  border-left: 2px solid #b29142;
 }
 @media (max-width: 767px) {
   .parts_block .left_block .top_block {
@@ -6801,7 +6817,7 @@ footer .block_bottom .block_right p {
 }
 .parts_block .left_block .bottom_block {
   padding-left: 2rem;
-  border-left: 2px solid #B29142;
+  border-left: 2px solid #b29142;
 }
 .parts_block .left_block .bottom_block .title {
   font-size: 3rem;
