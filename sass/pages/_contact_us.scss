@@ -75,7 +75,154 @@
             font-size: 1.8rem;
 
             @include respond-to(md-desktop) {
-              font-size: 1.6rem;
+              gap: 3rem;
+            }
+
+            @include respond-to(mobile-horizontal) {
+              grid-template-columns: 1fr;
+            }
+
+            .form_group {
+              display: flex;
+              flex-direction: column;
+
+              &.grid_max {
+                grid-column: span 2;
+
+                @include respond-to(mobile-horizontal) {
+                  grid-column: span 1;
+                }
+              }
+
+              label {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #5c5c5c;
+                margin-bottom: 1.2rem;
+
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                }
+              }
+
+              input {
+                padding: 1.6rem;
+                font-size: 1.8rem;
+                border-radius: 1rem;
+                border: 1px solid #00000033;
+
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                  padding: 1.6rem;
+                }
+
+                @include respond-to(mobile-horizontal) {
+                  padding: 1.6rem;
+                }
+
+                &::placeholder {
+                  color: #bcbcbc;
+                  font-size: 1.8rem;
+
+                  @include respond-to(md-desktop) {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+
+              select {
+                padding: 1.6rem;
+                height: 100%;
+                padding-right: 4.5rem;
+                font-size: 1.8rem;
+                border-radius: 1rem;
+                border: 1px solid #00000033;
+                appearance: none;
+                -webkit-appearance: none;
+                background-color: #fff;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23BCBCBC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 2rem center;
+                background-size: 1.2rem;
+                cursor: pointer;
+
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                  padding: 1.6rem;
+                  padding-right: 4rem;
+                  background-position: right 1.8rem center;
+                }
+
+                @include respond-to(mobile-horizontal) {
+                  padding: 1.6rem;
+                  padding-right: 3.8rem;
+                  background-position: right 1.6rem center;
+                }
+
+                &:invalid {
+                  color: #bcbcbc;
+                }
+
+                option {
+                  color: #000;
+                }
+
+                option[disabled] {
+                  display: none;
+                }
+              }
+
+              textarea {
+                padding: 1.6rem;
+                font-size: 1.8rem;
+                border-radius: 1rem;
+                border: 1px solid #00000033;
+                width: 100%;
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                  padding: 1.6rem;
+                }
+
+                @include respond-to(mobile-horizontal) {
+                  padding: 1.6rem;
+                }
+
+                &::placeholder {
+                  color: #bcbcbc;
+                  font-size: 1.8rem;
+
+                  @include respond-to(md-desktop) {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+
+              .btn {
+                border: none;
+              }
+              .error_message,
+              .form-item--error-messag {
+                font-size: 1.4rem;
+                color: #ff0000;
+                margin-top: 0.5rem;
+                // display: none;
+
+                @include respond-to(md-desktop) {
+                  font-size: 1.2rem;
+                }
+              }
+
+              .privacy_policy {
+                font-family: 1.8rem;
+
+                @include respond-to(md-desktop) {
+                  font-size: 1.6rem;
+                }
+
+                > a {
+                  color: #b29142;
+                }
+              }
             }
           }
         }
