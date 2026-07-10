@@ -5315,7 +5315,7 @@ footer .block_bottom .block_right p {
 .form_wrapper .form_block .form .form_group label {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #5c5c5c;
+  color: #5C5C5C;
   margin-bottom: 1.2rem;
 }
 @media (max-width: 1536px) {
@@ -5341,160 +5341,13 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group input::placeholder {
-  color: #bcbcbc;
+  color: #BCBCBC;
   font-size: 1.8rem;
 }
 @media (max-width: 1536px) {
   .form_wrapper .form_block .form .form_group input::placeholder {
-    gap: 3rem;
-  }
-}
-@media (max-width: 767px) {
-  .form_wrapper .form_block .form .form_group input::placeholder {
-    grid-template-columns: 1fr;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group {
-  display: flex;
-  flex-direction: column;
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group.grid_max {
-  grid-column: span 2;
-}
-@media (max-width: 767px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group.grid_max {
-    grid-column: span 1;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group label {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #5c5c5c;
-  margin-bottom: 1.2rem;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group label {
     font-size: 1.6rem;
   }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group input {
-  padding: 1.6rem;
-  font-size: 1.8rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group input {
-    font-size: 1.6rem;
-    padding: 1.6rem;
-  }
-}
-@media (max-width: 767px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group input {
-    padding: 1.6rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group input::placeholder {
-  color: #bcbcbc;
-  font-size: 1.8rem;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group input::placeholder {
-    font-size: 1.6rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group select {
-  padding: 1.6rem;
-  height: 100%;
-  padding-right: 4.5rem;
-  font-size: 1.8rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23BCBCBC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 2rem center;
-  background-size: 1.2rem;
-  cursor: pointer;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group select {
-    font-size: 1.6rem;
-    padding: 1.6rem;
-    padding-right: 4rem;
-    background-position: right 1.8rem center;
-  }
-}
-@media (max-width: 767px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group select {
-    padding: 1.6rem;
-    padding-right: 3.8rem;
-    background-position: right 1.6rem center;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group select:invalid {
-  color: #bcbcbc;
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group select option {
-  color: #000;
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group select option[disabled] {
-  display: none;
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
-  padding: 1.6rem;
-  font-size: 1.8rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 100%;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
-    font-size: 1.6rem;
-    padding: 1.6rem;
-  }
-}
-@media (max-width: 767px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea {
-    padding: 1.6rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group textarea::placeholder {
-  color: #bcbcbc;
-  font-size: 1.8rem;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group textarea::placeholder {
-    font-size: 1.6rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group .btn {
-  border: none;
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group .error_message,
-.form_wrapper .form_block .form .form_group input::placeholder .form_group .form-item--error-messag {
-  font-size: 1.4rem;
-  color: #ff0000;
-  margin-top: 0.5rem;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group .error_message,
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group .form-item--error-messag {
-    font-size: 1.2rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy {
-  font-family: 1.8rem;
-}
-@media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy {
-    font-size: 1.6rem;
-  }
-}
-.form_wrapper .form_block .form .form_group input::placeholder .form_group .privacy_policy > a {
-  color: #b29142;
 }
 .form_wrapper .form_block .form .form_group select {
   padding: 1.6rem;
@@ -5528,7 +5381,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group select:invalid {
-  color: #bcbcbc;
+  color: #BCBCBC;
 }
 .form_wrapper .form_block .form .form_group select option {
   color: #000;
@@ -5555,7 +5408,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group textarea::placeholder {
-  color: #bcbcbc;
+  color: #BCBCBC;
   font-size: 1.8rem;
 }
 @media (max-width: 1536px) {
@@ -5563,14 +5416,16 @@ footer .block_bottom .block_right p {
     font-size: 1.6rem;
   }
 }
-.form_wrapper .form_block .form .form_group .error_message {
+.form_wrapper .form_block .form .form_group .btn {
+  border: none;
+}
+.form_wrapper .form_block .form .form_group .error_message, .form_wrapper .form_block .form .form_group .form-item--error-messag {
   font-size: 1.4rem;
-  color: #ff0000;
+  color: #FF0000;
   margin-top: 0.5rem;
-  display: none;
 }
 @media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group .error_message {
+  .form_wrapper .form_block .form .form_group .error_message, .form_wrapper .form_block .form .form_group .form-item--error-messag {
     font-size: 1.2rem;
   }
 }
@@ -5583,7 +5438,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group .privacy_policy > a {
-  color: #b29142;
+  color: #B29142;
 }
 .form_wrapper .form_block .thank_you_message {
   display: none;
@@ -5605,7 +5460,7 @@ footer .block_bottom .block_right p {
 .form_wrapper .detail_block {
   border-radius: 1rem;
   padding: 4rem;
-  background: linear-gradient(90deg, #082c1a 0%, #25573b 100%);
+  background: linear-gradient(90deg, #082C1A 0%, #25573B 100%);
 }
 @media (max-width: 767px) {
   .form_wrapper .detail_block {
@@ -5646,7 +5501,7 @@ footer .block_bottom .block_right p {
 }
 .form_wrapper .detail_block .detail .heading_detail {
   font-size: 1.8rem;
-  color: #b29142;
+  color: #B29142;
   font-weight: 400;
   margin-bottom: 1.2rem;
 }
@@ -5705,7 +5560,7 @@ footer .block_bottom .block_right p {
   border-right: 0px;
 }
 .customTable tbody tr {
-  background: #f6f0e7;
+  background: #F6F0E7;
 }
 .customTable tbody tr:not(:last-child) {
   border-bottom: 1px solid #ffffff;
@@ -5739,7 +5594,7 @@ footer .block_bottom .block_right p {
   gap: 2rem;
 }
 .customTable tbody td .downloads a {
-  color: #10864f;
+  color: #10864F;
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
@@ -5788,64 +5643,6 @@ footer .block_bottom .block_right p {
 
 .webform-submission-contact-form [data-drupal-messages] {
   display: none;
-}
-
-.webform-actions {
-  grid-column: span 2 !important;
-}
-
-.webform-actions .form_group.grid_max {
-  position: relative;
-  display: inline-block;
-  width: fit-content;
-}
-.webform-actions p {
-  margin-bottom: 2rem;
-}
-.webform-actions .form_group.grid_max:has(input[type=submit]) input[type=submit] {
-  text-decoration: none;
-  font-size: 1.4rem !important;
-  font-weight: 600;
-  line-height: 2rem;
-  color: #fff;
-  background: linear-gradient(to right, #352e1e 50%, #b29142 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px !important;
-  border: 0 !important;
-  padding: 1.2rem 60px 1.2rem 24px !important;
-  cursor: pointer;
-  overflow: hidden;
-  transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.webform-actions .form_group.grid_max:has(input[type=submit]) input[type=submit]:hover {
-  background-position: left bottom;
-}
-.webform-actions .form_group.grid_max:has(input[type=submit])::after {
-  content: "↗";
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #fff;
-  color: #b29142;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
-  pointer-events: none;
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-.webform-actions .form_group.grid_max:has(input[type=submit]):hover::after {
-  transform: translateY(-50%) rotate(45deg);
 }
 
 .green_bk_quote .quote-inner-wrapper {
