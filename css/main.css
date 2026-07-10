@@ -3408,6 +3408,63 @@ footer .block_bottom .block_right p {
   }
 }
 
+/* Hero Banner */
+.hero_banner_section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: #000;
+}
+@media (max-width: 1281px) {
+  .hero_banner_section {
+    height: calc(100vh - 60px);
+  }
+}
+
+.hero_banner_slider {
+  width: 100%;
+  height: 100%;
+}
+
+.hero_banner_slider .swiper-wrapper,
+.hero_banner_slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero_banner_item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.youtube_video_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Fullscreen YouTube */
+.youtube_video_wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Slightly oversized to remove white line/gap */
+  width: calc(max(100vw, 177.78vh) + 4px);
+  height: calc(max(100vh, 56.25vw) + 4px);
+  transform: translate(-50%, -50%) scale(1.02);
+  transform-origin: center;
+  border: 0;
+  display: block;
+  pointer-events: none;
+}
+
 .awards_container .tab-nav-wrap {
   display: flex;
   justify-content: space-between;
@@ -5233,7 +5290,7 @@ footer .block_bottom .block_right p {
 .form_wrapper .form_block .form .form_group label {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #5C5C5C;
+  color: #5c5c5c;
   margin-bottom: 1.2rem;
 }
 @media (max-width: 1536px) {
@@ -5259,7 +5316,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group input::placeholder {
-  color: #BCBCBC;
+  color: #bcbcbc;
   font-size: 1.8rem;
 }
 @media (max-width: 1536px) {
@@ -5299,7 +5356,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group select:invalid {
-  color: #BCBCBC;
+  color: #bcbcbc;
 }
 .form_wrapper .form_block .form .form_group select option {
   color: #000;
@@ -5326,7 +5383,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group textarea::placeholder {
-  color: #BCBCBC;
+  color: #bcbcbc;
   font-size: 1.8rem;
 }
 @media (max-width: 1536px) {
@@ -5336,7 +5393,7 @@ footer .block_bottom .block_right p {
 }
 .form_wrapper .form_block .form .form_group .error_message {
   font-size: 1.4rem;
-  color: #FF0000;
+  color: #ff0000;
   margin-top: 0.5rem;
   display: none;
 }
@@ -5354,7 +5411,7 @@ footer .block_bottom .block_right p {
   }
 }
 .form_wrapper .form_block .form .form_group .privacy_policy > a {
-  color: #B29142;
+  color: #b29142;
 }
 .form_wrapper .form_block .thank_you_message {
   display: none;
@@ -5376,7 +5433,7 @@ footer .block_bottom .block_right p {
 .form_wrapper .detail_block {
   border-radius: 1rem;
   padding: 4rem;
-  background: linear-gradient(90deg, #082C1A 0%, #25573B 100%);
+  background: linear-gradient(90deg, #082c1a 0%, #25573b 100%);
 }
 @media (max-width: 767px) {
   .form_wrapper .detail_block {
@@ -5417,7 +5474,7 @@ footer .block_bottom .block_right p {
 }
 .form_wrapper .detail_block .detail .heading_detail {
   font-size: 1.8rem;
-  color: #B29142;
+  color: #b29142;
   font-weight: 400;
   margin-bottom: 1.2rem;
 }
@@ -5476,7 +5533,7 @@ footer .block_bottom .block_right p {
   border-right: 0px;
 }
 .customTable tbody tr {
-  background: #F6F0E7;
+  background: #f6f0e7;
 }
 .customTable tbody tr:not(:last-child) {
   border-bottom: 1px solid #ffffff;
@@ -5510,7 +5567,7 @@ footer .block_bottom .block_right p {
   gap: 2rem;
 }
 .customTable tbody td .downloads a {
-  color: #10864F;
+  color: #10864f;
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
@@ -5559,6 +5616,64 @@ footer .block_bottom .block_right p {
 
 .webform-submission-contact-form [data-drupal-messages] {
   display: none;
+}
+
+.webform-actions {
+  grid-column: span 2 !important;
+}
+
+.webform-actions .form_group.grid_max {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+.webform-actions p {
+  margin-bottom: 2rem;
+}
+.webform-actions .form_group.grid_max:has(input[type=submit]) input[type=submit] {
+  text-decoration: none;
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #fff;
+  background: linear-gradient(to right, #352e1e 50%, #b29142 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px !important;
+  border: 0 !important;
+  padding: 1.2rem 60px 1.2rem 24px !important;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.webform-actions .form_group.grid_max:has(input[type=submit]) input[type=submit]:hover {
+  background-position: left bottom;
+}
+.webform-actions .form_group.grid_max:has(input[type=submit])::after {
+  content: "↗";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #b29142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.webform-actions .form_group.grid_max:has(input[type=submit]):hover::after {
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .green_bk_quote .quote-inner-wrapper {
