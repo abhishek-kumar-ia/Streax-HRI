@@ -148,11 +148,14 @@
                     }
                 }
 
-                .error_message {
+                .btn {
+                    border: none;
+                }
+                .error_message , .form-item--error-messag{
                     font-size: 1.4rem;
                     color: #FF0000;
                     margin-top: 0.5rem;
-                    display: none;
+                    // display: none;
 
                     @include respond-to(md-desktop) {
                         font-size: 1.2rem;

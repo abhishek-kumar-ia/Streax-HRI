@@ -5360,14 +5360,16 @@ footer .block_bottom .block_right p {
     font-size: 1.6rem;
   }
 }
-.form_wrapper .form_block .form .form_group .error_message {
+.form_wrapper .form_block .form .form_group .btn {
+  border: none;
+}
+.form_wrapper .form_block .form .form_group .error_message, .form_wrapper .form_block .form .form_group .form-item--error-messag {
   font-size: 1.4rem;
   color: #FF0000;
   margin-top: 0.5rem;
-  display: none;
 }
 @media (max-width: 1536px) {
-  .form_wrapper .form_block .form .form_group .error_message {
+  .form_wrapper .form_block .form .form_group .error_message, .form_wrapper .form_block .form .form_group .form-item--error-messag {
     font-size: 1.2rem;
   }
 }
