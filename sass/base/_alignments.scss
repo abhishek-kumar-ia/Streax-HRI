@@ -98,3 +98,9 @@
     justify-content: flex-start;
   }
 }
+
+@include respond-to(mobile-large) {
+  .mob-text-left {
+    text-align: left !important;
+  }
+}

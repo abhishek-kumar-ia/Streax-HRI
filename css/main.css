@@ -770,6 +770,11 @@ p, .p {
   }
 }
 
+@media (max-width: 992px) {
+  .mob-text-left {
+    text-align: left !important;
+  }
+}
 .pt-0 {
   padding-top: 0;
 }
