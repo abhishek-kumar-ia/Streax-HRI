@@ -4512,7 +4512,7 @@ footer .block_bottom .block_right p {
   grid-template-columns: 1fr 64px 1fr;
   gap: 0;
   margin-bottom: 15rem;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (max-width: 992px) {
   .timelineBlock {
@@ -4574,6 +4574,7 @@ footer .block_bottom .block_right p {
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-top: 6rem;
 }
 
 .node-dot {
@@ -4635,7 +4636,7 @@ footer .block_bottom .block_right p {
   position: relative;
   left: 15%;
   height: 100%;
-  top: 45%;
+  top: 0;
 }
 @media (max-width: 992px) {
   .timelineBlock.right .content {
@@ -4647,7 +4648,7 @@ footer .block_bottom .block_right p {
 .timelineBlock.left .content {
   padding: 0 32px 0 0;
   height: 100%;
-  top: 45%;
+  top: 0;
   position: relative;
 }
 @media (max-width: 992px) {
@@ -4886,7 +4887,7 @@ footer .block_bottom .block_right p {
 .map-row .map-list .map-item .country-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   row-gap: 10px;
 }
 @media (max-width: 1536px) {
@@ -4901,7 +4902,7 @@ footer .block_bottom .block_right p {
   list-style: none;
   color: #fff;
   display: inline-flex;
-  padding: 16px;
+  padding: 5px;
   align-items: center;
   gap: 12px;
   align-self: stretch;
@@ -4909,7 +4910,7 @@ footer .block_bottom .block_right p {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
-  font-size: 1.68rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: 25.2px; /* 150% */

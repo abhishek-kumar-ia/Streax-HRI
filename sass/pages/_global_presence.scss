@@ -106,7 +106,7 @@
       .country-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 30px;
         row-gap: 10px;
         @include respond-to(md-desktop) {
           gap: 20px;
@@ -120,7 +120,7 @@
 
           color: #fff;
           display: inline-flex;
-          padding: 16px;
+          padding: 5px;
           align-items: center;
           gap: 12px;
           align-self: stretch;
@@ -130,7 +130,7 @@
           border: 1px solid rgba(255, 255, 255, 0.1);
           background: rgba(255, 255, 255, 0.05);
 
-          font-size: 1.68rem;
+          font-size: 1.5rem;
           font-style: normal;
           font-weight: 500;
           line-height: 25.2px; /* 150% */
