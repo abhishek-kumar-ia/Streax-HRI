@@ -4314,10 +4314,22 @@ footer .block_bottom .block_right p {
   font-size: 1.8rem;
   line-height: 1.35;
 }
+.growth_story .right {
+  height: 80%;
+}
+@media (max-width: 992px) {
+  .growth_story .right {
+    height: 100%;
+  }
+}
 .growth_story .right .growth-story-timeline {
+  height: 100%;
   flex: 0 0 48%;
   position: relative;
   padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .growth_story .right .growth-story-timeline::before {
   content: "";
@@ -4359,6 +4371,8 @@ footer .block_bottom .block_right p {
   color: #005039;
   font-size: 1.8rem;
   font-weight: 700;
+  position: relative;
+  top: -5px;
 }
 
 .author_quote_section .quote-inner-wrapper {

@@ -127,10 +127,18 @@
   }
 
   .right {
+    height: 80%;
+    @include respond-to(mobile-large) {
+      height: 100%;
+    }
     .growth-story-timeline {
+      height: 100%;
       flex: 0 0 48%;
       position: relative;
       padding-left: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &::before {
         content: "";
@@ -178,6 +186,8 @@
           color: $primary;
           font-size: 1.8rem;
           font-weight: 700;
+          position: relative;
+          top: -5px;
         }
       }
     }
