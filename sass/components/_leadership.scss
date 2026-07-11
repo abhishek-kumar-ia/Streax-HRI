@@ -11,7 +11,18 @@
   @include respond-to(mobile-large) {
     grid-template-columns: 1fr;
   }
+
   .single_block {
+    cursor: pointer;
+    &:hover {
+      .btn {
+        .arrow_parent {
+          .arrow {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
     .img_block {
       margin-bottom: 2rem;
     }

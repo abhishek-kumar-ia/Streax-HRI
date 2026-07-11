@@ -1774,6 +1774,10 @@ footer .block_bottom .block_right p {
 .brand_card {
   background-color: #fff;
   border-radius: 2rem;
+  display: inline-block;
+}
+.brand_card:hover .btn .arrow_parent .arrow {
+  transform: rotate(360deg);
 }
 .brand_card img {
   border-top-left-radius: 2rem;
@@ -1797,18 +1801,6 @@ footer .block_bottom .block_right p {
 }
 .brand_card .brand_details .img_block .logo_img {
   border-radius: 0rem;
-}
-@media (max-width: 1536px) {
-  .brand_card .brand_details .img_block .logo_img {
-    max-width: 180px;
-    height: auto;
-  }
-}
-@media (max-width: 1281px) {
-  .brand_card .brand_details .img_block .logo_img {
-    max-width: 150px;
-    height: auto;
-  }
 }
 .brand_card .brand_details > h3 {
   font-size: 2rem;
@@ -2032,6 +2024,21 @@ footer .block_bottom .block_right p {
   border-color: #B29142;
   background: transparent;
   opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .linkedin_posts {
+    box-sizing: content-box;
+  }
+}
+.linkedin_posts .card a img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .linkedin_posts .card a img {
+    aspect-ratio: 4/3;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2648,7 +2655,7 @@ footer .block_bottom .block_right p {
 }
 .card_item .card_content {
   padding: 3rem;
-  height: stretch;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2679,6 +2686,7 @@ footer .block_bottom .block_right p {
   transition: all 220ms ease;
   position: relative;
   top: 0px;
+  font-weight: 600;
 }
 @media (max-width: 1281px) {
   .card_item .card_content > h2 {
@@ -2695,6 +2703,7 @@ footer .block_bottom .block_right p {
   display: block;
   line-height: 1.4;
   margin-top: 1rem;
+  font-weight: 600;
   max-width: 50%;
 }
 @media (max-width: 1281px) {
@@ -2710,7 +2719,7 @@ footer .block_bottom .block_right p {
 .card_item .card_content > p {
   font-size: 2rem;
   color: #4c4c4c;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 220ms ease;
   position: relative;
   top: 0px;
@@ -3095,6 +3104,12 @@ footer .block_bottom .block_right p {
   .legacy_grid {
     grid-template-columns: 1fr;
   }
+}
+.legacy_grid .single_block {
+  cursor: pointer;
+}
+.legacy_grid .single_block:hover .btn .arrow_parent .arrow {
+  transform: rotate(360deg);
 }
 .legacy_grid .single_block .img_block {
   margin-bottom: 2rem;
@@ -4208,6 +4223,7 @@ footer .block_bottom .block_right p {
 }
 .description_content p {
   font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .visions_grid--no-after .block:nth-child(2)::after {
@@ -4435,11 +4451,7 @@ footer .block_bottom .block_right p {
   color: #fff;
   text-align: left;
   border-radius: 2rem;
-}
-@media (max-width: 767px) {
-  .define_block .block .overlay_block {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0) 100%);
 }
 .define_block .block .overlay_block .text_block {
   position: absolute;
@@ -4554,7 +4566,6 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 767px) {
   .details_standards .standard_grid {
-    grid-template-columns: 1fr !important;
     gap: 2rem;
   }
 }
@@ -4593,6 +4604,7 @@ footer .block_bottom .block_right p {
   font-weight: 600;
   color: #005039;
   margin-bottom: 1rem;
+  text-align: left;
 }
 @media (max-width: 1281px) {
   .details_standards .standard_grid .block .highlight {
@@ -4601,6 +4613,7 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 767px) {
   .details_standards .standard_grid .block .highlight {
+    text-align: center;
     font-size: 2.4rem;
   }
 }
@@ -4608,10 +4621,16 @@ footer .block_bottom .block_right p {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
+  text-align: left;
 }
 @media (max-width: 1281px) {
   .details_standards .standard_grid .block .description {
     font-size: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .details_standards .standard_grid .block .description {
+    text-align: center;
   }
 }
 .details_standards .iso_standards .block {
@@ -6104,11 +6123,7 @@ footer .block_bottom .block_right p {
   color: #fff;
   text-align: left;
   border-radius: 2rem;
-}
-@media (max-width: 767px) {
-  .care_and_growth_block .block .overlay_block {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0) 100%);
 }
 .care_and_growth_block .block .overlay_block .text_block {
   position: absolute;
@@ -6576,6 +6591,12 @@ footer .block_bottom .block_right p {
   position: absolute;
   top: 0;
   right: 10%;
+}
+@media (max-width: 1536px) {
+  .gptw .img-block .img-gptw {
+    max-width: 75px;
+    height: auto;
+  }
 }
 .gptw .text-block {
   position: absolute;

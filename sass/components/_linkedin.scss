@@ -61,3 +61,20 @@
         }
     }
 }
+
+.linkedin_posts {
+    @include respond-to (mobile-large) {
+        box-sizing: content-box;
+    }
+    .card {
+        a {
+            img {
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                @include respond-to(mobile-large) {
+                    aspect-ratio: 4 / 3; 
+                }
+            }
+        }
+    }
+}

@@ -21,10 +21,14 @@
       color: $white;
       text-align: left;
       border-radius: 2rem;
-
-      @include respond-to(mobile-horizontal) {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+      // background-color: rgba(0, 0, 0, 0.3);
+      background: linear-gradient(to top,
+                        rgba(0, 0, 0, 0.85) 0%,
+                        rgba(0, 0, 0, 0.3) 45%,
+                        rgba(0, 0, 0, 0) 100%);
+      // @include respond-to(mobile-horizontal) {
+      //   background-color: rgba(0, 0, 0, 0.3);
+      // }
 
       .text_block {
         position: absolute;
@@ -512,6 +516,10 @@
       position: absolute;
       top: 0;
       right: 10%;
+      @include respond-to(md-desktop) {
+        max-width: 75px;
+        height: auto;
+      }
     }
   }
   .text-block {

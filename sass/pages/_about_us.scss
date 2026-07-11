@@ -255,10 +255,14 @@
       color: $white;
       text-align: left;
       border-radius: 2rem;
-
-      @include respond-to(mobile-horizontal) {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+      // background-color: rgba(0, 0, 0, 0.3);
+      background: linear-gradient(to top,
+                        rgba(0, 0, 0, 0.85) 0%,
+                        rgba(0, 0, 0, 0.3) 45%,
+                        rgba(0, 0, 0, 0) 100%);
+      // @include respond-to(mobile-horizontal) {
+      //   background-color: rgba(0, 0, 0, 0.3);
+      // }
 
       .text_block {
         position: absolute;
@@ -376,7 +380,7 @@
       grid-template-columns: 1fr 1fr !important;
     }
     @include respond-to(mobile-horizontal) {
-      grid-template-columns: 1fr !important;
+      // grid-template-columns: 1fr !important;
       gap: 2rem;
     }
     :nth-child(3) {
@@ -417,11 +421,12 @@
         font-weight: 600;
         color: $primary;
         margin-bottom: 1rem;
-
+        text-align: left;
         @include respond-to(sm-desktop) {
           font-size: 3rem;
         }
         @include respond-to(mobile-horizontal) {
+          text-align: center;
           font-size: 2.4rem;
         }
       }
@@ -430,9 +435,13 @@
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 1.4;
-
+        text-align: left;
         @include respond-to(sm-desktop) {
           font-size: 1.6rem;
+        }
+        @include respond-to(mobile-horizontal) {
+
+          text-align: center;
         }
       }
     }

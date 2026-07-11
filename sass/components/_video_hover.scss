@@ -102,7 +102,7 @@
   }
   .card_content {
     padding: 3rem;
-    height: stretch;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -130,6 +130,7 @@
       transition: all 220ms ease;
       position: relative;
       top: 0px;
+      font-weight: 600;
       @include respond-to(sm-desktop) {
         font-size: 4rem;
       }
@@ -141,6 +142,7 @@
         display: block;
         line-height: 1.4;
         margin-top: 1rem;
+        font-weight: 600;
         max-width: 50%;
         @include respond-to(sm-desktop) {
           font-size: 1.4rem;
@@ -153,7 +155,7 @@
     > p {
       font-size: 2rem;
       color: #4c4c4c;
-      font-weight: 600;
+      font-weight: 700;
       transition: all 220ms ease;
       position: relative;
       top: 0px;
