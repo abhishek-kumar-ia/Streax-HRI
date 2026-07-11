@@ -50,6 +50,9 @@
         height: 100vh;
         object-fit: cover;
         display: block;
+        @include respond-to(mobile-large) {
+          height: auto;
+        }
       }
     }
     .video_slider_container {
@@ -67,7 +70,7 @@
       @include respond-to(mobile-large) {
         left: 0%;
         bottom: 0;
-        padding: 3rem 2rem 10rem;
+        padding: 3rem 2rem 3rem;
         border-bottom-left-radius: 0rem;
         border-bottom-right-radius: 0rem;
         max-width: 100%;
@@ -77,8 +80,7 @@
         padding: 3rem;
         @include respond-to(mobile-large) {
           max-width: 100%;
-          padding-right: 0;
-          padding-left: 0;
+          padding: 0;
         }
       }
     }

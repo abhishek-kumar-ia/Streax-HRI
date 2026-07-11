@@ -2402,6 +2402,11 @@ footer .block_bottom .block_right p {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 992px) {
+  .video_slider .swiper-slide .video_block img {
+    height: auto;
+  }
+}
 .video_slider .swiper-slide .video_slider_container {
   position: absolute;
   bottom: 8rem;
@@ -2422,7 +2427,7 @@ footer .block_bottom .block_right p {
   .video_slider .swiper-slide .video_slider_container {
     left: 0%;
     bottom: 0;
-    padding: 3rem 2rem 10rem;
+    padding: 3rem 2rem 3rem;
     border-bottom-left-radius: 0rem;
     border-bottom-right-radius: 0rem;
     max-width: 100%;
@@ -2435,8 +2440,7 @@ footer .block_bottom .block_right p {
 @media (max-width: 992px) {
   .video_slider .swiper-slide .video_slider_container .video_slider_content {
     max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
   }
 }
 
@@ -4150,7 +4154,7 @@ footer .block_bottom .block_right p {
 }
 @media (max-width: 767px) {
   .our_brands_section .brand_card .text_block .descp {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -4185,6 +4189,7 @@ footer .block_bottom .block_right p {
 .products_grid .single_item .img_block > img {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  width: 100%;
 }
 .products_grid .single_item .text_block {
   padding: 2rem;
@@ -4223,7 +4228,11 @@ footer .block_bottom .block_right p {
 }
 .description_content p {
   font-size: 1.8rem;
-  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .description_content p {
+    font-size: 1.6rem;
+  }
 }
 
 .visions_grid--no-after .block:nth-child(2)::after {
