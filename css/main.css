@@ -6324,6 +6324,11 @@ footer .block_bottom .block_right p {
   border-radius: 2rem;
   object-fit: cover;
 }
+@media (max-width: 992px) {
+  .masonry_grid .left > img {
+    height: auto;
+  }
+}
 .masonry_grid .right {
   display: grid;
   grid-template-columns: 1fr;
@@ -6340,6 +6345,11 @@ footer .block_bottom .block_right p {
   height: 100%;
   object-fit: cover;
   border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .masonry_grid .right > img {
+    height: auto;
+  }
 }
 .masonry_grid .right .top {
   display: grid;
@@ -6364,6 +6374,11 @@ footer .block_bottom .block_right p {
   object-fit: cover;
   border-radius: 2rem;
 }
+@media (max-width: 992px) {
+  .masonry_grid .right .top > img {
+    height: auto;
+  }
+}
 @media (max-width: 1281px) {
   .masonry_grid .right .bottom {
     gap: 2rem;
@@ -6375,6 +6390,11 @@ footer .block_bottom .block_right p {
   height: 100%;
   object-fit: cover;
   border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .masonry_grid .right .bottom > img {
+    height: auto;
+  }
 }
 
 .hri_advantage_grid {
