@@ -205,6 +205,11 @@ a:focus-visible {
   display: inline;
 }
 
+.text-link {
+  color: #005039;
+  font-weight: 600;
+}
+
 .text-primary {
   color: #005039;
 }
@@ -7298,6 +7303,7 @@ footer .block_bottom .block_right p {
 .contact-wrapper-info .contact-grid .info-card {
   flex: 1;
   min-height: 130px;
+  justify-content: flex-start;
 }
 
 .compliance-card {
