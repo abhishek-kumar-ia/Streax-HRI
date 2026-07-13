@@ -2085,6 +2085,12 @@ footer .block_bottom .block_right p {
   align-items: center;
   background-color: #f9f9f9;
   overflow: hidden;
+  margin-bottom: 10rem;
+}
+@media (max-width: 1024px) {
+  .slider_brand_card {
+    margin-bottom: 4rem;
+  }
 }
 .slider_brand_card .text_block {
   padding: 4rem;
@@ -3341,6 +3347,9 @@ footer .block_bottom .block_right p {
   color: #005039;
   background: rgba(0, 80, 57, 0.06);
 }
+.legacy_profile_close:focus-visible {
+  outline: none;
+}
 
 .legacy_profile_inner {
   display: grid;
@@ -3875,6 +3884,9 @@ footer .block_bottom .block_right p {
 .awards_profile_close:hover {
   color: #005039;
   background: rgba(0, 80, 57, 0.06);
+}
+.awards_profile_close:focus-visible {
+  outline: none;
 }
 
 .awards_profile_inner {
@@ -6766,7 +6778,6 @@ footer .block_bottom .block_right p {
   position: relative;
 }
 .gptw .img-block .img-banner.d-mobile-block {
-  aspect-ratio: 9/16;
   object-fit: cover;
 }
 .gptw .img-block .img-gptw {
@@ -6778,6 +6789,12 @@ footer .block_bottom .block_right p {
   .gptw .img-block .img-gptw {
     max-width: 75px;
     height: auto;
+    right: 5%;
+  }
+}
+@media (max-width: 992px) {
+  .gptw .img-block .img-gptw {
+    max-width: 45px;
   }
 }
 .gptw .text-block {
@@ -6785,6 +6802,16 @@ footer .block_bottom .block_right p {
   z-index: 2;
   width: 100%;
   top: 50%;
+}
+@media (max-width: 992px) {
+  .gptw .text-block {
+    top: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .gptw .text-block {
+    top: 50%;
+  }
 }
 
 @media (max-width: 767px) {

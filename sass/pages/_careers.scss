@@ -519,7 +519,7 @@
     position: relative;
     .img-banner {
       &.d-mobile-block {
-        aspect-ratio: 9 / 16;
+        // aspect-ratio: 9 / 16;
         object-fit: cover;
       }
     }
@@ -530,6 +530,10 @@
       @include respond-to(md-desktop) {
         max-width: 75px;
         height: auto;
+        right: 5%;
+      }
+      @include respond-to(mobile-large) {
+        max-width: 45px;
       }
     }
   }
@@ -538,6 +542,12 @@
     z-index: 2;
     width: 100%;
     top: 50%;
+    @include respond-to(mobile-large) {
+      top: 70%;
+    }
+    @include respond-to(mobile-horizontal) {
+      top: 50%;
+    }
   }
 }
 

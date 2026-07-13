@@ -191,7 +191,10 @@
   align-items: center;
   background-color: #f9f9f9;
   overflow: hidden;
-
+  margin-bottom: 10rem;
+  @include respond-to(break-desktop) {
+    margin-bottom: 4rem;
+  }
   .text_block {
     padding: 4rem;
 

@@ -146,6 +146,9 @@
     color: $primary;
     background: rgba($primary, 0.06);
   }
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .awards_profile_inner {
