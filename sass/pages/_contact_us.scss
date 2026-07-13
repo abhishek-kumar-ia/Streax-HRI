@@ -457,7 +457,7 @@
    
       // Arrow only for submit
       &::after {
-        content: "\2197";
+        content: url("../assets/icons/golden_arrow_contact.svg");
         position: absolute;
         top: 50%;
         right: 8px;

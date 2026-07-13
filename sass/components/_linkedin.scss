@@ -71,6 +71,7 @@
             img {
                 aspect-ratio: 16 / 9;
                 object-fit: cover;
+                transition: all 0.3s ease;
                 @include respond-to(mobile-large) {
                     aspect-ratio: 4 / 3; 
                 }
