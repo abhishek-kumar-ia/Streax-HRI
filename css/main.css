@@ -3689,6 +3689,14 @@ footer .block_bottom .block_right p {
     font-size: 1.6rem;
   }
 }
+.article_block div {
+  font-size: 1.8rem;
+}
+@media (max-width: 992px) {
+  .article_block div {
+    font-size: 1.6rem;
+  }
+}
 
 /* Hero Banner */
 .hero_banner_section {
@@ -5985,6 +5993,10 @@ footer .block_bottom .block_right p {
 }
 .webform-actions .form_group.grid_max:has(input[type=submit]):hover::after {
   transform: translateY(-50%) rotate(45deg);
+}
+
+.ajax-progress-throbber {
+  display: none;
 }
 
 .green_bk_quote .quote-inner-wrapper {

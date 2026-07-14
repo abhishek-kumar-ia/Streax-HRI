@@ -42,4 +42,10 @@
             font-size: 1.6rem;
         }
     }
+    div {
+        font-size: 1.8rem;
+        @include respond-to(mobile-large) {
+            font-size: 1.6rem;
+        }
+    }
 }
