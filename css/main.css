@@ -7294,12 +7294,7 @@ footer .block_bottom .block_right p {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: auto;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
+  text-decoration: underline;
 }
 .contact-wrapper-info .info-card.full-width {
   margin-bottom: 30px;

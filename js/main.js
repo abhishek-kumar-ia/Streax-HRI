@@ -6,33 +6,33 @@ $(function () {
     $(this).toggleClass("is_open");
     $menu.stop(true, true).slideToggle(250).toggleClass("is_open");
     if ($menu.hasClass("is_open")) {
-      $('body').css('overflow', 'hidden');
+      $("body").css("overflow", "hidden");
     } else {
-      $('body').css('overflow', 'auto');
+      $("body").css("overflow", "auto");
     }
   });
 
   // Search Btn Functionality Start
   $("#search_btn").on("click", function (e) {
-        e.stopPropagation();
-        $(".search_menu").toggleClass("is_open");
-        // Hide menu if its open
-        $(".mobile_menu").slideUp(250);
-        // Hide hamburger menu if its open
-        $(".hamburger_icon").removeClass("is_open");
-    });
+    e.stopPropagation();
+    $(".search_menu").toggleClass("is_open");
+    // Hide menu if its open
+    $(".mobile_menu").slideUp(250);
+    // Hide hamburger menu if its open
+    $(".hamburger_icon").removeClass("is_open");
+  });
 
-    $(document).on("click", function () {
-        $(".search_menu").removeClass("is_open");
-    });
+  $(document).on("click", function () {
+    $(".search_menu").removeClass("is_open");
+  });
 
-    $(".search_menu").on("click", function (e) {
-        e.stopPropagation();
-    });
-        // Hide menu on scroll
-    $(window).on("scroll", function () {
-        $(".search_menu").removeClass("is_open");
-    });
+  $(".search_menu").on("click", function (e) {
+    e.stopPropagation();
+  });
+  // Hide menu on scroll
+  $(window).on("scroll", function () {
+    $(".search_menu").removeClass("is_open");
+  });
   // Search Btn Functionality End
 
   // Mobile dropdown menu toggle
@@ -110,8 +110,8 @@ $(function () {
   // Accessibility Button End
 
   //   Banner
-  const bannerSwiper = new Swiper('.banner_container', {
-    // loop: true,
+  /*   const bannerSwiper = new Swiper('.banner_container', {
+     loop: true,
     slidesPerView: 1,
     pagination: {
       el: '.swiper_pagination_banner',
@@ -121,15 +121,75 @@ $(function () {
       nextEl: '.swiper-button-next-banner',
       prevEl: '.swiper-button-prev-banner',
     },
-    // autoplay: {
-    //     delay: 4000,
-    //     disableOnInteraction: false,
-    // },
+   autoplay: {
+       delay: 4000,
+         disableOnInteraction: false,
+     },
+  }); */
+
+  const bannerSwiper = new Swiper(".banner_container", {
+    slidesPerView: 1,
+
+    pagination: {
+      el: ".swiper_pagination_banner",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next-banner",
+      prevEl: ".swiper-button-prev-banner",
+    },
+
+    on: {
+      init() {
+        playCurrentVideo(this);
+      },
+      slideChangeTransitionEnd() {
+        playCurrentVideo(this);
+      },
+    },
   });
 
+  function playCurrentVideo(swiper) {
+    const totalSlides = swiper.slides.length;
+
+    // Pause & reset all videos
+    document.querySelectorAll(".banner-video").forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+      video.loop = false;
+      video.onended = null;
+    });
+
+    const activeVideo =
+      swiper.slides[swiper.activeIndex].querySelector(".banner-video");
+
+    if (!activeVideo) return;
+
+    // If only one slide, keep looping
+    if (totalSlides === 1) {
+      activeVideo.loop = true;
+      activeVideo.play();
+      return;
+    }
+
+    // Multiple slides
+    activeVideo.loop = false;
+    activeVideo.play();
+
+    activeVideo.onended = function () {
+      this.currentTime = 0;
+
+      if (swiper.isEnd) {
+        swiper.slideTo(0);
+      } else {
+        swiper.slideNext();
+      }
+    };
+  }
 
   // Brands Swiper
-  const brandsSwiper = new Swiper('.swiper_brands.swiper', {
+  const brandsSwiper = new Swiper(".swiper_brands.swiper", {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 30,
@@ -146,16 +206,15 @@ $(function () {
     },
   });
 
-
   // Awards Swiper Start
-  const $awardsSlider = $('.awards_slider');
-  const $awardsSection = $awardsSlider.closest('section');
-  const $awardsTrack = $awardsSection.find('.progress-track');
-  const $awardsIndicator = $awardsSection.find('.progress-indicator');
-  const $awardsPrev = $awardsSection.find('.awards_slider_prev');
-  const $awardsNext = $awardsSection.find('.awards_slider_next');
+  const $awardsSlider = $(".awards_slider");
+  const $awardsSection = $awardsSlider.closest("section");
+  const $awardsTrack = $awardsSection.find(".progress-track");
+  const $awardsIndicator = $awardsSection.find(".progress-indicator");
+  const $awardsPrev = $awardsSection.find(".awards_slider_prev");
+  const $awardsNext = $awardsSection.find(".awards_slider_next");
 
-  const awardsSwiper = new Swiper('.awards_slider', {
+  const awardsSwiper = new Swiper(".awards_slider", {
     slidesPerView: 4,
     // slidesPerGroup: 1,
     spaceBetween: 30,
@@ -176,7 +235,6 @@ $(function () {
     },
   });
 
-
   function updateAwardsProgress() {
     const totalSteps = awardsSwiper.snapGrid.length;
     if (!totalSteps || !$awardsTrack.length) return;
@@ -185,19 +243,19 @@ $(function () {
     const stepWidth = trackWidth / totalSteps;
     // snapIndex aligns with snapGrid; with loop, activeIndex does not
     const stepIndex =
-      typeof awardsSwiper.snapIndex === 'number'
+      typeof awardsSwiper.snapIndex === "number"
         ? awardsSwiper.snapIndex
         : awardsSwiper.activeIndex;
 
     $awardsIndicator.width((stepIndex + 1) * stepWidth);
-    $awardsPrev.prop('disabled', awardsSwiper.isBeginning);
-    $awardsNext.prop('disabled', awardsSwiper.isEnd);
+    $awardsPrev.prop("disabled", awardsSwiper.isBeginning);
+    $awardsNext.prop("disabled", awardsSwiper.isEnd);
   }
 
-  awardsSwiper.on('slideChange', updateAwardsProgress);
-  awardsSwiper.on('resize', updateAwardsProgress);
-  awardsSwiper.on('breakpoint', updateAwardsProgress);
-  $(window).on('resize', updateAwardsProgress);
+  awardsSwiper.on("slideChange", updateAwardsProgress);
+  awardsSwiper.on("resize", updateAwardsProgress);
+  awardsSwiper.on("breakpoint", updateAwardsProgress);
+  $(window).on("resize", updateAwardsProgress);
   updateAwardsProgress();
   // Awards Swiper End
 
@@ -242,7 +300,8 @@ $(function () {
       // Short links: https://youtu.be/VIDEOID
       if (/youtu\.be/i.test(s)) {
         const id = s.split("youtu.be/")[1].split(/[?&#]/)[0];
-        if (id) return ensureAutoplayParams(`https://www.youtube.com/embed/${id}`);
+        if (id)
+          return ensureAutoplayParams(`https://www.youtube.com/embed/${id}`);
       }
 
       const url = new URL(s, window.location.href);
@@ -256,27 +315,37 @@ $(function () {
       // https://www.youtube.com/embed/VIDEOID
       const embedMatch = url.pathname.match(/\/embed\/([^/]+)/i);
       if (embedMatch && embedMatch[1]) {
-        return ensureAutoplayParams(`https://www.youtube.com/embed/${embedMatch[1]}`);
+        return ensureAutoplayParams(
+          `https://www.youtube.com/embed/${embedMatch[1]}`,
+        );
       }
 
       // https://www.youtube.com/shorts/VIDEOID
       const shortsMatch = url.pathname.match(/\/shorts\/([^/]+)/i);
       if (shortsMatch && shortsMatch[1]) {
-        return ensureAutoplayParams(`https://www.youtube.com/embed/${shortsMatch[1]}`);
+        return ensureAutoplayParams(
+          `https://www.youtube.com/embed/${shortsMatch[1]}`,
+        );
       }
     } catch (e) {
       // If URL() fails, try extracting IDs from raw text.
       const embedMatch = s.match(/\/embed\/([^/?&#]+)/i);
       if (embedMatch && embedMatch[1]) {
-        return ensureAutoplayParams(`https://www.youtube.com/embed/${embedMatch[1]}`);
+        return ensureAutoplayParams(
+          `https://www.youtube.com/embed/${embedMatch[1]}`,
+        );
       }
       const watchMatch = s.match(/[?&]v=([^/?&#]+)/i);
       if (watchMatch && watchMatch[1]) {
-        return ensureAutoplayParams(`https://www.youtube.com/embed/${watchMatch[1]}`);
+        return ensureAutoplayParams(
+          `https://www.youtube.com/embed/${watchMatch[1]}`,
+        );
       }
       const shortsMatch = s.match(/\/shorts\/([^/?&#]+)/i);
       if (shortsMatch && shortsMatch[1]) {
-        return ensureAutoplayParams(`https://www.youtube.com/embed/${shortsMatch[1]}`);
+        return ensureAutoplayParams(
+          `https://www.youtube.com/embed/${shortsMatch[1]}`,
+        );
       }
     }
 
@@ -285,18 +354,16 @@ $(function () {
 
   function pauseBackgroundVideos() {
     const $bgVideos = $(".video_slider .video_block video");
-    backgroundVideoState = $bgVideos
-      .toArray()
-      .map((el) => ({
-        el,
-        time: el.currentTime || 0,
-        wasPaused: el.paused,
-      }));
+    backgroundVideoState = $bgVideos.toArray().map((el) => ({
+      el,
+      time: el.currentTime || 0,
+      wasPaused: el.paused,
+    }));
 
     $bgVideos.each(function () {
       try {
         this.pause();
-      } catch (e) { }
+      } catch (e) {}
     });
   }
 
@@ -306,9 +373,9 @@ $(function () {
         el.currentTime = time;
         if (!wasPaused) {
           const p = el.play();
-          if (p && typeof p.catch === "function") p.catch(() => { });
+          if (p && typeof p.catch === "function") p.catch(() => {});
         }
-      } catch (e) { }
+      } catch (e) {}
     });
     backgroundVideoState = [];
   }
@@ -349,7 +416,7 @@ $(function () {
     if ($video.length) {
       try {
         $video[0].pause();
-      } catch (e) { }
+      } catch (e) {}
       $video.attr("src", "");
     }
 
@@ -424,10 +491,7 @@ $(function () {
     closeVideoPopup();
   });
 
-
-
   // Video Popup dynamic code emd
-
 
   // Video Hover Cards (play video only on active card) start -- uncomment below code for hover effect
   // (function initVideoHoverCards() {
@@ -496,7 +560,6 @@ $(function () {
   // })();
   // Video Hover Cards (play video only on active card) end
 
-
   // All Sliders Function Start
   function allSliders() {
     teamsSwiper.init();
@@ -510,104 +573,93 @@ $(function () {
 
   // Awards Page Tab clicks Functionality
   function activateTab($tab) {
-
     const targetPanel = $tab.data("tab-target");
 
     // Reset tabs
-    $('[role="tab"]')
-        .removeClass('active')
-        .attr('aria-selected', 'false');
+    $('[role="tab"]').removeClass("active").attr("aria-selected", "false");
 
     // Reset panels
-    $('[role="tabpanel"]')
-        .removeClass('active')
-        .attr('hidden', true);
+    $('[role="tabpanel"]').removeClass("active").attr("hidden", true);
 
     // Activate current tab
-    $tab
-        .addClass('active')
-        .attr('aria-selected', 'true');
+    $tab.addClass("active").attr("aria-selected", "true");
 
     // Activate panel
-    $(targetPanel)
-        .addClass('active')
-        .removeAttr('hidden');
-}
+    $(targetPanel).addClass("active").removeAttr("hidden");
+  }
 
-// Click
-$('[role="tab"]').on('click', function () {
+  // Click
+  $('[role="tab"]').on("click", function () {
     activateTab($(this));
-});
+  });
 
-// Keyboard support
-$('[role="tab"]').on('keydown', function (e) {
-
+  // Keyboard support
+  $('[role="tab"]').on("keydown", function (e) {
     const $tabs = $('[role="tab"]');
     let index = $tabs.index(this);
 
-    if (e.key === 'ArrowRight') {
-        index = (index + 1) % $tabs.length;
-        $tabs.eq(index).focus().click();
+    if (e.key === "ArrowRight") {
+      index = (index + 1) % $tabs.length;
+      $tabs.eq(index).focus().click();
     }
 
-    if (e.key === 'ArrowLeft') {
-        index = (index - 1 + $tabs.length) % $tabs.length;
-        $tabs.eq(index).focus().click();
+    if (e.key === "ArrowLeft") {
+      index = (index - 1 + $tabs.length) % $tabs.length;
+      $tabs.eq(index).focus().click();
     }
-});
+  });
 
+  // Awards Popup Start
+  // Awards modal
+  const $awardsModal = $(".awards_profile_modal_wrap");
+  const $awardsBackdrop = $(".awards_profile_backdrop");
+  const $awardsClose = $(".awards_profile_close");
 
-// Awards Popup Start
-// Awards modal
-const $awardsModal = $(".awards_profile_modal_wrap");
-const $awardsBackdrop = $(".awards_profile_backdrop");
-const $awardsClose = $(".awards_profile_close");
+  function openAwardsModal() {
+    if (!$awardsModal.length) return;
 
-function openAwardsModal() {
-  if (!$awardsModal.length) return;
-
-  $awardsModal.addClass("is_open").attr("aria-hidden", "false");
-  $("body").css("overflow", "hidden");
-  $awardsClose.trigger("focus");
-}
-
-function closeAwardsModal() {
-  if (!$awardsModal.hasClass("is_open")) return;
-
-  $awardsModal.removeClass("is_open").attr("aria-hidden", "true");
-  $("body").css("overflow", "auto");
-}
-
-// Open modal on award card click
-$(document).on("click", ".award-card", function (e) {
-  e.preventDefault();
-  openAwardsModal();
-});
-
-// Close modal
-$awardsClose.on("click", closeAwardsModal);
-$awardsBackdrop.on("click", closeAwardsModal);
-
-// Escape key support
-$(document).on("keydown", function (e) {
-  if (e.key === "Escape" && $awardsModal.hasClass("is_open")) {
-    closeAwardsModal();
+    $awardsModal.addClass("is_open").attr("aria-hidden", "false");
+    $("body").css("overflow", "hidden");
+    $awardsClose.trigger("focus");
   }
-});
-// Awards Popup End
+
+  function closeAwardsModal() {
+    if (!$awardsModal.hasClass("is_open")) return;
+
+    $awardsModal.removeClass("is_open").attr("aria-hidden", "true");
+    $("body").css("overflow", "auto");
+  }
+
+  // Open modal on award card click
+  $(document).on("click", ".award-card", function (e) {
+    e.preventDefault();
+    openAwardsModal();
+  });
+
+  // Close modal
+  $awardsClose.on("click", closeAwardsModal);
+  $awardsBackdrop.on("click", closeAwardsModal);
+
+  // Escape key support
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape" && $awardsModal.hasClass("is_open")) {
+      closeAwardsModal();
+    }
+  });
+  // Awards Popup End
 
   //   testimonial Swiper
-  const testimonialSwiper = new Swiper('.testimonial_slider_1', {
+  const testimonialSwiper = new Swiper(".testimonial_slider_1", {
     // loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
     pagination: {
-      el: '.swiper_pagination_testimonial_1',
+      el: ".swiper_pagination_testimonial_1",
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next-testimonial_1',
-      prevEl: '.swiper-button-prev-testimonial_1  ',
+      nextEl: ".swiper-button-next-testimonial_1",
+      prevEl: ".swiper-button-prev-testimonial_1  ",
     },
     breakpoints: {
       1024: {
@@ -627,48 +679,48 @@ $(document).on("keydown", function (e) {
   });
 
   // HRI Swiper
-    //   testimonial Swiper
-    const humansSwiper = new Swiper('.testimonial_slider_2', {
-      // loop: true,
-      slidesPerView: 3,
-      spaceBetween: 40,
-      pagination: {
-        el: '.swiper_pagination_testimonial_2',
-        clickable: true,
+  //   testimonial Swiper
+  const humansSwiper = new Swiper(".testimonial_slider_2", {
+    // loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    pagination: {
+      el: ".swiper_pagination_testimonial_2",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-testimonial_2",
+      prevEl: ".swiper-button-prev-testimonial_2",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
       },
-      navigation: {
-        nextEl: '.swiper-button-next-testimonial_2',
-        prevEl: '.swiper-button-prev-testimonial_2',
+      768: {
+        slidesPerView: 2,
       },
-      breakpoints: {
-        1024: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        0: {
-          slidesPerView: 1,
-        },
+      0: {
+        slidesPerView: 1,
       },
-      // autoplay: {
-      //     delay: 4000,
-      //     disableOnInteraction: false,
-      // },
-    });
+    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
+  });
 
   // Leadership Testimonials Swiper
-  const leadershipSwiper = new Swiper('.leadership_testimonial_slider', {
+  const leadershipSwiper = new Swiper(".leadership_testimonial_slider", {
     slidesPerView: 1.15,
     spaceBetween: 30,
     loop: true,
     pagination: {
-      el: '.swiper_pagination_leadership',
+      el: ".swiper_pagination_leadership",
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next-leadership',
-      prevEl: '.swiper-button-prev-leadership',
+      nextEl: ".swiper-button-next-leadership",
+      prevEl: ".swiper-button-prev-leadership",
     },
     breakpoints: {
       1024: {
@@ -685,22 +737,19 @@ $(document).on("keydown", function (e) {
       },
     },
   });
-
 });
 // jQuery End
 
-
 // Swipers Outside jQuery Start
 
-
 // Mobile Slider for Teams Start
-const teamsSwiper = new Swiper('.swiper_teams', {
+const teamsSwiper = new Swiper(".swiper_teams", {
   loop: true,
   slidesPerView: 1.4,
   spaceBetween: 20,
   navigation: {
-    nextEl: '.swiper-button-next-teams',
-    prevEl: '.swiper-button-prev-teams',
+    nextEl: ".swiper-button-next-teams",
+    prevEl: ".swiper-button-prev-teams",
   },
   breakpoints: {
     768: {
@@ -714,7 +763,7 @@ const teamsSwiper = new Swiper('.swiper_teams', {
 // Mobile Slider for Teams End
 
 // Mobile Slider for Innovation Cards Start
-const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
+const innovationCardsSwiper = new Swiper(".swiper_innovation_cards", {
   loop: true,
   slidesPerView: 1.4,
   spaceBetween: 20,
@@ -730,28 +779,28 @@ const innovationCardsSwiper = new Swiper('.swiper_innovation_cards', {
 // Mobile Slider for Innovation Cards End
 
 // Video Slider Swiper Start
-const videoSliderSwiper = new Swiper('.video_slider', {
+const videoSliderSwiper = new Swiper(".video_slider", {
   // loop: true,
   slidesPerView: 1,
   pagination: {
-    el: '.swiper_pagination_videos',
+    el: ".swiper_pagination_videos",
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next-videos',
-    prevEl: '.swiper-button-prev-videos',
+    nextEl: ".swiper-button-next-videos",
+    prevEl: ".swiper-button-prev-videos",
   },
 });
 // Video Slider Swiper End
 
 // Linkedin Posts Swiper Start
-const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
+const linkedinPostsSwiper = new Swiper(".linkedin_posts", {
   // loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
   navigation: {
-    nextEl: '.swiper-button-next-linkedin',
-    prevEl: '.swiper-button-prev-linkedin',
+    nextEl: ".swiper-button-next-linkedin",
+    prevEl: ".swiper-button-prev-linkedin",
   },
   breakpoints: {
     1100: {
@@ -767,15 +816,14 @@ const linkedinPostsSwiper = new Swiper('.linkedin_posts', {
 });
 // Linkedin Posts Swiper End
 
-
 // Brand Card With Slider Start
-const sliderBrandCardSwiper = new Swiper('.sliders_brands_card', {
+const sliderBrandCardSwiper = new Swiper(".sliders_brands_card", {
   loop: false,
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    nextEl: '.slider_brands_card_next',
-    prevEl: '.slider_brands_card_prev',
+    nextEl: ".slider_brands_card_next",
+    prevEl: ".slider_brands_card_prev",
   },
 });
 // Brand Card With Slider End

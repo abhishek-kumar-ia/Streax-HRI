@@ -13420,40 +13420,40 @@
       $('.country-pin').removeClass('active');
       $('.country-marker').removeClass('active');
 
-      // Show selected label
-      $('.country-marker[data-country="' + country + '"] .country-label')
-        .addClass('active');
+      // Get active marker
+      var $marker = $('.country-marker[data-country="' + country + '"]');
 
-      // Highlight selected marker
-      $('.country-marker[data-country="' + country + '"]')
-        .addClass('active');
+      // Bring active marker to front (SVG z-index)
+      if ($marker.length) {
+        $marker.appendTo($marker.parent());
+      }
 
-      // Highlight pin
-      $('.country-marker[data-country="' + country + '"] .country-pin')
-        .addClass('active');
+      // Activate marker
+      $marker.addClass('active');
 
-      // Highlight list item
-      $('.country-list li[data-country="' + country + '"]')
-        .addClass('active');
+      // Activate pin
+      $marker.find('.country-pin').addClass('active');
+
+      // Activate label
+      $marker.find('.country-label').addClass('active');
+
+      // Activate country list item
+      $('.country-list li[data-country="' + country + '"]').addClass('active');
     }
 
     // Click from country list
     $('.country-list li').on('click', function () {
-
-      const country = $(this).data('country');
+      var country = $(this).data('country');
       activateCountry(country);
-
     });
 
-    // Click anywhere on SVG marker
+    // Click on SVG marker
     $('.country-marker').on('click', function () {
-
-      const country = $(this).data('country');
+      var country = $(this).data('country');
       activateCountry(country);
-
     });
 
-    // Default selection
+    // Default active country
     activateCountry('south-africa');
 
   });
