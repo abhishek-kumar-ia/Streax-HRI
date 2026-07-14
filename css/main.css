@@ -208,6 +208,7 @@ a:focus-visible {
 .text-link {
   color: #005039;
   font-weight: 600;
+  border-bottom: 1px solid #005039;
 }
 
 .text-primary {
