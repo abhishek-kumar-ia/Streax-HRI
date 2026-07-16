@@ -211,6 +211,24 @@ a:focus-visible {
   border-bottom: 1px solid #005039;
 }
 
+.text-link-white {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid #fff;
+}
+
+.text-link-black {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+}
+
+.text-link-secondary {
+  color: #B29142;
+  font-weight: 600;
+  border-bottom: 1px solid #B29142;
+}
+
 .text-primary {
   color: #005039;
 }
@@ -7294,7 +7312,7 @@ footer .block_bottom .block_right p {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  text-decoration: underline;
+  width: fit-content;
 }
 .contact-wrapper-info .info-card.full-width {
   margin-bottom: 30px;

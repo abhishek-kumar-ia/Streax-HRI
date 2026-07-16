@@ -154,3 +154,19 @@ a {
     font-weight: 600;
     border-bottom: 1px solid $primary;
 }
+.text-link-white {
+    color: $white;
+    font-weight: 600;
+    border-bottom: 1px solid $white;
+}
+
+.text-link-black {
+    color: $black;
+    font-weight: 600;
+    border-bottom: 1px solid $black;
+}
+.text-link-secondary {
+    color: $secondary;
+    font-weight: 600;
+    border-bottom: 1px solid $secondary;
+}
