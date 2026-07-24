@@ -821,6 +821,10 @@ const sliderBrandCardSwiper = new Swiper(".sliders_brands_card", {
   loop: false,
   slidesPerView: 1,
   spaceBetween: 0,
+  pagination: {
+    el: ".sliders_brands_card_pagination",
+    clickable: true,
+  },
   navigation: {
     nextEl: ".slider_brands_card_next",
     prevEl: ".slider_brands_card_prev",

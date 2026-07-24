@@ -4355,6 +4355,33 @@ footer .block_bottom .block_right p {
   }
 }
 
+.sliders_brands_card_control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.sliders_brands_card_control .sliders_brands_card_pagination {
+  width: fit-content;
+  bottom: auto;
+  right: 0;
+  position: relative;
+}
+.sliders_brands_card_control .sliders_brands_card_pagination .swiper-pagination-bullet {
+  height: 1rem;
+  width: 1rem;
+  background-color: #b7b7b7;
+  border-radius: 50%;
+  opacity: 1;
+  margin-right: 5px;
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+.sliders_brands_card_control .sliders_brands_card_pagination .swiper-pagination-bullet-active {
+  background-color: #10864f;
+  width: 4rem;
+  border-radius: 10px;
+}
+
 .products_grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -4842,7 +4869,7 @@ footer .block_bottom .block_right p {
 .details_standards .iso_standards .block {
   padding: 2rem;
   font-size: 1.8rem;
-  background-color: #F6F0E7;
+  background-color: #f6f0e7;
   border-left: 4px solid #B29142;
   margin-bottom: 1rem;
   line-height: 1.4;
@@ -4851,6 +4878,72 @@ footer .block_bottom .block_right p {
   .details_standards .iso_standards .block {
     font-size: 1.6rem;
   }
+}
+
+.certified_standards {
+  border-top: 1px solid #000;
+  padding-top: 5rem;
+}
+
+.iso-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.iso-card {
+  width: calc(50% - 2rem);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #f6f0e7;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .iso-card {
+    width: 100%;
+  }
+}
+
+.iso-icon {
+  flex: 0 0 120px;
+}
+@media (max-width: 992px) {
+  .iso-icon {
+    flex: 0 0 80px;
+  }
+}
+
+.iso-icon img {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+@media (max-width: 992px) {
+  .iso-icon img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.iso-content {
+  flex: 1;
+}
+
+.iso-content h4 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.iso-content p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .timeline {

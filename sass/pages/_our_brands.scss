@@ -134,3 +134,29 @@
     }
   }
 }
+.sliders_brands_card_control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .sliders_brands_card_pagination {
+    width: fit-content;
+    bottom: auto;
+    right: 0;
+    position: relative;
+    .swiper-pagination-bullet {
+      height: 1rem;
+      width: 1rem;
+      background-color: #b7b7b7;
+      border-radius: 50%;
+      opacity: 1;
+      margin-right: 5px;
+      margin-left: 5px;
+      transition: 0.3s ease;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #10864f;
+      width: 4rem;
+      border-radius: 10px;
+    }
+  }
+}
