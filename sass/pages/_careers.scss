@@ -7,6 +7,8 @@
     @include respond-to(mobile-large) {
       aspect-ratio: 1;
       object-fit: cover;
+      width: 100%;
+      border-radius: 2rem;
     }
   }
   .block {
@@ -526,9 +528,9 @@
     .img-gptw {
       position: absolute;
       top: 0;
-      right: 10%;
+      right: 5%;
       @include respond-to(md-desktop) {
-        max-width: 75px;
+        max-width: 60px;
         height: auto;
         right: 5%;
       }

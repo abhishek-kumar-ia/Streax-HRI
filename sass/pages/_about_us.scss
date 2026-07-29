@@ -110,7 +110,7 @@
     }
 
     p {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
 
     ul {
@@ -268,9 +268,9 @@
 
       .text_block {
         position: absolute;
-        bottom: 5rem;
-        padding-right: 5rem;
-        padding-left: 5rem;
+        bottom: 4rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
 
         @include respond-to(md-desktop) {
           padding-right: 3rem;
@@ -281,7 +281,7 @@
         > h3 {
           font-size: 2.2rem;
           font-weight: 700;
-          margin-bottom: 1.6rem;
+          // margin-bottom: 1.6rem;
 
           @include respond-to(md-desktop) {
             font-size: 2rem;
@@ -289,7 +289,7 @@
 
           @include respond-to(mobile-horizontal) {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            // margin-bottom: 1rem;
           }
         }
 
@@ -371,65 +371,36 @@
 
   .standard_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     margin-bottom: 5rem;
-
-    @include respond-to(md-desktop) {
-      gap: 4rem;
-    }
     @include respond-to(mobile-large) {
       grid-template-columns: 1fr 1fr !important;
     }
     @include respond-to(mobile-horizontal) {
-      // grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr !important;
       gap: 2rem;
     }
-    :nth-child(3) {
-      &::after {
-        @include respond-to(mobile-large) {
-          display: none;
-        }
-      }
-    }
+
     .block {
       position: relative;
-
-      &:first-child {
-        &::after {
-          display: none;
-        }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -40px;
-        width: 1px;
-        height: 100%;
-        background-color: #000;
-
-        @include respond-to(md-desktop) {
-          left: -20px;
-        }
-        @include respond-to(mobile-horizontal) {
-          display: none;
-        }
-      }
+      background-color: #F6F0E7;
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+    align-items: center;
+    gap: 2rem;
 
       .highlight {
-        font-size: 4rem;
-        font-weight: 600;
-        color: $primary;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $black;
         text-align: left;
         @include respond-to(sm-desktop) {
-          font-size: 3rem;
+          font-size: 2rem;
         }
         @include respond-to(mobile-horizontal) {
-          text-align: center;
-          font-size: 2.4rem;
+          font-size: 1.8rem;
         }
       }
 
@@ -440,9 +411,6 @@
         text-align: left;
         @include respond-to(sm-desktop) {
           font-size: 1.6rem;
-        }
-        @include respond-to(mobile-horizontal) {
-          text-align: center;
         }
       }
     }
@@ -468,22 +436,34 @@
   padding-top: 5rem;
 }
 .iso-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
+  @include respond-to(break-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @include respond-to(mobile-horizontal) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .iso-card {
-  width: calc(50% - 2rem);
+  // width: calc(50% - 2rem);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 4rem;
   padding: 20px;
-  background: #f6f0e7;
+  // background: #f6f0e7;
   border-radius: 20px;
   box-sizing: border-box;
+  text-align: center;
   @include respond-to(mobile-large) {
     width: 100%;
+    gap: 2rem;
   }
 }
 

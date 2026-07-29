@@ -6,15 +6,15 @@
     position: relative;
     .video_block {
       position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   background-color: rgba(0, 0, 0, 0.5);
+      // }
       .play_button {
         position: absolute;
         top: 45%;
@@ -46,20 +46,22 @@
         display: block;
       }
       img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        display: block;
+        // width: 100%;
+        // height: 100vh;
+        // object-fit: cover;
+        // display: block;
+        max-width: 100%;
+        height: auto;
         @include respond-to(mobile-large) {
           height: auto;
         }
       }
     }
     .video_slider_container {
-      position: absolute;
-      bottom: 8rem;
-      left: 10%;
-      background-color: #00000075;
+      position: relative;
+      // bottom: 8rem;
+      // left: 10%;
+      background-color: #000000;
       @include respond-to(xxl-desktop-up) {
         max-width: 80%;
       }
@@ -77,7 +79,7 @@
       }
       .video_slider_content {
         max-width: 75%;
-        padding: 3rem;
+        padding: 4rem;
         @include respond-to(mobile-large) {
           max-width: 100%;
           padding: 0;
@@ -100,6 +102,28 @@
     gap: 2rem;
     @include respond-to(mobile-large) {
       justify-content: space-between;
+    }
+  }
+}
+
+.video_slider_section {
+  padding: 4rem;
+  @include respond-to(mobile-large) {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .video_slider {
+    @include respond-to(mobile-large) {
+      margin-right: 0;
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+  .video_slider_content {
+    @include respond-to(mobile-large) {
+      padding-right: 2rem;
+      padding-left: 2rem;
     }
   }
 }

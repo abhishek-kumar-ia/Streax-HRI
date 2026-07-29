@@ -95,6 +95,7 @@
   }
 
   .map-list {
+    display: none;
     flex: 35;
     @include respond-to(md-desktop) {
       gap: 10px;
