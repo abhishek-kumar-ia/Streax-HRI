@@ -1,0 +1,103 @@
+@use "../base/_vars.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.section_legacy {
+  .container_legacy {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    @include respond-to(md-desktop) {
+      max-width: 90%;
+    }
+    .year_container {
+      margin-bottom: 10rem;
+      @include respond-to(mobile-large) {
+        margin-bottom: 5rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .year_block {
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+        border-bottom: 3px solid #D5D5D5;
+        padding-bottom: 2rem;
+        position: relative;
+        @include respond-to(mobile-large) {
+          gap: 1rem;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          height: 3px;
+          width: 22%;
+          background-color: $primary;
+          @include respond-to(mobile-large) {
+            width: 100%;
+          }
+        }
+        > .h2 {
+          @include respond-to(mobile-large) {
+            font-size: 2.4rem;
+          }
+        }
+        .year {
+
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -3rem;
+            width: 3px;
+            height: 100%;
+            background-color: #D5D5D5;
+            @include respond-to(mobile-large) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .final_block {
+      margin-top: 10rem;
+      padding-top: 5rem;
+      position: relative;
+      @include respond-to(mobile-large) {
+        margin-top: 5rem;
+        padding-top: 2rem;
+      }
+      &::before {
+        content: "";
+        background-color: #005038;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        height: 3px;
+        
+      }
+    }
+  }
+}
+
+.year_container {
+  .descp_block {
+    @include respond-to(mobile-large) {
+      margin-bottom: 2rem;
+    }
+  }
+  .img_block {
+    @include respond-to(mobile-large) {
+      margin-bottom: 2rem;
+    }
+  }
+}
