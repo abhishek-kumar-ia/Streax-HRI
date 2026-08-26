@@ -7956,7 +7956,7 @@ button, .button {
   display: flex;
   gap: 6rem;
   align-items: center;
-  border-bottom: 3px solid #D5D5D5;
+  border-bottom: 3px solid #d5d5d5;
   padding-bottom: 2rem;
   position: relative;
 }
@@ -7996,7 +7996,7 @@ button, .button {
   right: -3rem;
   width: 3px;
   height: 100%;
-  background-color: #D5D5D5;
+  background-color: #d5d5d5;
 }
 @media (max-width: 992px) {
   .section_legacy .container_legacy .year_container .year_block .year::before {
@@ -8023,6 +8023,14 @@ button, .button {
   transform: translateX(-50%);
   width: 250px;
   height: 3px;
+}
+.section_legacy .container_legacy .img_block img {
+  width: 60%;
+}
+@media (max-width: 992px) {
+  .section_legacy .container_legacy .img_block img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
